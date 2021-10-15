@@ -1,6 +1,6 @@
-> Kubernetes for the absolute beginners course
-> Certified Kubernetes Administrator Course
-> Certified Kubernetes Application Developer Course
+*  Kubernetes for the absolute beginners course
+*  Certified Kubernetes Administrator Course
+*  Certified Kubernetes Application Developer Course
 
 ***
 
