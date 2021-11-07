@@ -166,3 +166,29 @@ protected Object readResolve(){
    return instance;
 }
 }
+
+Override clone method and throw CloneNotSupported Exception:
+In order to not allow singleton class to be clonable from created objects, it is even recommended to implement your class from cloneable interface and override the clone() method. Inside the method throw CloneNotSupportedException to avoid cloning of the object.
+clone() method is protected method in object class, which cannot be visible outside the class unless we override. That is why we need to implement Cloneable interface.
+
+So the final Singleton class is below:
+
+public class DateUtil implements Serializable, Cloneable{
+
+private static volatile Dateutil intance;
+
+public static DateUtil getInstance(){
+
+if(instance==null{synchronized(DateUtil.class){ if(instance==null){instance=new DateUtil();}}}
+
+return instance;
+}
+protected  Object readResolve(){ return instance;}
+@Override
+protected Object clone()throws CloneNotSupportedException{ throw new CloneNotSupportedException();}
+}
+
+When to use Singleton:
+When a class has absolutely zero state. The methods of the class are not using any of the state of the class, rather the outcome of execution of the method depends on the parameter values with which u called the method. In such case you can declare the class singleton.
+When a class has some state and it has some methods, methods are using the state and the state is readonly. So the outcome of the method doesn't depend on the state of the class rather would depend on the values with which u called the method. Such classes we can make them as singleton.
+When a class has some state and methods, state is not read only but it is sharable state, means every other class in the application should see the same state of the object. In such case we don't need to create multiple objects, rather one instance of the class can be shared across multiple classes in the application.  Here the state the class is holding is a common state, we need to synchronize the read and write access to the class by making the methods of the class as synchronized to avoid concurrency issues.
