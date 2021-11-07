@@ -201,3 +201,28 @@ main advantage of factory pattern is it abstracts the creation process of the cl
 
 FactoryMethod: Used for creating the object for family of related classes with in the hierarchy.(Creates objects of same family).
 
+AbstractFactory: Creates objects of another factory(Factory of Factories) It is a super factory. Using factory design pattern we abstract the creation process of another  class. Using the abstract factory pattern we abstract the creation of family of classes.
+
+Diff between abstract factory and Factory Method:
+Abstract factory pattern delegates the responsibility of object instantiation to another object via comosition
+Factory method uses inheritance and relies on subclasses to handle the desired object instantiation.
+
+Template Method: it is behavioral design pattern,  in this we have a base template method, it defines an algorithm with some abstract steps. These steps have to be implemented by subclasses.
+
+ex: 
+
+public abstract class DataRenderer{
+//algorithm is fixed, but to make algo work subclasses need to implement readData and processData.
+public void render(){
+String data=null;
+String pdata=null;
+data=readData();
+pdata=processData(data);
+System.out.println(pdata);
+}
+
+public abstract String readData();
+public abstract String processData(String data);
+}
+
+XMLDataRenderer will implement readData and processData differently from TextDataRenderer.
