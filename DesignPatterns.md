@@ -131,3 +131,5 @@ return instance;
 }
 
 
+It is recommended to declare static member instance as volatile to avoid problem in a multi-threaded environment.
+
