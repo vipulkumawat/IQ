@@ -192,3 +192,9 @@ When to use Singleton:
 When a class has absolutely zero state. The methods of the class are not using any of the state of the class, rather the outcome of execution of the method depends on the parameter values with which u called the method. In such case you can declare the class singleton.
 When a class has some state and it has some methods, methods are using the state and the state is readonly. So the outcome of the method doesn't depend on the state of the class rather would depend on the values with which u called the method. Such classes we can make them as singleton.
 When a class has some state and methods, state is not read only but it is sharable state, means every other class in the application should see the same state of the object. In such case we don't need to create multiple objects, rather one instance of the class can be shared across multiple classes in the application.  Here the state the class is holding is a common state, we need to synchronize the read and write access to the class by making the methods of the class as synchronized to avoid concurrency issues.
+
+
+Factory:
+Not all objects in the java can be created out of new operator. few objects may be created by new, few have to be created by calling static factory(singleton) and other by passing other object as reference while creating etc.
+
+main advantage of factory pattern is it abstracts the creation process of the class. ex: JDBC, connection is an interface in jdbc api, respective vendor drivers will implement the connection interface. So, jdbc has provided an factory class called DriverManager with method getConnection(); Every factory class has a method, it contains the logic for creating the object of another class, so it is called factory method.
