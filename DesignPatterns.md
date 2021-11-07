@@ -227,3 +227,8 @@ public abstract String processData(String data);
 }
 
 XMLDataRenderer will implement readData and processData differently from TextDataRenderer but the render algorithm remains same.
+
+Points to remember:
+* The template method in the super class calls the methods of the sub classes, instead the subclasses calls the template method of the super class.
+* Template methods are techniques for code reuse because with this u can standardize the algo and defer the specific implementations to the subclass.
+
