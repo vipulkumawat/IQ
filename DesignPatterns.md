@@ -62,3 +62,12 @@ _Integration Tier:_ This tier is responsible for communicating with external res
 * Domain Store
 * Web Service Broker
 
+Explanation:
+Singleton: If a class is singleton, an application allows only one instance of the class. Generally we create a class as singleton when we want global point of access to that instance.
+
+How to make class singleton:
+* Declare constructor of the class private(Other classes cannot create the object of the class directly)
+* Declare a static method which can check and return only one object of the class(If method is non-static, to call it we need object of the class). As this method contains logic for creating the object, this method is called factory Method(static factory method)
+* Declare a static member of same class type in the class. This member is used in above static method so that it tracks whether an object for the class is already exists, that's where u create first object u will assign it to a member variable. So, in the next call to the method, u just return the same object which u stored in the member variable.
+
+ 
