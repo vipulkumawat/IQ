@@ -83,3 +83,51 @@ public class DateUtil{
  }
 
 
+Eager Initialization: We can instantiate the instance eagerly before when class is loaded into memory 
+
+public class DateUtil{
+ private static DateUtil instance= new DateUtil();
+ private DateUtil(){}
+ public static DateUtil getInstance(){
+ return instance;
+ }
+ }
+
+Lazy Initialization:
+In Most cases it is recommended to delay initialization process until the object is needed, but the problem with this is in a multithreaded environment when more than one thread are executing at the same time, it might end up in creating more than one instance of the class. To avoid this we use synchronized.
+
+public static synchronized DateUtil getInstance(){
+
+if(instance==null){
+instance=new DateUtil();
+}
+return instance;
+
+
+Instead of making the whole method as synchronized, it is enough to enclose only the conditional check in synchronized block.
+
+public static DateUtil getInstance(){
+synchronized(Dateutil.class){
+if(instance==null){
+instance=new DateUtil();
+}
+}
+return instance;
+}
+
+
+Again we have a problem with the above piece of code, after first call to the getInstance(), in next calls to the method will check for instance ==null,
+while doing so it acquires the lock to verify the condition which is not required. Acquiring and releasing the locks are costly, we need to avoid them as much we can. To fix this we can have a double level check for the condition as shown below:
+
+public static DateUtil getInstance(){
+if(instance==null){
+  synchronized(DateUtil.class){
+   if(instance==null){
+   instance=new DateUtil();
+}
+}
+}
+return instance;
+}
+
+
