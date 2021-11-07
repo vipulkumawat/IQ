@@ -232,3 +232,6 @@ Points to remember:
 * The template method in the super class calls the methods of the sub classes, instead the subclasses calls the template method of the super class.
 * Template methods are techniques for code reuse because with this u can standardize the algo and defer the specific implementations to the subclass.
 
+Adapter: makes in-compatible interfaces compatible.
+
+Flyweight: it is structural design pattern. here instead of creating large no of similar objects, those are reused to save memory. This is useful when memory is a key concern. For every class there are two types of attributes: intrinsic(sharable) and extrinsic(non-sharable). Non sharable state is passed as parameters to methods. This reduces memory usage. 
