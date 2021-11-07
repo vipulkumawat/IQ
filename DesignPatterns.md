@@ -5,5 +5,13 @@ _Pattern:_ Helps to identify the recurring problems and provides a pre-built sol
 
 All Convertor(Date util, Time Util, String Util) and Validation classes can be singleton.
 
+GOF Pattern Catalog:
+
+Creational: 
+* Abstract Factory
+* Builder
+* Factory Method
+* Prototype
+* Singleton
 
 
