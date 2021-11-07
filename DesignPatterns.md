@@ -212,8 +212,9 @@ Template Method: it is behavioral design pattern,  in this we have a base templa
 ex: 
 
 public abstract class DataRenderer{
-//algorithm is fixed, but to make algo work subclasses need to implement readData and processData.
-public void render(){
+//algorithm is fixed, but to make algo work subclasses need to implement readData and processData. to not allow algo getting overridden render method is declared final. 
+
+public final void render(){
 String data=null;
 String pdata=null;
 data=readData();
@@ -225,4 +226,4 @@ public abstract String readData();
 public abstract String processData(String data);
 }
 
-XMLDataRenderer will implement readData and processData differently from TextDataRenderer.
+XMLDataRenderer will implement readData and processData differently from TextDataRenderer but the render algorithm remains same.
