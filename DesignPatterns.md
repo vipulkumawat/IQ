@@ -235,3 +235,11 @@ Points to remember:
 Adapter: makes in-compatible interfaces compatible.
 
 Flyweight: it is structural design pattern. here instead of creating large no of similar objects, those are reused to save memory. This is useful when memory is a key concern. For every class there are two types of attributes: intrinsic(sharable) and extrinsic(non-sharable). Non sharable state is passed as parameters to methods. This reduces memory usage. 
+
+Decorator: Widely used structural pattern, it adds dynamically the functionality to an object at runtime without affecting the other object. It adds additional responsibility to an object by wrapping it. So it is called wrapper.
+* Add and remove additional functionalities or responsibilities to an object dynamically at runtime, without affecting the other objects.
+* Usually these decorators are designed on component interface, so u can select the object that has to be decorated at runtime.
+* Sometime adding additional responsibility to a class may not be possible by subclasssing it. Only available way of achieving it is using decorator.
+
+
+
