@@ -71,13 +71,13 @@ How to make class singleton:
 * Declare a static member of same class type in the class. This member is used in above static method so that it tracks whether an object for the class is already exists, that's where u create first object u will assign it to a member variable. So, in the next call to the method, u just return the same object which u stored in the member variable.
 
  
-`public class DateUtil{`
-`private static DateUtil instance;`
-`private DateUtil(){}`
-`public static DateUtil getInstance(){`
-`if(instance==null){`
-`instance=new DateUtil();`
-`}`
-`return instance;`
-`}`
-`}`
+> public class DateUtil{
+> private static DateUtil instance;
+> private DateUtil(){}
+> public static DateUtil getInstance(){
+> if(instance==null){
+> instance=new DateUtil();
+> }
+> return instance;
+> }
+> }
