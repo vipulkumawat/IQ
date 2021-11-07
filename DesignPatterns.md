@@ -133,3 +133,36 @@ return instance;
 
 It is recommended to declare static member instance as volatile to avoid problem in a multi-threaded environment.
 
+It seems above are best possible ways of creating a singleton class. Do u still see any drawbacks with above piece of code? yes, when we serialize and de-serialize a singleton class, the de-serialization process will creates as many no of objects for the singleton class which avoids the rule of singleton.
+
+public static void main(String... args){
+DateUtil du1=DateUtil.getInstance();
+ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(new File("D:\\DateUtil.ser")));
+oos.writeObject(du1);
+ObjectInputStream ois=new ObjectInputStream(new FileInputStream(new File("D:\\Dateutil.ser"))):
+DateUtil du2=(DateUtil)ois.readObject();
+System.out.println(du1==du2); //false
+
+}
+
+How to avoid creating more than one objects of singleton class even we serialize or de-serialize also, that's where we need to write readResolve() method as part of the singleton class. Deserailzation process will call readResolve method on the class to read the bytestream to build the object. If we write this method and can return the same instance of the class, we can avoid creating more than one object even in case of serialization as well.
+
+Here is the complete code:
+
+public class DateUtil implements Serializable{
+private static volatile Dateutil instance;
+private DateUtil(){}
+public static DateUtil getInstance(){
+
+if(instance==null){
+synchronized(DateUtil.class){
+if(instance==null){ instance=new DateUtil();}
+}
+
+}
+return instance;
+}
+protected Object readResolve(){
+   return instance;
+}
+}
