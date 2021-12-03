@@ -14,3 +14,15 @@ How do u clear cache in spark
 what are packages in java
 ```
 
+**MineralTree:**
+```
+What design patterns u used in application and how u implemented them in the project
+explain microservice architecture
+More on GCP cloud
+Explain your project management
+argocd, kuberneties
+what is the ORM used in the project?
+```
+
+
+
