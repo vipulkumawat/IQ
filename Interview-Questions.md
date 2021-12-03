@@ -22,6 +22,8 @@ More on GCP cloud
 Explain your project management
 argocd, kuberneties
 what is the ORM used in the project?
+Different design patterns used in microservices
+How your deployment process works?
 ```
 
 
