@@ -56,6 +56,6 @@ Difference between countdownlatch and cyclic barrier
 what is semaphore
 Difference between embeddable collection and oneToMany Relationship in hibernate
 How many ways u can implement oneToOne Relationship in hibernate
-
+Explain More Components u worked On Kuberneties and GCP 
 ```
 
