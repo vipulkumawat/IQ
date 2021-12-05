@@ -44,6 +44,7 @@ complexity of the stream operations u are performing
 Display HighestValue Products 
 Display total value of the products
 Write SpringBoot Application with above functionalities
+
 I have a kafka topic with parition size 5, Lets say I have a lag of 72 million. What u can do to improve the consumption and clear the lag.
 How hazelcast is different from redis
 how hazelcast is different interms of distributed caching
