@@ -65,13 +65,11 @@ Explain More Components u worked On Kuberneties and GCP
 
 ```
 dsalgo: find min no of steps needed to reach end of the list
-
-
 what are the features of java8
 what are the rules for writing functional interface
 can u give some inbuilt functional interfaces
 what are different design patterns u have implemented in your project
-what are different transaction states?
+what are different transaction states/stages?
 
 ```
 
@@ -90,3 +88,10 @@ what are different transaction states?
 ```
 
 **Paytm:**
+```
+```
+
+**Visa:**
+```
+```
+
