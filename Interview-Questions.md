@@ -129,3 +129,29 @@ In an undefined matrix where navigation is only through diagonally find whether 
 **Nike:**
 ```
 ```
+
+**LatentView:**
+```
+DF1: userId, userName
+DF2: userId, pageId, timestamp, eventType
+
+def calculate(sparkSession: SparkSession): Unit = {
+ val UserIdColName = "userId"
+ val UserNameColName = "userName"
+ val CountColName = "totalEventCount"
+
+ val userRdd: DataFrame = readUserData(sparkSession)
+ val userActivityRdd: DataFrame = readUserActivityData(sparkSession)
+
+
+ val result = userRdd
+   .repartition(col(UserIdColName))
+   .join(userActivityRdd.repartition(col(UserIdColName))
+   .select(col(UserNameColName))
+   .collect(Collectors.Map(Function.identity,Collectors.counting));
+
+ result.show()
+}
+
+
+```
