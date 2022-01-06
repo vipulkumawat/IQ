@@ -1,3 +1,5 @@
+
+```
 @Component:
 •	If we want Spring to create and manage objects, we can do so by adding the @Component annotation at the beginning of the class and importing org.springframework.stereotype.Component.
 
@@ -2235,7 +2237,7 @@ Adaptor
 Decorator
 Faced
 
-
+```
  
 
 
