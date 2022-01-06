@@ -113,10 +113,13 @@ what are different transaction states?
 
 **Zeta:**
 ```
+Find Illiterate villages that are a distance greater than d from given Literate village.
+In an undefined matrix where navigation is only through diagonally find whether u can reach from Point A to Pont B and A->B->C.
 ```
 
 **Paytm:**
 ```
+
 ```
 
 **Visa:**
