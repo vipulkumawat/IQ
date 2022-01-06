@@ -80,7 +80,7 @@ during  serialization and deserialization how u can implement custom encryption 
 
 what are the new features of java8
 what is predicate?
-what are functional interfaces? ex: predicate, 
+what are functional interfaces? ex: predicate, consumer,producer
 what are the rules for writing functional interface? what is the structure of functional interface?
 can u give some inbuilt functional interfaces
 What is difference between ClassNotFoundException and NoClassDefFoundError
