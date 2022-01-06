@@ -59,3 +59,33 @@ How many ways u can implement oneToOne Relationship in hibernate
 Explain More Components u worked On Kuberneties and GCP 
 ```
 
+
+
+**Algonomy:**
+
+```
+dsalgo: find min no of steps needed to reach end of the list
+
+
+what are the features of java8
+what are the rules for writing functional interface
+can u give some inbuilt functional interfaces
+what are different design patterns u have implemented in your project
+what are different transaction states?
+
+```
+
+
+**Target:**
+```
+
+```
+
+**Walmart:**
+```
+```
+
+**Zeta:**
+```
+```
+
