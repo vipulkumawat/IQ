@@ -102,14 +102,30 @@ what are different transaction states?
 
 ```
 
+AJIO:
+```
+First Round : Technical + DSAlgo
+
+
+```
+
 
 **Target:**
 ```
+First Round: DS Algo
+Second Round: Technical
+Third Round: Thechnical
+Fourth Round: Managerial Round
 
 ```
 
 **Walmart:**
 ```
+First Round: DSAlgo
+Second Round: Technical Round
+Third Round: Technical Round on Hazelcast
+Fourth Round: Director Round
+
 ```
 
 **Zeta:**
