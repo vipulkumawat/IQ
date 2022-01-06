@@ -64,12 +64,40 @@ Explain More Components u worked On Kuberneties and GCP
 **Algonomy:**
 
 ```
+Algonomy:
 dsalgo: find min no of steps needed to reach end of the list
-what are the features of java8
-what are the rules for writing functional interface
+given a 2d array, can u use javastreams to print all elements of the 2d array.
+
+what is ur approach to process million of records
+If my worker thread need to return some thing what u will do
+what is your worker thread ? it is runnable right, what is its return type? what is the return type of run method.
+
+what are different designpatterns u haved used
+what is builder design pattern
+what are different ways that u can break ur singleton design pattern?
+apart from deserialization and cloning process
+during  serialization and deserialization how u can implement custom encryption and decryption
+
+what are the new features of java8
+what is predicate?
+what are functional interfaces? ex: predicate, 
+what are the rules for writing functional interface? what is the structure of functional interface?
 can u give some inbuilt functional interfaces
-what are different design patterns u have implemented in your project
-what are different transaction states/stages?
+What is difference between ClassNotFoundException and NoClassDefFoundError
+ClassNotFoundException is an exception while NoClassDefFoundError is an error. ClassNotFoundException occurs when classpath does not get updated with required JAR files while error occurs when the required class definition is not present at runtime
+
+In springboot if I need to return both xml and json data what will u do?
+If I need to handle my exceptions at single place what u need to do ?
+are u aware of AOP? 
+
+From UI if multiple users try to modify same data how u can avoid it?
+what are different transaction states?
+
+
+
+
+
+
 
 ```
 
