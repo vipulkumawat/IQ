@@ -143,15 +143,19 @@ In an undefined matrix where navigation is only through diagonally find whether 
 
 **Paytm:**
 ```
+Online Coding Round
 
 ```
 
 **Visa:**
 ```
+Online Coding Round
 ```
 
 **Nike:**
 ```
+Exploratory Call
+
 ```
 
 **LatentView:**
