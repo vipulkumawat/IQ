@@ -109,6 +109,13 @@ First Round : Technical + DSAlgo
 
 ```
 
+**Snapdeal:**
+
+```
+Online Coding
+FirstRound: DsAlgo
+
+```
 
 **Target:**
 ```
