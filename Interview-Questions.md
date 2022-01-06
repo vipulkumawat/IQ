@@ -85,6 +85,7 @@ what are the rules for writing functional interface? what is the structure of fu
 can u give some inbuilt functional interfaces
 What is difference between ClassNotFoundException and NoClassDefFoundError
 ClassNotFoundException is an exception while NoClassDefFoundError is an error. ClassNotFoundException occurs when classpath does not get updated with required JAR files while error occurs when the required class definition is not present at runtime
+NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time.
 
 In springboot if I need to return both xml and json data what will u do?
 If I need to handle my exceptions at single place what u need to do ?
