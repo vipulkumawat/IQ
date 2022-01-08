@@ -105,6 +105,10 @@ Interpolation Search:
 Interpolation Search is an improvement over Binary Search for instances, where the values in a sorted array are uniformly distributed. Binary Search always goes to the middle element to check. On the other hand, interpolation search may go to different locations according to the value of the key being searched.  if the value of the key is closer to the last element, interpolation search is likely to start search toward the end side.
 
 
+Binary Search goes to the middle element to check irrespective of search-key. On the other hand, Interpolation Search may go to different locations according to search-key. If the value of the search-key is close to the last element, Interpolation Search is likely to start search toward the end side.
+
+
+
 exponential search: O(logN)
 Exponential search involves two steps:  
 Find range where element is present
