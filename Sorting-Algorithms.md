@@ -10,5 +10,17 @@ When all data that needs to be sorted cannot be placed in-memory at a time, the 
 When all data is placed in-memory, then sorting is called internal sorting.
 
 **Stability in sorting algorithms:**
+Stability is mainly important when we have key value pairs with duplicate keys possible 
+A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted.
+stability means that equivalent elements retain their relative positions, after sorting.
+Some Sorting Algorithms are stable by nature, such as Bubble Sort, Insertion Sort, Merge Sort, Count Sort etc.
+
+Quick Sort, Heap Sort etc., can be made stable by also taking the position of the elements into consideration. 
+
+Efficiency of an algorithm depends on two parameters:
+1. Time Complexity
+2. Space Complexity
+
+
 
 ```
