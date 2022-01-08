@@ -148,5 +148,10 @@ Binary Search uses a division operator to divide range. Fibonacci Search doesnâ€
 Fibonacci Search examines relatively closer elements in subsequent steps. So when the input array is big that cannot fit in CPU cache or even in RAM, Fibonacci Search can be useful.
 
 
+Why is Binary Search preferred over Ternary Search?
+Ternary Search does more comparisons than Binary Search in worst case.
+https://www.geeksforgeeks.org/binary-search-preferred-ternary-search/
+
+
 
 
