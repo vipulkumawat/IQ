@@ -129,3 +129,7 @@ It works better than Binary Search for bounded arrays, and also when the element
 
 
 ```
+SublistSearch: Timecomplexity: O(m*n) where m is the number of nodes in second list and n in first
+
+
+
