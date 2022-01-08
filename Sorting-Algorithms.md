@@ -73,5 +73,27 @@ Worst case occurs when array is reverse sorted
                 break;
         }
     }
+
+    private static void bubbleSortRec(int[] arr,int n){
+
+        if(n==1)
+            return;
+        int temp=0;
+        boolean swapped=true;
+        for(int i=0;i<n-1;i++){
+            if(arr[i]>arr[i+1]){
+                temp=arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=temp;
+                swapped=false;
+            }
+        }
+
+        if(swapped)
+            return;
+        bubbleSort(arr,n-1);
+    }
+
 ```
+
 
