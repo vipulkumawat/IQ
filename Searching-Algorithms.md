@@ -89,3 +89,38 @@ Bitwise binary search:
         return -1;
     }
 ```
+
+
+Jump Search:  basic idea is to check fewer elements (than linear search) by jumping ahead by fixed steps or skipping some elements in place of searching all elements.What is the optimal block size to be skipped? 
+In the worst case, we have to do n/m jumps and if the last checked value is greater than the element to be searched for, we perform m-1 comparisons more for linear search. Therefore the total number of comparisons in the worst case will be ((n/m) + m-1). The value of the function ((n/m) + m-1) will be minimum when m = √n
+Important points: 
+ 
+
+Works only sorted arrays.
+The optimal size of a block to be jumped is (√ n). This makes the time complexity of Jump Search O(√ n).
+The time complexity of Jump Search is between Linear Search ( ( O(n) ) and Binary Search ( O (Log n) ).
+Binary Search is better than Jump Search, but Jump search has an advantage that we traverse back only once (Binary Search may require up to O(Log n) jumps, consider a situation where the element to be searched is the smallest element or just bigger than the smallest). So in a system where binary search is costly, we use Jump Search.
+
+Interpolation Search:
+Interpolation Search is an improvement over Binary Search for instances, where the values in a sorted array are uniformly distributed. Binary Search always goes to the middle element to check. On the other hand, interpolation search may go to different locations according to the value of the key being searched.  if the value of the key is closer to the last element, interpolation search is likely to start search toward the end side.
+
+
+exponential search: O(logN)
+Exponential search involves two steps:  
+Find range where element is present
+Do Binary Search in above found range.
+Applications of Exponential Search: 
+
+Exponential Binary Search is particularly useful for unbounded searches, where size of array is infinite. 
+It works better than Binary Search for bounded arrays, and also when the element to be searched is closer to the first element.
+
+
+
+
+
+
+
+```
+
+
+```
