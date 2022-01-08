@@ -49,7 +49,29 @@ In every iteration of selection sort, the minimum element (considering ascending
             }
         }
     }
-
-
-
 ```
+
+**BubbleSort:**
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+Best case occurs when array is already sorted.
+Worst case occurs when array is reverse sorted
+```
+    private static void bubbleSort(int[] arr,int n){
+        boolean swapped=true;
+        int temp=-1;
+        for(int i=0;i<n-1;i++){
+            swapped=true;
+            for(int j=0;j<n-1-i;j++){
+                if(arr[j]>arr[j+1]){
+                    temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                    swapped=false;
+                }
+            }
+            if(swapped)
+                break;
+        }
+    }
+```
+
