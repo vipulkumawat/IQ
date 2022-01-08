@@ -59,3 +59,33 @@ Binary Search: Search a sorted array by repeatedly dividing the search interval 
 ```
 
 Bitwise binary search:
+
+
+```
+    static int bitwiseBinarySearch(int[] arr,int target){
+
+        int index,power;
+
+        // Compute the first power of 2 that is >= size
+        for(power=1;power<arr.length;power<<=1);
+
+        // loop while(power > 0)
+        // and divide power by two each iteration
+        for(index=0;power>0;power>>=1){
+
+            // if the next condition is true
+            // it means that the power value can
+            // contribute to the "sum"(a closer index where target might be)
+            if(index+power<arr.length && arr[index+power]<=target)
+                index+=power;
+        }
+
+        // if the element at position [index] == target,
+        // the target value is present in the array
+        if(arr[index]==target)
+            return index;
+
+        // else the value is not present in the array
+        return -1;
+    }
+```
