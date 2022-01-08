@@ -99,10 +99,21 @@ Worst case occurs when array is reverse sorted
 ```
 Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
 
-**MergeSort:**
-```
-```
 
+```
+**MergeSort:**
+
+```
+ It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. The merge() function is used for merging two halves.  The merge(arr, l, m, r) is a key process that assumes that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one.
+Applications of Merge Sort:
+Merge Sort is useful for sorting linked lists in O(nLogn) time. 
+Inversion Count Problem
+Used in External Sorting
+Drawbacks of Merge Sort
+
+Slower comparative to the other sort algorithms for smaller tasks.
+Merge sort algorithm requires an additional memory space of 0(n) for the temporary array.
+It goes through the whole process even if the array is sorted.
 
 ```
 
