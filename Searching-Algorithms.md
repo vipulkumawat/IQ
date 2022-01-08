@@ -114,13 +114,18 @@ Applications of Exponential Search:
 Exponential Binary Search is particularly useful for unbounded searches, where size of array is infinite. 
 It works better than Binary Search for bounded arrays, and also when the element to be searched is closer to the first element.
 
-
-
-
-
-
-
 ```
+ static int exponentialSearch(int[] arr,int x){
+
+        if(arr[0]==x)
+            return 0;
+        int i=1;
+        while(i<arr.length && arr[i]<=x)
+            i=i*2;
+
+        return Arrays.binarySearch(arr,i/2,Math.min(i,arr.length-1),x);
+        
+    }
 
 
 ```
