@@ -177,5 +177,9 @@ It goes through the whole process even if the array is sorted.
     }
 
 ```
+**QuickSort:**
+```
+
+```
 
 
