@@ -131,5 +131,18 @@ It works better than Binary Search for bounded arrays, and also when the element
 ```
 SublistSearch: Timecomplexity: O(m*n) where m is the number of nodes in second list and n in first
 
+Fibonacci Search: Fibonacci Search is a comparison-based technique that uses Fibonacci numbers to search an element in a sorted array.
+Similarities with Binary Search:  
+Works for sorted arrays
+A Divide and Conquer Algorithm.
+Has Log n time complexity.
+
+Differences with Binary Search: 
+
+Fibonacci Search divides given array into unequal parts
+Binary Search uses a division operator to divide range. Fibonacci Search doesn’t use /, but uses + and -. The division operator may be costly on some CPUs.
+Fibonacci Search examines relatively closer elements in subsequent steps. So when the input array is big that cannot fit in CPU cache or even in RAM, Fibonacci Search can be useful.
+
+
 
 
