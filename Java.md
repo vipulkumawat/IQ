@@ -26,3 +26,40 @@ When the requirement is fetch data frequently and adding data is not so frequent
 When not to use ArrayList
 When the list is updated frequently
 ```
+
+**LinkedList:**
+```
+Linked List
+Ordered
+As opposed to ArrayList, LinkedList does not store elements in a array. Linked List is a actually a collection of objects linked together using a reference to each other. So in assence a java.util.LinkedList is a Doubly Linked List.
+
+add(E element )
+ Every Time we call add(var);  a new instance of 'Entry' class is created and attached at the end of the list.
+ 
+add(var, position)
+Inserts the specified element at the specified position in this list.
+Shifts the element currently at that position (if any) and any subsequent elements to the right. This is not as fast as ArrayList.
+ 
+get(int index)
+It iterates through the list and returns the element. This is very expensive and time consuming as opposed to ArraList.get(int index)
+
+When to use LinkedList
+When the elements are getting added and removed frequently.
+ 
+When not to use LinkedList
+When you want to access or fetch a element by index.
+```
+
+**Map:**
+```
+Map:
+ Map is a special collection provided by Java. It helps to find a added element quickly.
+Map allows you to add 2 elements. One called as key and the other as value
+The logic to save and fetch a value is based upon the key.
+
+```
+
+**HashMap:**
+```
+
+```
