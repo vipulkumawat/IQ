@@ -81,5 +81,25 @@ DEFAULT_INITIAL_CAPACITY = 16;
 
 **TreeMap:**
 ```
+TreeMap:
+Sorted
+TreeMap is a structure which is designed to work as a Red - Black - Tree. Here each node has only two child nodes and the insertion is a tree happens same as the insertion strategy of Java Binary Search Tree 
+
+The Tree Map has Key and Value in the node, while the BST only has the value.
+
+
+So the elements in a TreeMap are always sorted.
+The elements added is a TreeMap should implement comparable and provide implementation of compareTo method. On the basis of this TreeMap decides wether the node is smaller or greater than other node. If Comparable is not implemented, a class which is Comparator should be passed in the constructor of TreeMap. If both Comparable and Comparator are present TreeMap uses Comparator implementation.
+
+TreeMap internally maintains a List of Nodes with each node being a Entry<K,V> class which is actually a implementation of Map.Entry<K,V> interface.
+
+When we use put(K,V) method it checks if root is pointing anywhere if no it makes the instance of Entry<K,V> and point to root;
+The constructor of Entry<K,V> takes key, value and parent. In this case parent is null;
+For the next time we enter something using put(K,V) it first identifies the comparison mechanism to use. First it check the Comparator class is present or not . This class is passed when creating the instance of TreeMap. If not present it uses the Key's Comparable implementation.
+It then traverse through root and compares each node with the node entered and depending upon the comparison places the node either left or right of the parent node.
+```
+
+**Set:**
+```
 
 ```
