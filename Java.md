@@ -101,5 +101,10 @@ It then traverse through root and compares each node with the node entered and d
 
 **Set:**
 ```
+that can not contain duplicate values. So if we want to have a unique collection, Set is the obvious choice.
+```
+
+**HashSet:**
+```
 
 ```
