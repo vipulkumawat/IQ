@@ -10,7 +10,7 @@ That means it is a ordered Collection.
 Sets : Unique things ( Classes that implement Set Interface)
 Maps : Things with unique id ( Classes that implement Map Interface)
 Queues : Things arranged in order ( Classes that implement Queue Interface)
-
+```
 **ArrayList:**
 ```
 ArrayList: works on the principle of creating a array and adding elements to it.ArrayList is dynamic sized array. add(E element)
