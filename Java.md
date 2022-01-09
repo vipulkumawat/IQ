@@ -141,3 +141,5 @@ Ordered
 LinkedHashSet extends HashSet that means it is a HashMap without duplicates. But the difference here with HashSet is that LinkedHashSet is ordered.
 It uses a Doubly Linked List that runs through the Set holding the order together.
 ```
+http://www.java-redefined.com/2013/08/java-collections-internal-working.html
+
