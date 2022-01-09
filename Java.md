@@ -61,5 +61,25 @@ The logic to save and fetch a value is based upon the key.
 
 **HashMap:**
 ```
+HashMap
+HashMap works on the principal of hashing. It stores values in the form of key-value pair and to access a value you need to provide the key.
+HashMap is basically a 2 dimensional Singly Linked List. It can grow in both directions.
+For efficient use of HashMap the 'key' element should implement equals() and hashcode() method. equals() method define that two objects are meaningfully equal. hashcode() helps HashMap to arrange elements separately in a bucket. So elements with same hascode are kept in the same bucket together.
+All elements that are stored horizontally are said to be in the same bucket.
+So when we want to fetch a element using get(K key), HashMap first identifies the bucket in which all elements of the same hascode as the hashcode of the 'key' passed are present. Now since it knows the bucket, it will only have to traverse through that bucket to fetch the actual object.
+
+Then it uses the equals() method to identify the actual object present in the bucket.
+
+For fast access to a value HashMap places a element (both key and value) in a SinglyLinkedList(Bucket). All the elements that have the same hascode are placed in the same SinglyLinkedList. The number of SinglyLinkedList(buckets) depends upon how many objects are present with different hashcode. To hold these buckets together a array is used. The size of the array is initially defined to 12. And it changes as new elements with different hascodes are added
+
+HashMap also has some more variables which define the initial size of the array.
+
+DEFAULT_LOAD_FACTOR = 0.75f;
+DEFAULT_INITIAL_CAPACITY = 16;
+
+```
+
+**TreeMap:**
+```
 
 ```
