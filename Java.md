@@ -106,5 +106,38 @@ that can not contain duplicate values. So if we want to have a unique collection
 
 **HashSet:**
 ```
+Non Duplicate
+Un-Ordered
+Hashset is a special case
+HashSet internally uses HashMap. Yes thats true.
+HashSet has a instance variable called 'map' which is a instance of HashMap
 
+
+add(E element)
+When we add a value in Hashset, Hashset internally adds a value in 'map' by calling put(E,o);
+where E that is the key is the element passed in add(E element) of HashSet and 'o' as the value which is a dummy Object creted by doing Object o = new Object; which is common for all key's entered in HashMap 'map'.
+HashSet internally checks wether the Key that is 'element' is already present by calling the equals method of 'element'.
+This method returns false if the Key is already present in HashMap.
+
+```
+
+**TreeSet:**
+```
+Non Duplicate
+Sorted
+Like HashSet uses HashMap internally, TreeSet uses TreeMap internally. TreeSet ensures that elements added are not duplicate and they are sorted. Sorting is done using TreeMap.
+
+add(E element)
+When we add a value in TreeSet, TreeSet internally adds a value in 'map' by calling put(E,o);
+where E that is the key is the element passed in add(E element) of TreeSetand 'o' as the value which is a dummy Object creted by doing Object o = new Object; which is common for all key's entered in TreeMap 'map'.
+TreeSet internally checks wether the Key that is 'element' is already present by calling the equals method of 'element'.
+This method returns false if the Key is already present in TreeMap.
+```
+
+**LinkedHashSet:**
+```
+Non Duplicate
+Ordered
+LinkedHashSet extends HashSet that means it is a HashMap without duplicates. But the difference here with HashSet is that LinkedHashSet is ordered.
+It uses a Doubly Linked List that runs through the Set holding the order together.
 ```
