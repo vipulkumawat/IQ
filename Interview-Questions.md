@@ -216,5 +216,12 @@ If I need to maintain the order of events in kafka?
 How do u ensure u are hazelcast is updated along with cassandra ?
 
 39:50sec
-
+What is the cache update strategy you are using in your application?
+Until it is updated to cache we are having inconsitency with hazelcast, how u can handle it?
+How do u maintain a distributed transaction across microservices ?
+what is a transaction?
+How do u ensure a transaction is successful?
+How do u do internal communication between microservices?
+using feign client in communication is synchrous, how can u do asynchronous communication between different microservices?
+If any of the service is down or causing a delay and causing cascading failures in microservices, how u can avoid this cascading failure?
 ```
