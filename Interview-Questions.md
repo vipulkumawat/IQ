@@ -194,3 +194,27 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 
 ```
+
+**DeltaAirlines:**
+```
+how do u define the no of partitions for a topic?
+why did u use kafka streams, why not other database for aggregations ?
+are u using kafka internal rocks db or some external rocksdb?
+talk about producer and consumer configurations u used in kafka?
+within the topic how u will do parallel processing?
+how do u control the speed of processing in kafka?
+why do u need partitions?
+what is the partition strategy, how do u decide how many consumers are required?
+if ur consumer is suddenly down how do u ensure ur consumed message is processed successfully and how u have not lost any message either at producer or consumer end ?
+how do u know or application or kafka knows when service is down the consumed message is not lost, how do u gaurantee it.
+how ur application knows messages are produced successfully to kafka?
+how do u ensure u are storing data successfully when application goes down suddenly?
+I have two consumers, I want to consumer same message at two different consumer how u can do that?
+when the consumer is down and comes back online how can I ensure my consumer is consuming the lag data. offset.reset set to earliest option
+when happens when a kafka consumer goes down? does rebalancing and assings the partition to a different consumer.
+If I need to maintain the order of events in kafka?
+How do u ensure u are hazelcast is updated along with cassandra ?
+
+39:50sec
+
+```
