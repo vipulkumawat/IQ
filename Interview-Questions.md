@@ -120,6 +120,9 @@ FirstRound: DsAlgo
 **Target:**
 ```
 First Round: DS Algo
+Two Arrays of Size n and m with distinct elements with non repeated element, find all possible pairs from numbers from both arrays, whose sum is x.
+arr1[]={8,7,3,11,6} arr2={12,6,5,7,9,13} x=14, so possible pairs={8,6} {7,7}
+
 Second Round: Technical
 Third Round: Thechnical
 Fourth Round: Managerial Round
