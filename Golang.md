@@ -21,3 +21,4 @@ Support for pointer arithmetic
 Support for assertions
 Support for generic programming
 ```
+https://www.tutorialspoint.com/go/go_environment.htm
