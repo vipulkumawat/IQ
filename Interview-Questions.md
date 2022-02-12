@@ -228,3 +228,16 @@ How do u do internal communication between microservices?
 using feign client in communication is synchrous, how can u do asynchronous communication between different microservices?
 If any of the service is down or causing a delay and causing cascading failures in microservices, how u can avoid this cascading failure?
 ```
+**StockX:**
+``` 
+what are disadvantages of microservices
+if there is a change of data in database, how will microservices know the change
+if second microservice is down how you will handle request the request coming via first microservice
+how much tps your application is handling
+how you are handling autoscaling in your application 
+if there is sudden increase of traffic and if your pod takes some time to spinup how you will handle the scenario
+why do you choose cassandra in your application not rdbms
+what are different criteria's to consider for designing microservice
+What is idempotence and which http headers are idempotent
+If a customer tries to place an order twice through post api... How u  can avoid it
+```
