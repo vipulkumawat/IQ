@@ -74,6 +74,13 @@ For fast access to a value HashMap places a element (both key and value) in a Si
 
 HashMap also has some more variables which define the initial size of the array.
 
+Buckets
+
+A bucket is one element of HashMap array. It is used to store nodes. Two or more nodes can have the same bucket. In that case link list structure is used to connect the nodes. Buckets are different in capacity. A relation between bucket and capacity is as follows: 
+ 
+
+capacity = number of buckets * load factor
+
 DEFAULT_LOAD_FACTOR = 0.75f;
 DEFAULT_INITIAL_CAPACITY = 16;
 
