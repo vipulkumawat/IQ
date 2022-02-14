@@ -244,3 +244,8 @@ Decorator: Widely used structural pattern, it adds dynamically the functionality
 
 
 
+Command Pattern:
+https://www.baeldung.com/java-replace-if-statements
+
+
+
