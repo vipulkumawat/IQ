@@ -248,4 +248,6 @@ Command Pattern:
 https://www.baeldung.com/java-replace-if-statements
 
 
+How to make post request fault tolerant and idempotent:
+https://medium.com/@saurav200892/how-to-achieve-idempotency-in-post-method-d88d7b08fcdd
 
