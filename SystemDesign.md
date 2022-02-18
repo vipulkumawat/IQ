@@ -17,3 +17,9 @@ Book My Show LLD
 https://www.youtube.com/watch?v=7LaKmNfMCAo
 
 ```
+```
+Hotel Booking System
+https://www.gohired.in/2020/02/03/system-design-designing-a-lld-for-hotel-booking/
+
+
+```
