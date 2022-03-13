@@ -362,3 +362,17 @@ https://www.geeksforgeeks.org/combinations-strings-can-used-dial-given-phone-num
 
 
 ```
+
+**Cleartrip:**
+```
+Q1:https://leetcode.com/problems/car-pooling/
+Q2: if there are events with below data:
+User_id, timestamp, score
+U1        12:00    2
+U2        13:00    3
+U1        13:02    2
+U3        14:03    4
+
+If you are provided dynamically a duration like past 30 minutes or past 1 hr. Can you tell me how you will get the score for that past duration
+
+```
