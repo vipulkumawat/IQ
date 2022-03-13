@@ -241,3 +241,124 @@ what are different criteria's to consider for designing microservice
 What is idempotence and which http headers are idempotent
 If a customer tries to place an order twice through post api... How u  can avoid it
 ```
+
+
+**Paypal:**
+```
+https://leetcode.com/discuss/interview-question/1194238/paypal-max-tasks-that-can-be-completed-in-given-budget
+https://leetcode.com/discuss/interview-question/1331054/paypal-oa-se-ii-se-iii
+
+https://www.hackerearth.com/problem/algorithm/beautiful-numbers-05de0f51-101121ca/
+sol:
+public class TestClass {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter wr = new PrintWriter(System.out);
+        int T = Integer.parseInt(br.readLine().trim());
+                long[] preProcessArray = preProcess();
+        for(int t_i = 0; t_i < T; t_i++)
+        {
+            String[] str = br.readLine().split(" ");
+            int l = Integer.parseInt(str[0]);
+            int r = Integer.parseInt(str[1]);
+            wr.write(preProcessArray[r]-preProcessArray[l-1]+"\n");
+            
+         }
+
+         wr.close();
+         br.close();
+    }
+
+    static boolean check(int u) {
+        int cnt = 40;
+        while (cnt > 0 && u!=4) {
+            int ans = 0;
+            while (u > 0) {
+                ans += (u%10)*(u%10);
+                u /= 10;
+            }
+            u = ans;
+            cnt--;
+            if (u==1) {return true;}
+        }
+        return false;
+    }
+
+    static long[] preProcess() {
+        long[] preProcessArray = new long[1000005];
+        for (int i=1;i<=1000000;i++) {
+            if (check(i)) {
+                preProcessArray[i] = i;
+            }
+        }
+
+        for (int i=1;i<=1000000;i++) {
+            preProcessArray[i] += preProcessArray[i-1];
+        }
+        return preProcessArray;
+    }
+}
+
+
+https://leetcode.com/discuss/interview-question/1194238/paypal-max-tasks-that-can-be-completed-in-given-budget
+static int solve(int n, int t, int[][] task){
+   PriorityQueue<Integer> pQueue= new PriorityQueue<>(Collections.reverseOrder());
+   Arrays.sort(task,Comparator.comparingInt(o->o[0]));
+   int pQueueSum=0;
+   int max=0;
+   for(int i=0;i<n;i++){
+       int totalTime =t;
+       int distance = 2*task[i][0];
+       int remainingTime=totalTime-distance;
+       int currEffort=task[i][1];
+       if(remainingTime<0){
+           break;
+       }
+       while(pQueueSum>remainingTime){
+           pQueueSum-=pQueue.poll();
+       }
+       if(pQueue.isEmpty()&&remainingTime>currEffort){
+         pQueue.add(currEffort);
+         pQueueSum+=currEffort;  
+       }
+       else if(pQueueSum+currEffort<=remainingTime){
+           pQueue.add(currEffort);
+           pQueueSum+=currEffort;
+       }
+       else{
+           Integer currMax=pQueue.peek();
+           if(currMax != null && currMax>currEffort){
+               pQueue.poll();
+               pQueue.add(currEffort);
+               pQueueSum=pQueueSum-currMax+currEffort;
+           }
+       }
+       max=Math.max(max,pQueue.size());
+   }
+return max;
+}
+
+
+Paypal
+Q1:
+given a mapping={"0","1","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"}
+
+number=23
+result: ad, ae,af, bd,be,bf,cd,ce,cf
+
+number=1
+result=1
+number=21
+result= a1,b1,c1
+
+number = 8909
+result=tw0w,tw0x,tw0y,tw0z,tx0w,...
+
+Q2: we have browserhistory and size of results you need to return.
+LRU cache implementation
+
+https://www.geeksforgeeks.org/combinations-strings-can-used-dial-given-phone-number/
+
+
+```
