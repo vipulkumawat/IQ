@@ -402,9 +402,7 @@ If you are provided dynamically a duration like past 30 minutes or past 1 hr. Ca
 **Paytm:**
 ```
 ```
-**Walmart:**
-```
-```
+
 **Amazon:**
 ```
 ```
