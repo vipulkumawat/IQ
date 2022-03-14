@@ -313,6 +313,23 @@ why do you choose cassandra in your application not rdbms
 what are different criteria's to consider for designing microservice
 What is idempotence and which http headers are idempotent
 If a customer tries to place an order twice through post api... How u  can avoid it
+
+round1: cache implemenation
+LFU Cache implemenation
+
+round2: system design
+At StockX, we have a catalog of products. On any of these products, you can place a bid (which indicates
+that you’re willing to buy at a certain price) or an ask (which indicates that you’re willing to sell at a certain
+price). Let’s imagine that we somehow didn’t have the endpoint that allows you to place bids. I’d like you
+to design that for me.
+
+1. Bidding – at what price a buyer is willing to pay
+2. Selling- at what price a seller is ready to sell
+
+
+round3:
+Cultural fitness round
+
 ```
 
 
