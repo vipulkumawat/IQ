@@ -96,6 +96,15 @@ what are different transaction states?
 
 
 
+round2:
+tell me how is your day to day life
+where you stand in your team
+give me one problem statement which you solved or in your career you have collabaratively solved the problem
+explain what is the problem and how you solved it
+when we have autoscaling how logs are captured?
+keeping logging as different microservice..have you ever used it?
+is central log microservice which can capture all logs, microservice focus on business logic and not worried about the logging queue.
+do you see any problem with central logging microservice 
 
 
 
@@ -391,9 +400,6 @@ If you are provided dynamically a duration like past 30 minutes or past 1 hr. Ca
 ```
 ```
 **SalesForce:**
-```
-```
-**Algonomy:**
 ```
 ```
 **Epsilon:**
