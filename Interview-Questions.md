@@ -108,7 +108,11 @@ https://www.geeksforgeeks.org/supplier-interface-in-java-with-examples/
 what are the design patterns you have used?
 what is use of builder design pattern?
 to provide a flexible solution to various object creation problems in object-oriented programming. The intent of the Builder design pattern is to separate the construction of a complex object from its representation.
-
+If you don't want to seralize a variable then what you can use? if I want to do encrypt/decrypt during seralization and deseralization, what we can do?
+In spring boot if I need to use central exception handling what we can do?
+what are checked and unchecked exceptions?
+class not found and no class defination error ?
+https://dzone.com/articles/java-classnotfoundexception-vs-noclassdeffounderro#:~:text=ClassNotFoundException%20is%20an%20exception%20that,was%20missing%20at%20run%20time.
 
 
 
@@ -583,6 +587,63 @@ public static void main(String... args){
 
 
 round2:
+ Q1.
+public class Test implements Runnable{
+
+
+public void run(){
+sysout("test");
+}
+
+public static void main(String... args){
+
+Thread t1=new Thread(new Test());
+t1.start();
+t1.start();
+sopln(t1.getState());
+
+}
+}
+
+Q2.
+class MyThread extends Thread{
+
+	public void run(){
+		s.o.pln("run");
+	}
+
+	public void start(){
+		s.o.pln("start");
+	}
+}
+
+class Test{
+
+	psvm(String... args){
+	s.o.pln("mainStarted");
+	MyThread t1=new MyThread();
+	t1.start();
+	s.o.pln("main has ended");
+	}
+}
+
+Q3.
+if there is a transaction to be happened
+(a,b,10)
+(b,a,20)
+what are the issues that needs to be taken care and can you write some sudo code
+ Q4.
+write query to find duplicate records
+Q5.
+delete duplicate records from table
+ Q6.
+
+static int getCount(){
+
+static int i=0;
+return ++i;
+}
+any issue with the code
 
 ```
 
