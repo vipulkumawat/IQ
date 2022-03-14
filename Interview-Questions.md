@@ -110,7 +110,49 @@ when we have autoscaling how logs are captured?
 keeping logging as different microservice..have you ever used it?
 is central log microservice which can capture all logs, microservice focus on business logic and not worried about the logging queue.
 do you see any problem with central logging microservice 
+explain how log4j or slf4j works internally? why there is a need for separate framework, how you are getting benefitted from it and how it works?
+can you explain how your sprint works, bascially what you do in the sprint ?
 
+public class Algonomy {
+    private static int number;
+    private static boolean ready;
+    private static class Tester extends Thread {
+        @Override
+        public void run() {
+            while (!ready) {
+                Thread.yield();
+            }
+            System.out.println(number);
+        }
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(4);
+        list.add(2);
+        list.add(1);
+        list.add(0);
+        list.add(3);
+       list.remove(Integer.parseInt("4"));  
+        System.out.println(list);
+
+        new Tester().start();
+        //number = 2;
+        number = 4001;
+        ready = true;
+
+    }
+}
+O/p: what is the output?
+// will output changes if we run it 10k times...we will get 4001 always or different output?
+
+
+String exp= "((1+2)*(8-6))+4";
+//solve the expression and give result with java code without using stacks
+https://www.geeksforgeeks.org/stack-set-4-evaluation-postfix-expression/
+https://www.tutorialcup.com/interview/stack/expression-evaluation.htm
+
+what services you hav 
 
 
 
