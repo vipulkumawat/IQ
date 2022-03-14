@@ -96,8 +96,22 @@ what are different transaction states?
 
 
 Algonomy round1:
-Single Linked list methods implementation
-Find Min depth of the binary tree
+Single Linked list methods implementation: push,delete,traverse
+write program to Find Minimum depth of the binary tree
+In java how you can handle mutual exclusion scenario? means it should not be shared across multiple threads, if there is critical sections should not be shared across multiple threads? 
+we can use synchronized. what does it happen really in the background with synchronized?
+difference between wait and sleep method?
+https://www.geeksforgeeks.org/difference-between-wait-and-sleep-in-java/
+what is predicate in java?
+what is supplier and how it is different from predicate? what are its usecases?
+https://www.geeksforgeeks.org/supplier-interface-in-java-with-examples/
+what are the design patterns you have used?
+what is use of builder design pattern?
+to provide a flexible solution to various object creation problems in object-oriented programming. The intent of the Builder design pattern is to separate the construction of a complex object from its representation.
+
+
+
+
 
 
 
@@ -152,7 +166,10 @@ String exp= "((1+2)*(8-6))+4";
 https://www.geeksforgeeks.org/stack-set-4-evaluation-postfix-expression/
 https://www.tutorialcup.com/interview/stack/expression-evaluation.htm
 
-what services you hav 
+what services you have used in AWS?
+what sort of queries you have used in elastic search?
+what is the max amount of data you have worked on and how much time it took to consume it in your microservice?
+
 
 
 
