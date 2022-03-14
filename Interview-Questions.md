@@ -484,6 +484,16 @@ design inventory management system
 
 **Cargill:**
 ```
+round1
+Design library management system
+
+Round2
+Questions on spring boot and rest apis
+
+Round3
+Question on what challenges you faced and techstack related questions... More on current project architecture
+
+
 ```
 **Oracle:**
 ```
@@ -496,6 +506,83 @@ design inventory management system
 **SalesForce:**
 ```
 
+round1:
+
+ 2. Fix the code issue with Roman to Integer conversion
+3. Exception handling code output
+ 4. Foo bar program output
+5. what is the best way to find length of last word in the given string
+ public static void main(String[] args) {
+        int a,b,c,d,f,g,x;
+        x=1;
+        a=b=c=d=f=g=0;
+        try{
+            try{
+                switch (x){
+                    case 1:
+                        throw new Ex1();
+
+                    case 2:
+                        throw new Ex2();
+
+                    case 3:
+                        throw new Ex3();
+                }
+                a++;
+            }catch (Ex2 ex){
+                b++;
+            }finally {
+                c++;
+            }
+        }catch(Ex1 ex){
+            d++;
+        }catch(Exception e){
+            f++;
+        }finally {
+            g++;
+        }
+        System.out.println(a+","+b+","+c+","+d+","+f+","+g);
+    }
+what is the output of above code ?
+ interface iFoo{
+    void func();
+}
+
+class Foo implements iFoo{
+    public void func(){
+        System.out.println("Foo");
+    }
+}
+class Bar extends Foo implements iFoo{
+    public void func(){
+        System.out.println("Bar");
+    }
+
+    public void bfunc(){
+        System.out.println("barFunc");
+    }
+
+public static void main(String... args){
+    Foo f=new Foo();
+        f.func();//
+
+        iFoo i=f;
+        i.func();//
+
+        Bar b=new Bar();
+        b.func();//
+
+        ((Foo)b).func();//
+        ((Foo)b).bfunc();//
+        f=b;
+        f.func();//
+
+        i.func();//
+}
+}
+
+
+round2:
 
 ```
 
