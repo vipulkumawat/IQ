@@ -95,6 +95,11 @@ From UI if multiple users try to modify same data how u can avoid it?
 what are different transaction states?
 
 
+Algonomy round1:
+Single Linked list methods implementation
+Find Min depth of the binary tree
+
+
 
 round2:
 tell me how is your day to day life
@@ -388,6 +393,17 @@ If you are provided dynamically a duration like past 30 minutes or past 1 hr. Ca
 
 **ServiceNow:**
 ```
+Round1:
+Top View Of the tree
+print possible words from string -    hellojavaworld
+Find Kth Max element of the in the list of elements
+Define cap theorum and explain with examples
+
+round2: 
+rotate matrix elements by  90 degrees
+design inventory management system
+
+
 ```
 
 **Cargill:**
@@ -398,10 +414,15 @@ If you are provided dynamically a duration like past 30 minutes or past 1 hr. Ca
 ```
 **HPE:**
 ```
+
 ```
+
 **SalesForce:**
 ```
+
+
 ```
+
 **Epsilon:**
 ```
 ```
