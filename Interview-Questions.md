@@ -1,6 +1,3 @@
-
-
-
 **Coforge:**
 ```
 Scalability and Elasticity: 
@@ -13,7 +10,6 @@ what is jdk, jre, jvm
 How do u clear cache in spark
 what are packages in java
 ```
-
 **MineralTree:**
 ```
 What design patterns u used in application and how u implemented them in the project
@@ -25,7 +21,6 @@ what is the ORM used in the project?
 Different design patterns used in microservices
 How your deployment process works?
 ```
-
 **Reshamandi**
 ```
 customer,productName,qty,pricePerQty
@@ -59,10 +54,7 @@ How many ways u can implement oneToOne Relationship in hibernate
 Explain More Components u worked On Kuberneties and GCP 
 ```
 
-
-
 **Algonomy:**
-
 ```
 Algonomy:
 dsalgo: find min no of steps needed to reach end of the list
@@ -174,20 +166,13 @@ what services you have used in AWS?
 what sort of queries you have used in elastic search?
 what is the max amount of data you have worked on and how much time it took to consume it in your microservice?
 
-
-
-
 ```
-
 AJIO:
 ```
 First Round : Technical + DSAlgo
 
-
 ```
-
 **Snapdeal:**
-
 ```
 Online Coding
 FirstRound: DsAlgo
@@ -739,28 +724,21 @@ any issue with the code
 **quizzizz:**
 ```
 ```
-
 **Devon:**
 ```
 ```
-
 **vmware:**
 ```
 ```
-
 **Koreai:**
 ```
 ```
-
 **byjus:**
 ```
 ```
-
 **banyan data services:**
 ```
 ```
-
-
-
-
-
+**Decimal Technology:**
+```
+```
