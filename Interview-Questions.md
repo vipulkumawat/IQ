@@ -474,7 +474,10 @@ design inventory management system
 **Cargill:**
 ```
 round1
-Design library management system
+what are ER diagrams, class diagrams, sequence diagrams
+Library management system system design
+how do you decide which database to use?
+what are different design patterns you have used?
 
 Round2
 Questions on spring boot and rest apis
