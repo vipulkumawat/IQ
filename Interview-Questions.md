@@ -773,6 +773,46 @@ Each node in the tree has:
 
 https://www.geeksforgeeks.org/treemap-in-java/
 
+what is hashmap:
+provides the basic implementation of the Map interface of Java.
+HashMap is similar to HashTable, but it is unsynchronized. It allows to store the null keys as well, but there should be only one null key object and there can be any number of null values.  This class makes no guarantees as to the order of the map.
+HashMap implements Serializable, Cloneable, Map<K, V> interfaces. HashMap extends AbstractMap<K, V> class. The direct subclasses are LinkedHashMap, PrinterStateReasons.
+initial capacity of 16 and load factor of 0.75. the insertion order is not retained in the Hashmap. Internally, for every element, a separate hash is generated and the elements are indexed based on this hash to make it more efficient.
+HashMap uses a technique called Hashing. Hashing is a technique of converting a large String to small String that represents the same String. A shorter value helps in indexing and faster searches. HashSet also uses HashMap internally.
+HashMap allows null key also but only once and multiple null values.
+This class makes no guarantees as to the order of the map; in particular, it does not guarantee that the order will remain constant over time. It is roughly similar to HashTable but is unsynchronized.
+
+
+Internal Structure of HashMap
+Internally HashMap contains an array of Node and a node is represented as a class that contains 4 fields: 
+
+int hash
+K key
+V value
+Node next
+It can be seen that the node is containing a reference to its own object. So it’s a linked list.
+
+Performance of HashMap:
+Initial Capacity
+LoadFactor
+Threshold=InitialCapacity*loadFactor,rehashing takes place after meeting threshold no of keys
+Rehashing: the process of doubling the capacity of the HashMap after it reaches its Threshold.
+If the initial capacity is kept higher then rehashing will never be done. But by keeping it higher increases the time complexity of iteration. So it should be chosen very cleverly to increase performance. The expected number of values should be taken into account to set the initial capacity. The most generally preferred load factor value is 0.75 which provides a good deal between time and space costs. The load factor’s value varies between 0 and 1. 
+
+Note: From Java 8 onward, Java has started using Self Balancing BST instead of a linked list for chaining. The advantage of self-balancing bst is, we get the worst case (when every key maps to the same slot) search time is O(Log n). 
+Collections.synchronizedMap() to make HashMap synchronized and avoid accidental unsynchronized access. 
+
+ Iterators of this class are fail-fast if any structure modification is done after the creation of iterator, in any way except through the iterator’s remove method. In a failure of iterator, it will throw ConcurrentModificationException.
+ 
+Time complexity of HashMap: HashMap provides constant time complexity for basic operations, get and put if the hash function is properly written and it disperses the elements properly among the buckets. Iteration over HashMap depends on the capacity of HashMap and a number of key-value pairs. Basically, it is directly proportional to the capacity + size. Capacity is the number of buckets in HashMap. So it is not a good idea to keep a high number of buckets in HashMap initially.
+
+HashMap is mainly the implementation of hashing. It is useful when we need efficient implementation of search, insert and delete operations. 
+
+Hashmap put and get operation time complexity is O(1) with assumption that key-value pairs are well distributed across the buckets.
+
+https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
+
+
 Level order traversal program with printing each level in new line
 
 ```
