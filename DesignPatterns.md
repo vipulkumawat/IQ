@@ -241,6 +241,9 @@ As enums don’t have any constructor so it is not possible for Reflection to ut
 2. Serialization: as explained above on serialization, how we avoided it
 3. Clone: as explained above on Cloning, how we avoided it.
 
+https://www.geeksforgeeks.org/prevent-singleton-pattern-reflection-serialization-cloning/
+
+
 Factory:( Creates objects of different family)
 Not all objects in the java can be created out of new operator. few objects may be created by new, few have to be created by calling static factory(singleton) and other by passing other object as reference while creating etc.
 
