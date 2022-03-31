@@ -813,6 +813,19 @@ Hashmap put and get operation time complexity is O(1) with assumption that key-v
 https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
 
 
+HashTable doesnot allow null key.
+
+what is timecomplexity of searching an element in hashset,hashmap,treemap.
+what is heap?
+what is usage of binary search tree in realtime? indexing, searching algorithms, treemaps, treesets based on read-black balanced tree implementation
+what is the benefit of cassandra over rdbms? CAP theorm
+which database you choose for different requirements?
+what is eventual consistency?
+how you maintain faulttolerance for cassandra?
+how you can copeup if complete cluster goes down in cassandra ?
+what is RAID architecture?
+what is RAID 0 and RAID 1?
+ 
 Level order traversal program with printing each level in new line
 
 ```
