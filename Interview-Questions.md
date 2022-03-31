@@ -825,6 +825,9 @@ how you maintain faulttolerance for cassandra?
 how you can copeup if complete cluster goes down in cassandra ?
 what is RAID architecture?
 what is RAID 0 and RAID 1?
+
+
+
  
 Level order traversal program with printing each level in new line
 
