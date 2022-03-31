@@ -194,7 +194,7 @@ When a class has absolutely zero state. The methods of the class are not using a
 When a class has some state and it has some methods, methods are using the state and the state is readonly. So the outcome of the method doesn't depend on the state of the class rather would depend on the values with which u called the method. Such classes we can make them as singleton.
 When a class has some state and methods, state is not read only but it is sharable state, means every other class in the application should see the same state of the object. In such case we don't need to create multiple objects, rather one instance of the class can be shared across multiple classes in the application.  Here the state the class is holding is a common state, we need to synchronize the read and write access to the class by making the methods of the class as synchronized to avoid concurrency issues.
 
-what are various concepts which can break singleton property of a class and how to avoid them:
+**what are various concepts which can break singleton property of a class and how to avoid them:**
 There are mainly 3 concepts which can break singleton property of a class
 
 ```
@@ -242,6 +242,8 @@ As enums don’t have any constructor so it is not possible for Reflection to ut
 3. Clone: as explained above on Cloning, how we avoided it.
 
 https://www.geeksforgeeks.org/prevent-singleton-pattern-reflection-serialization-cloning/
+
+https://stackoverflow.com/questions/20421920/what-are-the-different-ways-we-can-break-a-singleton-pattern-in-java
 
 
 Factory:( Creates objects of different family)
