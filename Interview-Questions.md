@@ -745,3 +745,34 @@ any issue with the code
 **Decimal Technology:**
 ```
 ```
+
+**Rakuten:**
+```
+What is the criteria for developing a microservice, what is the design you followed?
+How you decided the approach/requirements for the microservice?
+what are the collections you used in your project?
+what is the treemap?
+implements Map interface and NavigableMap, 
+map is sorted according to the natural ordering of its keys, 
+or by a Comparator provided at map creation time.
+The class implements Map interfaces including NavigableMap, SortedMap, and extends AbstractMap class.
+TreeMap in Java does not allow null keys (like Map) and thus a NullPointerException is thrown. However, multiple null values can be associated with different keys.
+Entry pairs returned by the methods in this class and its views represent snapshots of mappings at the time they were produced. They do not support the Entry.setValue method.
+
+Synchronized TreeMap:  accomplished by using the Collections.synchronizedSortedMap method. This is best done at the creation time, to prevent accidental unsynchronized access to the set. 
+SortedMap m = Collections.synchronizedSortedMap(new TreeMap(...));
+TreeMap while getting keyset and values, return an Iterator that is fail-fast in nature. Thus, any concurrent modification will throw ConcurrentModificationException. A TreeMap is based upon a red-black tree data structure. 
+Each node in the tree has: 
+
+3 Variables (K key=Key, V value=Value, boolean color=Color)
+3 References (Entry left = Left, Entry right = Right, Entry parent = Parent)
+
+ TreeMap itself is implemented using a red-black tree which is a self-balancing binary search tree. Since it uses a binary tree, the put() , contains() and remove() operations have a time complexity of O(log n). Furthermore, since the tree is balanced, the worst-case time complexity is also O(log n)
+
+
+
+https://www.geeksforgeeks.org/treemap-in-java/
+
+Level order traversal program with printing each level in new line
+
+```
