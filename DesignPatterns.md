@@ -299,6 +299,96 @@ Command Pattern:
 https://www.baeldung.com/java-replace-if-statements
 
 
+
+
 How to make post request fault tolerant and idempotent:
 https://medium.com/@saurav200892/how-to-achieve-idempotency-in-post-method-d88d7b08fcdd
 
+
+**Prototype:**
+refers to creating duplicate object while keeping performance in mind. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+ implementing a prototype interface which tells to create a clone of the current object. This pattern is used when creation of object directly is costly.
+For example, an object is to be created after a costly database operation. We can cache the object, returns its clone on next request and update the database as and when needed thus reducing database calls.
+Prototype allows us to hide the complexity of making new instances from the client. The concept is to copy an existing object rather than creating a new instance from scratch, something that may include costly operations. The existing object acts as a prototype and contains the state of the object. The newly copied object may change same properties only if required. This approach saves costly resources and time, especially when object creation is a heavy process. One of the best available ways to create an object from existing objects is the clone() method. Clone is the simplest approach to implement a prototype pattern. However, it is your call to decide how to copy existing object based on your business model. 
+example:
+```
+Prototype Design Participants
+1) Prototype : This is the prototype of an actual object.
+2) Prototype registry : This is used as a registry service to have all prototypes accessible using simple string parameters.
+3) Client : Client will be responsible for using registry service to access prototype instances.
+
+When to use the Prototype Design Pattern
+
+When a system should be independent of how its products are created, composed, and represented and 
+When the classes to instantiate are specified at run-time. 
+For example, 
+1) By dynamic loading or To avoid building a class hierarchy of factories that parallels the class hierarchy of products or
+2) When instances of a class can have one of only a few different combinations of state. It may be more convenient to install a corresponding number of prototypes and clone them rather than instantiating the class manually, each time with the appropriate state.
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Prototype {
+
+    public static void main(String[] args) {
+        ColorStore.getColor("blue").addColor();
+        ColorStore.getColor("black").addColor();
+        ColorStore.getColor("blue").addColor();
+        ColorStore.getColor("black").addColor();
+
+    }
+}
+abstract class Color implements Cloneable{
+
+    protected  String colorName;
+    abstract  void addColor();
+
+    public Object clone(){
+
+        Object clone=null;
+
+        try{
+            clone=super.clone();
+        }catch(CloneNotSupportedException e){
+            e.printStackTrace();
+        }
+        return clone;
+    }
+}
+
+class BlueColor extends Color{
+
+    public BlueColor(){
+        this.colorName="blue";
+    }
+
+    void addColor(){
+        System.out.println("Blue color added:"+this.hashCode());
+    }
+}
+
+class BlackColor extends Color{
+    public BlackColor(){
+        this.colorName="black";
+    }
+
+    void addColor(){
+        System.out.println("Black color added:"+this.hashCode());
+    }
+}
+
+class ColorStore{
+    private  static Map<String,Color> colorMap=new HashMap<>();
+
+    static {
+        colorMap.put("blue",new BlueColor());
+        colorMap.put("black",new BlackColor());
+    }
+
+    public static Color getColor(String colorName){
+        return (Color)colorMap.get(colorName).clone();
+    }
+}
+
+```
