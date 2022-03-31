@@ -194,6 +194,52 @@ When a class has absolutely zero state. The methods of the class are not using a
 When a class has some state and it has some methods, methods are using the state and the state is readonly. So the outcome of the method doesn't depend on the state of the class rather would depend on the values with which u called the method. Such classes we can make them as singleton.
 When a class has some state and methods, state is not read only but it is sharable state, means every other class in the application should see the same state of the object. In such case we don't need to create multiple objects, rather one instance of the class can be shared across multiple classes in the application.  Here the state the class is holding is a common state, we need to synchronize the read and write access to the class by making the methods of the class as synchronized to avoid concurrency issues.
 
+what are various concepts which can break singleton property of a class and how to avoid them:
+There are mainly 3 concepts which can break singleton property of a class
+
+```
+Reflection: Reflection can be caused to destroy singleton property of singleton class, as shown in following example:
+ public static void main(String[] args)
+    {
+        Singleton instance1 = Singleton.instance;
+        Singleton instance2 = null;
+        try
+        {
+            Constructor[] constructors = 
+                    Singleton.class.getDeclaredConstructors();
+            for (Constructor constructor : constructors) 
+            {
+                // Below code will destroy the singleton pattern
+                constructor.setAccessible(true);
+                instance2 = (Singleton) constructor.newInstance();
+                break;
+            }
+        } 
+        catch (Exception e) 
+        {
+            e.printStackTrace();
+        }     
+    System.out.println("instance1.hashCode():- " 
+                                      + instance1.hashCode());
+    System.out.println("instance2.hashCode():- " 
+                                      + instance2.hashCode());
+    }
+
+```
+After running this class, you will see that hashCodes are different that means, 2 objects of same class are created and singleton pattern has been destroyed.
+
+Overcome reflection issue: To overcome issue raised by reflection, enums are used because java ensures internally that enum value is instantiated only once. Since java Enums are globally accessible, they can be used for singletons. Its only drawback is that it is not flexible i.e it does not allow lazy initialization.
+
+//Java program for Enum type singleton
+public enum Singleton 
+{
+  INSTANCE;
+}
+
+As enums don’t have any constructor so it is not possible for Reflection to utilize it. Enums have their by-default constructor, we can’t invoke them by ourself. JVM handles the creation and invocation of enum constructors internally. As enums don’t give their constructor definition to the program, it is not possible for us to access them by Reflection also. Hence, reflection can’t break singleton property in case of enums.
+
+2. Serialization: as explained above on serialization, how we avoided it
+3. Clone: as explained above on Cloning, how we avoided it.
 
 Factory:( Creates objects of different family)
 Not all objects in the java can be created out of new operator. few objects may be created by new, few have to be created by calling static factory(singleton) and other by passing other object as reference while creating etc.
