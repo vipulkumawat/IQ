@@ -492,6 +492,7 @@ Question on what challenges you faced and techstack related questions... More on
 ```
 **HPE:**
 ```
+round1:
 How much time do you spend on development and maintainence?
 are you aware of docker and kuberneties?
 what is difference between docker and virtual machine ?
@@ -500,6 +501,54 @@ what is CAP theorm?
 Construct a binary search tree with given numbers, and search a given element in constructed binary tree.
 input={5,1,3,2,4,6,9,7,8}
 if element is found find the level else return -1
+
+round2:
+
+given a list of lines from the file, write a program to print how many times each word has occurred in given lines.
+List<String> inputList=Arrays.asList("what day is today?","today is monday","what day is tomorrow?","tomorrow is tuesday");
+
+//Output
+today - 2
+is - 4
+tomorrow - 2
+monday - 1
+tuesday - 1
+what - 2
+
+public List<String> wordCount(List<String> inputList){
+
+
+List<String> response = inputList.stream().map(input->input.replaceAll("\?","").replaceAll("-","").replaceAll(",",""))
+.flatMap(line->Stream.of(line.split(" "))).collect(Collectors.toMap(input->input,Collectors.counting()))
+.entrySet().stream().map((key,value)->key+"-"+value).collect(Collectors.toList());
+
+
+return response;
+
+}
+
+what is the complexity of above code ? as replaceAll will parse complete string it is having worst complexity,
+can you give the tune this code ?
+
+for above program can you design as a microservice which should be responsive, concurrent, latency should be less and throughput should be more.
+firstly design the api, where will you store the data etc...
+what operations you will provide in rest api.
+how can you gaurantee the latency, throughput and handle concurrent users
+if after taking the request pod goes down what will be the response ?
+asking for reposting to user is not good user experience, how you can handle in microservice architecture.
+how will you implement the get api?
+
+
+Write a program to Group Anagrams together:
+
+[care, dog, not, race, pot, ton, cone, none, acre, joke, poke]
+[ [care, race, acre], [ton, not], [joke], [poke], [cone], [pot], [dog]]
+
+https://www.techiedelight.com/group-anagrams-together-given-list-words/
+
+
+round3:
+
 
 
 
