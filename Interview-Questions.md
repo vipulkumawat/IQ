@@ -835,6 +835,8 @@ By using the principles, the system is maintainable, testable, scalable, and reu
 It avoids the bad design of the software.
 what is singleton design pattern?
 where we can you singleton design pattern?
+In Java the Singleton pattern will ensure that there is only one instance of a class is created in the Java Virtual Machine. It is used to provide global point of access to the object. In terms of practical use Singleton patterns are used in logging, caches, thread pools, configuration settings, device driver objects.
+
 what is decorator design pattern?
 what is DAO pattern?
 what is the resource in REST?
