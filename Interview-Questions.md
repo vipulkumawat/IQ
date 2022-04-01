@@ -825,9 +825,29 @@ how you maintain faulttolerance for cassandra?
 how you can copeup if complete cluster goes down in cassandra ?
 what is RAID architecture?
 what is RAID 0 and RAID 1?
-
-
-
+how you can copy file from one server to another?
+is SCP bidrectional? 
+explain solid principles
+Why should we use SOLID principles?
+It reduces the dependencies so that a block of code can be changed without affecting the other code blocks.
+The principles intended to make design easier, understandable.
+By using the principles, the system is maintainable, testable, scalable, and reusable.
+It avoids the bad design of the software.
+what is singleton design pattern?
+where we can you singleton design pattern?
+what is decorator design pattern?
+what is DAO pattern?
+what is the resource in REST?
+how many methods we can use in REST?
+for deleting which method is used?
+can we pass body to delete method ?
+what is cloud native?
+how the deployment works on cloud?
+can you give the flow how you can deploy the code in cloud?
+what is the autoscaling?
+what are the monitoring tools you are using?
+what is topic in kafka and explain kafka architecture?
+what is replication in kafka?
  
 Level order traversal program with printing each level in new line
 
