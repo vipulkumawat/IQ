@@ -492,6 +492,17 @@ Question on what challenges you faced and techstack related questions... More on
 ```
 **HPE:**
 ```
+How much time do you spend on development and maintainence?
+are you aware of docker and kuberneties?
+what is difference between docker and virtual machine ?
+difference between postgres and cassandra ?
+what is CAP theorm?
+Construct a binary search tree with given numbers, and search a given element in constructed binary tree.
+input={5,1,3,2,4,6,9,7,8}
+if element is found find the level else return -1
+
+
+
 
 ```
 
