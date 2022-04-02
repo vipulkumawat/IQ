@@ -548,7 +548,28 @@ https://www.techiedelight.com/group-anagrams-together-given-list-words/
 
 
 round3:
+why cassandra?
+how much time it takes to sync between onprem and cloud cassandra?
+explain springboot architecture
+what is lifecycle of spring
+difference between component and bean
+how you are connecting from springboot to cassandra?
+what are the annotations used in springboot and why you use them ?
+what are the components of GCP you are using ?
+how frequently you load the data to hazelcast?
+what are your responsibilites in the team?
+explain the usecase of threads in your application?
+explain the lifecycle of a thread
+difference between yield and join?
+explain kafka architecture
+how you handle blocking in your development activity? 
+how you analyze thread dump and heapdump.
+how you generate thread and heap dump
+how you handle memory leaks in java?
+what are the tools you use for performance testing of your application
+write a java program to print diamond pattern
 
+round4:
 
 
 
