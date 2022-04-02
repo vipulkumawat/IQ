@@ -570,6 +570,18 @@ what are the tools you use for performance testing of your application
 write a java program to print diamond pattern
 
 round4:
+ with a program that identify the top k pair of users having greatest similarity who visits relavent websites 
+
+users: a,b,c,d,e
+websites: 1,2,3,4,5,6,7
+a={1,3,5}
+b={2,4}
+e={1,3,5,6}
+c={5,7}
+d={2,3,4}
+
+
+round5:
 
 
 
