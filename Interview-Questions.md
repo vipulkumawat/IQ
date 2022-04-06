@@ -947,3 +947,122 @@ what is replication in kafka?
 Level order traversal program with printing each level in new line
 
 ```
+
+**Booking.com:**
+
+```
+HR  interview questions
+
+what interested you in applying for booking.com?
+what interested you to apply for fintech?
+can you tell me your current role?
+what is current techstack?
+what is the challenging project you handled?
+have you worked in building applications from scratch?
+have you worked in projects with distributed applications and multiple databases
+have you worked on designing of the systems too?
+have you worked on high load systems?
+what industry is your company dealing with?
+what is your salary expectations?
+what is notice period?
+
+
+```
+**Airtel:**
+
+```
+what are your roles and responsibilities in the project?
+have you worked on any project from scratch?
+have you implemented any design patterns in your project?
+what is strategy pattern?
+what is circuit breaker pattern?
+what is discovery server ?
+
+P1: [3, 1, 4, 8, 7, 2, 5]
+
+Index -> Day number
+Value -> Price of the stock
+
+Buy & Sell this stock only once.
+
+What is maximum profit that can be made?
+
+Day 1 -> 1rs
+Day 3 -> 8rs
+
+Profit -> 7
+
+Int[] arr={3, 1, 4, 8, 7, 2, 5};
+
+Int minEle=arr[0],maxProfit=Integer.MIN_VALUE;
+
+for(int i=1;i<arr.length;i++){
+
+if(minEle>arr[i])
+	minEle=arr[i];
+
+maxProfit=Integer.max(maxProfit,(arr[i]-minEle);
+
+}
+System.out.println(maxProfit);
+
+
+P2:
+String s =”pwwkew”;
+
+Length of the longest substring without any repeating characters.
+Wke
+Kew
+maxlength=3
+String s =”pwwkew”;
+Int length=Integer.MIN_VALUE,slow=-1;
+Map<Character,Integer> map=new HashMap<>();
+
+for(int i=0;i<s.length();i++){
+	Char currch=s.charAt(i);
+	if(map.contains(currch) && map.get(currch)>slow){
+	slow=map.get(currch);
+}
+map.put(currch,i);
+
+length=Integer.max(length,i-slow);
+}
+
+P3:
+Given a matrix find maxNoOf ones that are adjacent to each other.
+
+Int counter=0,maxOnes=0;;
+Public static void main(String… args){
+Int[][] matrix={{}};
+Int rows=matrix.length;
+Int cols=matrix[0].length;
+for(int i=0;i<rows;i++){
+	for(int  j=0;j<cols;j++){
+
+	if(matrix[i][j]==1){
+	bfs(matrix,i,j,rows,cols);
+	maxOnes=Integer.max(maxOnes,counter);
+	counter=0;
+}
+}
+
+}
+System.out.println(maxOnes);
+maxOnes=0;
+}
+
+Static void bfs(int[][] matrix,int row,int col,int rows,int cols){
+
+	if(row<0 || col<0 || row>=rows|| col>=cols|| matrix[row][col]!=1)
+		return;
+
+	matrix[row][col]=0;
+	Counter++;
+
+	bfs(matrix,row+1,col,rows,cols);
+	bfs(matrix,row-1,col,rows,cols);
+	bfs(matrix,row,col+1,rows,cols);
+	bfs(matrix,row,col-1,rows,cols);
+}
+
+```
