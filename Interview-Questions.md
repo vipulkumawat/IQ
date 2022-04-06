@@ -946,6 +946,72 @@ what is replication in kafka?
  
 Level order traversal program with printing each level in new line
 
+round2:
+
+What is singleton and explain it's usage in realtime
+What is the output for below code snippet:
+enum Color { BLACK, WHITE };
+enum Chiral { LEFT, RIGHT };
+
+Color nothing = null;
+1 if (nothing == Color.BLACK);
+2 if (nothing.equals(Color.BLACK));
+3 if (Color.BLACK.equals(Chiral.LEFT));
+4 if (Color.BLACK == Chiral.LEFT);
+
+
+Given two arrays find if they are same or not
+    public static void main(String[] args) {
+        int A[] = {1,2,5,4,0};
+        int B[] = {2,4,5,0,1};
+        System.out.println(sameArray(A,B));
+    }
+    static boolean sameArray(int[] A,int[] B){
+        if(A.length!=B.length)
+            return false;
+        Set<Integer> hashSet=new HashSet<>();
+        for(int data:A)
+            hashSet.add(data);
+        for(int data:B)
+            if(!hashSet.contains(data))
+                return false;
+        return true;
+    }
+
+Given 4 arrays and a target X. Find all possible combinations one ele from each array whose sum is equal or less given target
+public static void main(String[] args) {
+   int[] P = {10,20};
+        int[] S ={5,7};
+        int[] E= {4,6,8};
+        int[] M={1,5,2};
+        int X=29;
+
+        int[][] possibility={P,S,E,M};
+
+        findCombinations(possibility,X,0,new StringBuffer());
+        System.out.println(count);
+
+}
+
+    static int count=0;
+    static void findCombinations(int[][] possibilities,int X,int index,StringBuffer result){
+        if(X<0)
+            return;
+        if(index==possibilities.length) {
+            System.out.println(result.substring(0,result.length()-1));
+            count++;
+            return;
+        }
+        for(int i=0;i<possibilities[index].length;i++){
+            result.append(possibilities[index][i]+",");
+            findCombinations(possibilities,X-possibilities[index][i],index+1,result);
+            result.setLength(result.length()-(possibilities[index][i]+",").length());
+        }
+    }
+
+
+
+
 ```
 
 **Booking.com:**
