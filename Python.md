@@ -34,7 +34,44 @@ It is used in Windows to instruct Python to find the first case-insensitive matc
 PYTHONHOME
 It is an alternative module search path. It is usually embedded in the PYTHONSTARTUP or PYTHONPATH directories to make switching module libraries easy.
 
+There are three different ways to start Python −
+Interactive Interpreter
+You can start Python from Unix, DOS, or any other system that provides you a command-line interpreter or shell window.
 
+
+list of all the available command line options 
+-d
+It provides debug output.
+
+-O
+It generates optimized bytecode (resulting in .pyo files).
+
+-S
+Do not run import site to look for Python paths on startup.
+
+-v
+verbose output (detailed trace on import statements).
+
+-X
+disable class-based built-in exceptions (just use strings); obsolete starting with version 1.6.
+
+-c cmd
+run Python script sent in as cmd string
+
+file
+run Python script from given file
+
+Script from the Command-line
+A Python script can be executed at command line by invoking the interpreter on your application
+
+Integrated Development Environment
+You can run Python from a Graphical User Interface (GUI) environment as well, if you have a GUI application on your system that supports Python.
+
+Unix − IDLE is the very first Unix IDE for Python.
+
+Windows − PythonWin is the first Windows interface for Python and is an IDE with a GUI.
+
+Macintosh − The Macintosh version of Python along with the IDLE IDE is available from the main website, downloadable as either MacBinary or BinHex'd files.
 
 
 ```
