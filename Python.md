@@ -231,12 +231,39 @@ del var
 del var_a, var_b
 Python supports four different numerical types −
 
-int (signed integers)
-long (long integers, they can also be represented in octal and hexadecimal)
-float (floating point real values)
-complex (complex numbers)
+int (signed integers) 100, -9889,080, -0490, 0x260, 0x69
+long (long integers, they can also be represented in octal and hexadecimal) 51924361L, -0x19323L, 0xDEFABCECBDAECBFBAEl, -4721885298529L
+float (floating point real values) 0.0, -21.9, 32.3+e18, -90., 70.2-E12
+complex (complex numbers) 3.14j, 9.322e-36j, .876j, 4.53e-7j
 
 tutorialspoint.com/python/python_variable_types.htm
+Python allows you to use a lowercase l with long, but it is recommended that you use only an uppercase L to avoid confusion with the number 1. Python displays long integers with an uppercase L.
+
+A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, where x and y are the real numbers and j is the imaginary unit.
+
+Python Strings
+Strings in Python are identified as a contiguous set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.
+
+The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator.
+
+str = 'Hello World!'
+
+print str          # Prints complete string
+print str[0]       # Prints first character of the string
+print str[2:5]     # Prints characters starting from 3rd to 5th
+print str[2:]      # Prints string starting from 3rd character
+print str * 2      # Prints string two times
+print str + "TEST" # Prints concatenated string
+This will produce the following result −
+
+Hello World!
+H
+llo
+llo World!
+Hello World!Hello World!
+Hello World!TEST
+
+Python Lists:
 
 
 ```
