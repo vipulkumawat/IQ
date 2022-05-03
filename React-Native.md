@@ -125,6 +125,25 @@ react library
 
 
 8:00
+the building blocks of react native:
+Core components and Native components
+
+<View>
+<Text>
+<Image>
+<ScrollView>
+<TextInput>
+
+
+React native gives two things:
+Components:
+Basic
+UserInterface
+Listviews
+IOS and Android specific views
+Alerts
+
+APIs:
 
 
 
