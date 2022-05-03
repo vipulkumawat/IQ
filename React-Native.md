@@ -198,3 +198,9 @@ html and css are for the web.
 react native instead uses native mobile tools.
 so the css that we use in react native is built through javascript. it is based on CSS syntax but little different.
 
+
+
+section3:
+The 2 paths
+
+
