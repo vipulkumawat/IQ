@@ -165,6 +165,29 @@ javascript code with react library
 4. export the components
 
 
+video11:
+React Native internals
+what happens when you run react native code?
+native react views are converted to native views
+
+step1: react native compiles our views into native views
+which is very performant
+this makes react app more performance 	
+
+our react native compiles our views into native views which is very very performant
+it also needs to understand javascript knowledge on phone.
+javascript core that powers to browser
+it also helps to read the logic, the js core engine is used to read this logic and then js vm communicates with the phone to tell it what actions to be performaned.
+
+ournativeviews are converted into native platform apis.
+
+
+react native internals2:
+https://github.com/facebook/react-native
+
+Hermis: opensource javascript engine optimized for running react native apps on android.
+why apps are faster for IOS than android?
+because IOS naturally comes with javascript core. javascript core is used by safari given by apple. javascript core is by default available on all IOS apps. Android doesnot have that. So with android apps we need to ship jscore with our js logic. Shipping js core with app makes it heavy. instead use hermis which is optimized js engine for android.
 
 
 
