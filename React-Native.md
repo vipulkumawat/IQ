@@ -145,6 +145,24 @@ Alerts
 
 APIs:
 
+ReactNative components compiled into native components of IOS and Android depending on OS. So that it is super Performant and fast. It also gives us APIs to interact with phone like phone dimensions etc.
+
+It also have access to React Library. without react library react native doesn't know react specific things like state, props in react components. these are react specific.
+
+React component
+react native components
+Core components, Community native components, community components
+
+community components can be found in native directory
+https://reactnative.directory/
+
+you can have your own native components
+we are going to follow four step process as we build our UI.
+javascript code with react library
+1. import required components
+2. create our own components
+3. creating styles
+4. export the components
 
 
 
