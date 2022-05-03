@@ -191,3 +191,10 @@ because IOS naturally comes with javascript core. javascript core is used by saf
 
 
 
+Exercise: is there CSS?
+is there CSS in React Native?
+technically No, there is no css with React Native.
+html and css are for the web.
+react native instead uses native mobile tools.
+so the css that we use in react native is built through javascript. it is based on CSS syntax but little different.
+
