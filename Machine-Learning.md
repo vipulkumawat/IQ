@@ -208,6 +208,17 @@ Support Vector Machine
 Naive Bayes Classifier
 
 
+Machine learning Tutorial Part1:
+Machine can drive your car for you
+Because machine can now detect 50 eye diseases
+Machine can unlock your phone with your face/voice
+Facebook's Newsfeed algo for boosting engaugement in order to get greater reach
+company ha trained and reveiwed hundreds of thousands of posts to train a ML model that detects different types of engagement bait
+scans the keywords and phrases like "This" and checks the click through rate
+Google's Deep mind project "AlphaGO", a computer program that plays the board game "GO" has defeated the world's number one Go player KeJie
+video5:
+https://www.youtube.com/watch?v=9f-GarcDY58&list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy&index=5
+13:30
 
 
 ```
