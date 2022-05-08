@@ -53,6 +53,20 @@ Huge amount of data available online, every body makes transaction or surfing in
 that data is key to analysis. memory handling capabilities of computers have increased which helps them to process huge amount of data at hand without any delay.
 Computers have great computational power.
 
+Applications of ML:
+Healthcare
+Sentiment analysis
+Fraud Analysis
+E-commerce
+Search pricing of cabs used by Uber, 
+Differential pricing in real time based on :
+-Demand
+-Number of Cars available
+-Bad weather
+-Rush hour
+
+It also uses predictive modeling to predict where the demand will be high with a goal that drivers can take care of the demand and search pricing will be minimized
+
 
 ```
 
