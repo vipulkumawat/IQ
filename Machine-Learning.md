@@ -185,6 +185,16 @@ Apriori
 Hierarchical Clustering
 Principal Component Analysis
 
+ML prerequisits:
+computer science fundamentals and programming
+Intermediate statistical knowledge- probabilities
+Linear algebra and intermediate calculus - what is differential equation is etc, computer does all heavy lifting but need to know the terms when comeup. 
+Data wrangling and cleaning: how to cleanup your data. need to get good data
+
+Some applications of ML:
+Instance segmentation for object detection
+Number plate detection
+Automatic transulation for machine transulation
 
 
 ```
