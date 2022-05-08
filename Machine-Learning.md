@@ -197,6 +197,19 @@ Number plate detection
 Automatic transulation for machine transulation
 
 
+Algorithms:
+Linear regression
+Logistic Regression
+KMeans Clustering
+Decision Tree
+Random Forest
+KNN algorithm
+Support Vector Machine
+Naive Bayes Classifier
+
+
+
+
 ```
 
 
