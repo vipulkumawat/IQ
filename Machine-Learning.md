@@ -79,6 +79,80 @@ Adapt
 
 Deeplearning is subbranch of ML
 
+Neighbourhood based algo along with Navibase
+ML uses algorithms to mimic human learning in machines
+It is subset of AI
+
+Reinforced learning for pet detection
+build up a model based on examples which is called supervised learning
+
+
+classification and regression are the types of unsupervised learning
+
+Popular algo in Supervised learning:
+Decision tree
+Naive bayes
+Linear Regression
+SVM
+
+Unsupervised learning:
+Don't have a predetermined result in mind
+the machine tries to make sense of things from huge amount of data
+given many photos of animals machine starts segregating them by color, size, shape
+such an approach is called unsupervised learning
+Clustering and Association are types of unsupervised learning
+Popular algos of Unsupervised learning:
+K-means
+Hierarchical
+Apriori
+Genetic Algorithm
+
+Reinforcement learning:
+Rewards and punishment
+learn from feedback
+Teaches machine where it made a mistake and where it is right
+thus machine develops intelligence and makes better decisions in future because of reinforcement
+ex: google's New AI designs AI better than Humans Could
+Alibaba's AI
+PCWorld: Five things AI does better than humans, from the mundane to the magnificent
+Building wooden block towers
+Lip reading
+Transcribing
+News Reporting
+Disease diagnosis
+
+ML Roles:
+ML Engineer
+Deep learning Engineer
+AI Engineer
+Data Scientist
+
+
+Supervised learning
+Unsupervised learning
+Reinforcement learning
+Algorithms
+Applications
+25+ hands on exercise
+
+
+
+ML works on the development of computer programs that can access data and use it to automatically learn and improve from experience
+Difference between AI, ML, Deep learning
+AI: a technique which enables machines to mimic human behavior
+IBM deep blue chess
+Electronic Game Characters
+
+ML: which uses statistical methods, enabling machines to learn from their past data
+IBM watson
+Google search algorithm
+Email spam filter
+
+Deep learning: Subset of ML, composing algorithms that allow a model to train itself and preform tasks
+Alpha Go
+Natural Speech Recognition
+Deep learning is associated with tools like neural networks which is kind of blackbox as it learns it changes as a human it is hard for tracking.
+
 
 ```
 
