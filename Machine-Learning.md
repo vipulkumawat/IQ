@@ -153,6 +153,39 @@ Alpha Go
 Natural Speech Recognition
 Deep learning is associated with tools like neural networks which is kind of blackbox as it learns it changes as a human it is hard for tracking.
 
+Training Data
+Train the ML algo
+Processing
+new input data->ML Algo->prediction->feedback/Result
+
+Main categories of ML:
+Supervised Learning
+Unsupervised learning
+
+
+Known Data-> ML algo->processing-> trained model-> new Response with given unknown data
+
+Algoirthms for Supervised learning:
+Polynomial Regression
+Random Forest
+Linear Regression
+Logistic Regression
+Decision Trees
+K-Nearest Neighbours
+Naive Bayes
+
+Unsupervised learning
+unknown data->ML algo->processing-> trained model(I can see a pattern)->Response
+algorithms:
+Partial Least Squares
+Fuzzy Means
+Singular value decomposition
+K-Means clustering
+Apriori
+Hierarchical Clustering
+Principal Component Analysis
+
+
 
 ```
 
