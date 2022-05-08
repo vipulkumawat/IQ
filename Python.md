@@ -264,6 +264,97 @@ Hello World!Hello World!
 Hello World!TEST
 
 Python Lists:
+Lists are the most versatile of Python's compound data types.
+A list contains items separated by commas and enclosed within square brackets ([]). 
+To some extent, lists are similar to arrays in C.
+One difference between them is that all the items belonging to a list can be of different data type.
+
+The values stored in a list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. 
+The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator. 
+
+list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]
+tinylist = [123, 'john']
+print list          # Prints complete list
+print list[0]       # Prints first element of the list
+print list[1:3]     # Prints elements starting from 2nd till 3rd 
+print list[2:]      # Prints elements starting from 3rd element
+print tinylist * 2  # Prints list two times
+print list + tinylist # Prints concatenated lists
+
+
+Python Tuples
+A tuple is another sequence data type that is similar to the list. A tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.
+
+The main differences between lists and tuples are: Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. Tuples can be thought of as read-only lists.
+
+
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+tinytuple = (123, 'john')
+
+print tuple               # Prints the complete tuple
+print tuple[0]            # Prints first element of the tuple
+print tuple[1:3]          # Prints elements of the tuple starting from 2nd till 3rd 
+print tuple[2:]           # Prints elements of the tuple starting from 3rd element
+print tinytuple * 2       # Prints the contents of the tuple twice
+print tuple + tinytuple   # Prints concatenated tuples
+
+
+
+The following code is invalid with tuple, because we attempted to update a tuple, which is not allowed. Similar case is possible with lists −
+
+#!/usr/bin/python
+
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+list = [ 'abcd', 786 , 2.23, 'john', 70.2  ]
+tuple[2] = 1000    # Invalid syntax with tuple
+list[2] = 1000     # Valid syntax with list
+
+
+
+Python Dictionary
+Python's dictionaries are kind of hash table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
+
+Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]). For example −
+
+#!/usr/bin/python
+
+dict = {}
+dict['one'] = "This is one"
+dict[2]     = "This is two"
+
+tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+
+
+print dict['one']       # Prints value for 'one' key
+print dict[2]           # Prints value for 2 key
+print tinydict          # Prints complete dictionary
+print tinydict.keys()   # Prints all the keys
+print tinydict.values() # Prints all the values
+
+
+
+Dictionaries have no concept of order among elements. It is incorrect to say that the elements are "out of order"; they are simply unordered.
+Data Type Conversion
+Sometimes, you may need to perform conversions between the built-in types. To convert between types, you simply use the type name as a function.
+
+There are several built-in functions to perform conversion from one data type to another. These functions return a new object representing the converted value.
+
+
+int(x [,base]) Converts x to an integer. base specifies the base if x is a string.
+long(x [,base] ) Converts x to a long integer. base specifies the base if x is a string.
+float(x) Converts x to a floating-point number.
+complex(real [,imag]) Creates a complex number.
+str(x) Converts object x to a string representation.
+repr(x) Converts object x to an expression string.
+eval(str) Evaluates a string and returns an object.
+tuple(s) Converts s to a tuple.
+list(s) Converts s to a list.
+set(s) Converts s to a set.
+dict(d) Creates a dictionary. d must be a sequence of (key,value) tuples.
+
+
+
+
 
 
 ```
