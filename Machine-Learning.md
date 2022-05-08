@@ -67,6 +67,18 @@ Differential pricing in real time based on :
 
 It also uses predictive modeling to predict where the demand will be high with a goal that drivers can take care of the demand and search pricing will be minimized
 
+Email spam recognition
+Spell check
+Youtube video recommendations
+
+ML is subset of AI
+Sense
+Reason
+Act
+Adapt
+
+Deeplearning is subbranch of ML
+
 
 ```
 
