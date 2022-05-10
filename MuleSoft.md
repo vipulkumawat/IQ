@@ -379,7 +379,66 @@ On the other hand, we can also create our own perspective and can add or remove 
 
 
 
+Creating a Simple Http listener:
+https://www.tutorialspoint.com/mulesoft/mulesoft_creating_first_mule_application.htm
 
+
+DataWeave is basically a MuleSoft expression language. It is mainly used for accessing and transforming the data received through a Mule application. Mule runtime is responsible for running the script and expressions in our Mule application, DataWeave is strongly integrated with Mule runtime.
+
+
+ data received through a Mule application. Mule runtime is responsible for running the script and expressions in our Mule application, DataWeave is strongly integrated with Mule runtime.
+
+Features of DataWeave Language
+Following are some important features of DataWeave language −
+
+Data can be transformed from one format to another very easily.
+
+
+For example, we can transform application/json to application/xml. The input payload is as follows −
+
+{
+   "title": "MuleSoft",
+   "author": " tutorialspoint.com ",
+   "year": 2019
+}
+Following is the code in DataWeave for transform −
+
+%dw 2.0
+output application/xml
+---
+{
+   order: {
+      'type': 'Tutorial', 
+      'title': payload.title, 
+      'author': upper(payload.author), 
+      'year': payload.year
+   }
+}
+Next, the output payload is as follows −
+
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<order>
+   <type>Tutorial</type>
+   <title>MuleSoft</title>
+   <author>tutorialspoint.com</author>
+   <year>2019</year>
+</order>
+The transform component can be used for creating scripts that performs both simple as well as complex data transformations.
+
+We can access and use core DataWeave functions on parts of the Mule event that we need as most of the Mule message processors support DataWeave expressions.
+
+
+Prerequisites
+We need to satisfy the following prerequisites before using DataWeave scripts on our computer −
+
+Anypoint Studio 7 is required to use Dataweave scripts.
+
+After installing Anypoint Studio, we need to set up a project with a Transform Message component in order to use DataWeave scripts.
+
+
+https://www.tutorialspoint.com/mulesoft/mulesoft_dataweave_language.htm
+
+https://www.tutorialspoint.com/mulesoft/mulesoft_message_processor_and_script_components.htm
 
 
 
