@@ -441,6 +441,40 @@ https://www.tutorialspoint.com/mulesoft/mulesoft_dataweave_language.htm
 https://www.tutorialspoint.com/mulesoft/mulesoft_message_processor_and_script_components.htm
 
 
+MuleSoft - Message Processor & Script Components:
+The scripting modules facilitate users to use scripting language in Mule. In simple words, the scripting module can exchange custom logic written in scripting language. Scripts can be used as Implementations or transformers. They can be used for expression evaluation, i.e., for controlling message routing.
 
+Mule has the following supported scripting languages −
+
+Groovy
+Python
+JavaScript
+Ruby
+
+
+we need to choose the Engine from the execute component. The list of engines is as below −
+
+Groovy
+Nashorn(javaScript)
+jython(Python)
+jRuby(Ruby)
+
+
+Message Sources
+Mule 4 has a simplified model than Mule 3 message making it easier to work with data in a consistent way across connectors without overwriting information. In Mule 4 message model, each Mule event consists of two things: a message and variables associated with it.
+
+A Mule message is having payload and its attributes, where attribute is mainly metadata such as file size.
+
+And a variable holds the arbitrary user information such as operation result, auxiliary values, etc.
+
+Inbound
+The inbound properties in Mule 3 now becomes Attributes in Mule 4. As we know that inbound properties store additional information about the payload obtained through a message source, but this is now, in Mule 4, done with the help of attributes. Attributes have the following advantages −
+
+With the help of attributes, we can easily see which data is available, because attributes are strongly typed.
+
+We can easily access information contained in attributes.
+
+
+Outbound:
 
 ```
