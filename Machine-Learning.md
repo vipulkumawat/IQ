@@ -220,6 +220,62 @@ video5:
 https://www.youtube.com/watch?v=9f-GarcDY58&list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy&index=5
 13:30
 
+Machine Learning is the science of making computers learn and act like humans by feeding data and information without being explicitly programmed!
+
+Ordinary System
++ With AI
+gives machine learning
+It Learns, Predicts and Improves
+
+
+
+
+
+what is ML?
+Define Objective
+Collect Data
+Prepare Data
+Select Algorithm
+Train Model
+Test Model
+Predict
+Deploy
+
+
+Do you want to predict a Category? that's classification
+for instance whether stock price will increase or decrease
+
+Do you want to predict a quantity? That's regression
+For instance, Predicting the age of a person based on the height, weight, health and other factors
+
+Do you want to detect an anomaly? That's anomaly detection
+For instance you want to detect money withdrawal anomalies
+
+Do you want to discover structure in unexplored data? That's clustering
+For instance finding groups of customers with similar behavior given a large database of customer data containing their demographics and past buying records
+
+
+Types of ML:
+Supervised
+UnSupervised
+Reinforcement
+
+Supervised learning:
+it is a method used to enable machines to classify/predict objects, problems or situations based on labeled data fed to the machine
+
+Labeled data
+Labels
+Model training
+NewData
+Prediction
+Result
+
+Supervised learning on stock market whether making money or not.
+
+20:00
+
+
+
 
 ```
 
