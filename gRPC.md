@@ -1,4 +1,147 @@
 **gRPC**
 
+```
+Microservices need to agree on:
+API to exchange data
+Data format
+Error Patterns
+Load balancing
+Many other things...
+Building an API is hard:
+We need to think about:
+Endpoints:
+-GET /api/v1/user/123/post/456
+-POST /api/v1/user/123/post
+
+-DataFormat:
+-XML(heavy, somehow readable)
+-JSON(heavy, readable)
+-Binary(light, not readable)
+
+Invoking and Handling Errors
+-Behaviors
+-Error codes
+
+
+We need to think about:
+-Payload size
+-Latency
+-Scalability
+-Load Balancing
+-Languages Interop
+-Auth, Monitoring and Log
+
+Don't you wish you could just focus on data and leave the rest to the framework?
+This is where gRPC comes in.
+It is an opensource framework developed by google,square, github and other companies
+
+gRPC is now part of cloud native computation just like docker, kuberneties and others
+
+It is fast and efficient framework built on top of HTTP2.
+it has low latency and super streaming of data.
+It is language independent and makes it super easy to plugin new services like Authentication, logging, monitoring
+
+what is RPC?
+Remote procedure call
+it is like calling a function directly on server
+
+gRPC server
+gRPC Stub
+
+How do I get started?
+There are really 2 steps:
+choose a supported language
+Generate the code(protobuff)
+
+ex:
+syntax="proto3";
+message Greeting{
+string first_name=1;
+}
+
+message GreetRequest{
+Greeting greeting=1;
+}
+
+message GreetResponse{
+string result=1;
+}
+
+services GreetService{
+rpc Greet(GreetRequest) return(GreetResponse){}
+}
+
+
+Why ProtoBuff?
+-Language agnostic
+-small payload
+-Easy API evolution
+
+You should be familiar with Protobuff
+
+Why learning gRPC?
+Many companies using it like: 
+Google for internal and external services like pubsub, Cisco, Netflix, CoreOS, Juniper,Squre, Cockroach Labs
+Future of:
+Microservice APIs
+Microcontrollers/Mobile to server APIs
+and web apis in future
+
+Course Structure:
+Theory
+Practice
+Advanced concepts
+
+you will be able to:
+Understand how gRPC works
+Compare REST to gRPC
+Write your own services
+Implement advanced concepts
+
+You will need:
+Familiarity with language
+Familiarity with ProtoBuffs
+Basic Knowledge of Async Programming
+
+Bust most importantly:
+williness to learn new things
+
+https://github.com/Clement-Jean
+https://www.linkedin.com/in/clement-jean/
+https://clement-jean.github.io/
+
+
+The code is available at: https://github.com/Clement-Jean/grpc-java-course , don't hesitate to star the repo and to contribute.
+
+
+Protocol Buffers and Language Interoperability:
+Protocol buffers we define the messages,
+we define the data for request and response
+we define the service
+
+why gRPC defines ProtocolBuff?
+for communication between services because of payload size
+normal json is compressed in Protocol buff.
+we can save lot of bandwidth because messages are smaller
+Passing JSON is also quite CPU intensive because format is human readable.
+Protocol buffer is binary and it is very close to how data is represented in the memory.
+it will be less CPU intensive
+Protocol buffers are faster and more efficient communication between devices that are mobile and microcontrollers etc.
+We will get better performance with protocol buffer than JSONs.
+
+
+grpc.io
+Intuitive Message Definition
+Generated code for us
+Efficient Serialization/Deserialization
+
+
+
+```
+
+
+
+
+
 
 
