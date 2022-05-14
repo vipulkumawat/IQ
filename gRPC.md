@@ -168,6 +168,60 @@ less bandwidth usage
 More security
 All of that for free!
 
+https://http2.github.io/
+https://imagekit.io/demo/http2-vs-http1
+
+Types of gRPC APIs: 4 types
+Unary
+Server Streaming
+Client Streaming
+Bi directional Streaming
+
+
+Unary:
+Client sends request and server responds
+
+Server Streaming:
+client send one request and server can return one or more response depending on need.
+this might be interesting where client want to get updated on real time basis like getting list from server
+
+Client Streaming:
+client send multiple request, server respond one response
+useful when we do upload of information or realtime update of information
+
+Bidirectional Streaming:
+client and server can send multiple request and responses in parallel
+request and response can arrive in any order
+it can get response per request or response for two requests etc...
+
+
+
+Types of API in gRPC:
+service GreetService{
+//unary
+rpc Greet(GreetRequest) returns (GreetResponse){};
+
+//server streaming
+rpc GreetManyTimes(GreetRequest) returns (stream GreetResponse){};
+
+//client Streaming
+rpc LongGreet(stream GreetRequest) returns (GreetResponse){};
+
+//Bi directional streaming
+rpc GreetEveryone(stream GreetRequest) returns (stream GreetResponse){};
+
+
+}
+
+
+
+Scalability in gRPC:
+server is Async so main thread is not blocked and server can handle many requests in parallel
+client: Async or blocking based on requirement. when response is critical for application we go with blocking
+Google: 10Billion requests/sec
+
+
+Security in gRPC(SSL):
 
 
 
