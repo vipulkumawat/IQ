@@ -136,6 +136,40 @@ Generated code for us
 Efficient Serialization/Deserialization
 
 
+HTTP/2:
+it is a revolutionary technology which improved internet communication
+
+impagekit.io
+Performance difference between HTTP2 and HTTP1.0
+
+How HTTP1 Works?
+TCP connection per request until request is completed
+for 100 calls 100 connections that is way too much
+Plain text headers makes request header bigger consequence is bigger latency for each call
+accepts only Request/Response pattern. If request/respone take long lived connection we will have more overhead
+It accepts only GET/POST to manage resources at the backend.
+opens a connection to get the resources
+
+
+Http2:
+one TCP connection with long lasting connection which can be shared by multiple request and responses
+way more efficient
+Server Push when data is ready
+Multiplexing: server and client can push messages in parallel over same TCP connection
+we can process requests and responses much faster as we have less latency
+Http Headers are much lighter as headers and data are both compressed to binary data.
+In HTTP2 protocol buffers are much really great match.
+we can send binary messages using HTTP2 protocol.
+HTTP2 is more secure SSL
+
+So HTTP2 is 
+less chatter
+less bandwidth usage
+More security
+All of that for free!
+
+
+
 
 ```
 
