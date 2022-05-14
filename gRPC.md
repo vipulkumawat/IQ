@@ -222,6 +222,29 @@ Google: 10Billion requests/sec
 
 
 Security in gRPC(SSL):
+How secure is gRPC?
+it is schema based on serialization
+as data is binary and not readable.
+further more you need schema to deserialize it efficiently.
+gRPC allows easy ssl certificates initialization for SSL encryption.
+interceptors for Authentication for more advanced authentication
+
+
+gRPC vs Rest:
+Protocol buffers are lighter for cheaper communication, it is more restricting as schema is restricting as we have strict schema - JSON format
+HTTP2 - HTTP1
+Streaming type of data supported -  only Unary
+Bi directional - client->Server
+Free design - GET/POST/UPDATE/DELETE
+
+
+why use gRPC?
+code generation
+More secure
+easy TLS connection
+Streaming supported
+API Oriented
+
 
 
 
