@@ -377,6 +377,44 @@ The division of operands where the result is the quotient in which the digits af
 9//2 = 4 and 9.0//2.0 = 4.0, -11//3 = -4, -11.0//3 = -4.0
 
 Comparison Operators:
+These operators compare the values on either sides of them and decide the relation among them.
+==, !=, <>(similar to != operator), >, <, >=, <=
+
+Assignment Operators
+=, +=(Add And), -=(subtract And), *=(multiply And), /= (Divide And), %=(Modulus AND), **=(Exponent AND), //=(floor Division) 
+
+Bitwise Operators:
+Bitwise operator works on bits and performs bit by bit operation
+ if a = 60; and b = 13; Now in the binary format their values will be 0011 1100 and 0000 1101 respectively
+a = 0011 1100
+
+b = 0000 1101
+
+-----------------
+
+a&b = 0000 1100
+
+a|b = 0011 1101
+
+a^b = 0011 0001
+
+~a  = 1100 0011
+
+
+& Binary AND
+| Binary OR
+^ Binary XOR
+~ BinaryOnesComplement
+<< Binary Left Shift
+The left operands value is moved left by the number of bits specified by the right operand.
+a << 2 = 240 (means 1111 0000)
+>> Binary Right Shift
+The left operands value is moved right by the number of bits specified by the right operand.
+a >> 2 = 15 (means 0000 1111)
+
+
+Logical Operators:
+
 
 
 
