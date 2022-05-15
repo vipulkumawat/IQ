@@ -414,6 +414,26 @@ a >> 2 = 15 (means 0000 1111)
 
 
 Logical Operators:
+and: Logical AND
+If both the operands are true then condition becomes true.
+or: Logical OR
+If any of the two operands are non-zero then condition becomes true.
+not: Logical NOT
+Used to reverse the logical state of its operand.
+
+Membership Operators:
+membership operators test for membership in a sequence, such as strings, lists, or tuples
+in: 
+Evaluates to true if it finds a variable in the specified sequence and false otherwise.
+x in y, here in results in a 1 if x is a member of sequence y.
+
+not in:
+Evaluates to true if it does not finds a variable in the specified sequence and false otherwise.
+x not in y, here not in results in a 1 if x is not a member of sequence y.
+
+
+Identity Operators:
+
 
 
 
