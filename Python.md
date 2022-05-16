@@ -909,7 +909,123 @@ print str.isnumeric()
 
 isspace():
 method isspace() checks whether the string consists of whitespace.
+Returns true if string contains only whitespace characters and false otherwise.
+method returns true if there are only whitespace characters in the string and there is at least one character, false otherwise
+str = "       "; 
+print str.isspace()
 
+str = "This is string example....wow!!!";
+print str.isspace()
+
+
+istitle():
+Returns true if string is properly "titlecased" and false otherwise.
+checks whether all the case-based characters in the string following non-casebased letters are uppercase and all other case-based characters are lowercase.
+ returns true if the string is a titlecased string and there is at least one character, for example uppercase characters may only follow uncased characters and lowercase characters only cased ones.It returns false otherwise
+
+str = "This Is String Example...Wow!!!";
+print str.istitle()
+
+str = "This is string example....wow!!!";
+print str.istitle()
+
+
+isupper():
+Returns true if string has at least one cased character and all cased characters are in uppercase and false otherwise
+checks whether all the case-based characters (letters) of the string are uppercase.
+
+str.isupper()
+returns true if all cased characters in the string are uppercase and there is at least one cased character, false otherwise.
+
+str = "THIS IS STRING EXAMPLE....WOW!!!"; 
+print str.isupper()
+
+str = "THIS is string example....wow!!!";
+print str.isupper()
+
+join(seq):
+Merges (concatenates) the string representations of elements in sequence seq into a string, with separator string.
+method join() returns a string in which the string elements of sequence have been joined by str separator.
+str.join(sequence)
+
+Parameters
+sequence − This is a sequence of the elements to be joined.
+
+Return Value
+This method returns a string, which is the concatenation of the strings in the sequence seq. The separator between elements is the string providing this method.
+
+s = "-";
+seq = ("a", "b", "c"); # This is sequence of strings.
+print s.join( seq )
+
+len(string):
+Returns the length of the string
+len() returns the length of the string.
+
+#!/usr/bin/python
+
+str = "this is string example....wow!!!";
+print "Length of the string: ", len(str)
+
+ljust(width[, fillchar]):
+returns the string left justified in a string of length width. Padding is done using the specified fillchar (default is a space). The original string is returned if width is less than len(s).
+
+str.ljust(width[, fillchar])
+Parameters
+width − This is string length in total after padding.
+
+fillchar − This is filler character, default is a space.
+
+Return Value
+This method returns the string left justified in a string of length width. Padding is done using the specified fillchar (default is a space). The original string is returned if width is less than len(s)
+
+
+str = "this is string example....wow!!!";
+print str.ljust(50, '0')
+
+
+lower():
+Converts all uppercase letters in string to lowercase.
+returns a copy of the string in which all case-based characters have been lowercased.
+Return Value
+This method returns a copy of the string in which all case-based characters have been lowercased.
+
+str = "THIS IS STRING EXAMPLE....WOW!!!";
+print str.lower()
+
+lstrip():
+Removes all leading whitespace in string.
+returns a copy of the string in which all chars have been stripped from the beginning of the string (default whitespace characters).
+str.lstrip([chars])
+Parameters
+chars − You can supply what chars have to be trimmed.
+This method returns a copy of the string in which all chars have been stripped from the beginning of the string (default whitespace characters).
+
+str = "     this is string example....wow!!!     ";
+print str.lstrip()
+str = "88888888this is string example....wow!!!8888888";
+print str.lstrip('8')
+
+
+
+maketrans():
+Returns a translation table to be used in translate function.
+ returns a translation table that maps each character in the intabstring into the character at the same position in the outtab string. Then this table is passed to the translate() function.
+str.maketrans(intab, outtab)
+Parameters
+intab − This is the string having actual characters.
+outtab − This is the string having corresponding mapping character.
+
+returns a translate table to be used translate() function
+
+from string import maketrans   # Required to call maketrans function.
+
+intab = "aeiou"
+outtab = "12345"
+trantab = maketrans(intab, outtab)
+
+str = "this is string example....wow!!!"
+print str.translate(trantab)
 
 
 
