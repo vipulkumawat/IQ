@@ -704,26 +704,211 @@ str.capitalize()
 center(width, fillchar):
 Returns a space-padded string with the original string centered to a total of width columns.
 str.center(width[, fillchar])
-#!/usr/bin/python
+Python string method center() returns centered in a string of length width. Padding is done using the specified fillchar.
+Parameters
+width − This is the total width of the string.
+fillchar − This is the filler character.
+
 str = "this is string example....wow!!!"
 print "str.center(40, 'a') : ", str.center(40, 'a')
+result: str.center(40, 'a') :  aaaathis is string example....wow!!!aaaa
 
-https://www.tutorialspoint.com/python/python_strings.htm
+count(str, beg= 0,end=len(string)):
+Counts how many times str occurs in string or in a substring of string if starting index beg and ending index end are given.
+str.count(sub, start= 0,end=len(string))
+Parameters
+sub − This is the substring to be searched.
+start − Search starts from this index. First character starts from 0 index. By default search starts from 0 index.
+end − Search ends from this index. First character starts from 0 index. By default search ends at the last index.
+
+str = "this is string example....wow!!!";
+
+sub = "i";
+print "str.count(sub, 4, 40) : ", str.count(sub, 4, 40)
+sub = "wow";
+print "str.count(sub) : ", str.count(sub)
+
+str.count(sub, 4, 40) :  2
+str.count(sub) :  1
+
+
+Str.decode(encoding='UTF-8',errors='strict'):
+string method decode() decodes the string using the codec registered for encoding.
+Decodes the string using the codec registered for encoding. encoding defaults to the default string encoding.
+
+
+Parameters
+encoding − This is the encodings to be used. For a list of all encoding schemes please visit: Standard Encodings.
+https://docs.python.org/3/library/codecs.html#standard-encodings
+
+errors − This may be given to set a different error handling scheme. The default for errors is 'strict', meaning that encoding errors raise a UnicodeError. Other possible values are 'ignore', 'replace', 'xmlcharrefreplace', 'backslashreplace' and any other name registered via codecs.register_error().
+ex: Str = "this is string example....wow!!!";
+Str = Str.encode('base64','strict');
+
+print "Encoded String: " + Str
+print "Decoded String: " + Str.decode('base64','strict')
+
+
+encode(encoding='UTF-8',errors='strict')
+Returns encoded string version of string; on error, default is to raise a ValueError unless errors is given with 'ignore' or 'replace'
+
+method encode() returns an encoded version of the string. Default encoding is the current default string encoding. The errors may be given to set a different error handling scheme.
+
+
+Parameters
+encoding − This is the encodings to be used. For a list of all encoding schemes please visit: Standard Encodings.
+
+errors − This may be given to set a different error handling scheme. The default for errors is 'strict', meaning that encoding errors raise a UnicodeError. Other possible values are 'ignore', 'replace', 'xmlcharrefreplace', 'backslashreplace' and any other name registered via codecs.register_error().
+
+endswith(suffix, beg=0, end=len(string)):
+Determines if string or a substring of string (if starting index beg and ending index end are given) ends with suffix; returns true if so and false otherwise.
+returns True if the string ends with the specified suffix, otherwise return False optionally restricting the matching with the given indices start and end.
+
+str.endswith(suffix[, start[, end]])
+Parameters
+suffix − This could be a string or could also be a tuple of suffixes to look for.
+start − The slice begins from here.
+end − The slice ends here.
+
+Return Value
+TRUE if the string ends with the specified suffix, otherwise FALSE.
+
+str = "this is string example....wow!!!";
+
+suffix = "wow!!!";
+print str.endswith(suffix)
+print str.endswith(suffix,20)
+
+suffix = "is";
+print str.endswith(suffix, 2, 4)
+print str.endswith(suffix, 2, 6)
 
 
 
+expandtabs(tabsize=8)
+Expands tabs in string to multiple spaces; defaults to 8 spaces per tab if tabsize not provided.
+returns a copy of the string in which tab characters ie. '\t' are expanded using spaces, optionally using the given tabsize (default 8)
+
+Parameters
+tabsize − This specifies the number of characters to be replaced for a tab character '\t'.
+
+Return Value
+
+This method returns a copy of the string in which tab characters i.e., '\t' have been expanded using spaces.
 
 
+str = "this is\tstring example....wow!!!";
+
+print "Original string: " + str
+print "Defualt exapanded tab: " +  str.expandtabs()
+print "Double exapanded tab: " +  str.expandtabs(16)
 
 
+find(str, beg=0 end=len(string)):
+Determine if str occurs in string or in a substring of string if starting index beg and ending index end are given returns index if found and -1 otherwise
+determines if string str occurs in string, or in a substring of string if starting index beg and ending index end are given.
+
+Syntax
+str.find(str, beg=0, end=len(string))
+Parameters
+str − This specifies the string to be searched.
+
+beg − This is the starting index, by default its 0.
+
+end − This is the ending index, by default its equal to the length of the string.
+
+Return Value
+Index if found and -1 otherwise.
+
+str1 = "this is string example....wow!!!";
+str2 = "exam";
+
+print str1.find(str2)
+print str1.find(str2, 10)
+print str1.find(str2, 40)
 
 
+index(str, beg=0, end=len(string)):
+Same as find(), but raises an exception if str not found
+method index() determines if string str occurs in string or in a substring of string if starting index beg and ending index end are given. This method is same as find(), but raises an exception if sub is not found.
+str.index(str, beg = 0 end = len(string))
+Parameters
+str − This specifies the string to be searched.
+beg − This is the starting index, by default its 0.
+end − This is the ending index, by default its equal to the length of the string.
+
+Return Value
+Index if found otherwise raises an exception if str is not found
+str1 = "this is string example....wow!!!";
+str2 = "exam";
+
+print str1.index(str2)
+print str1.index(str2, 10)
+print str1.index(str2, 40)
 
 
+isalnum():
+Returns true if string has at least 1 character and all characters are alphanumeric and false otherwise.
+method isalnum() checks whether the string consists of alphanumeric characters
+returns true if all characters in the string are alphanumeric and there is at least one character, false otherwise.
+
+str = "this2009";  # No space in this string
+print str.isalnum()
+
+str = "this is string example....wow!!!";
+print str.isalnum()
+When we run above program, it produces following result −
+
+True
+False
 
 
+isalpha():
+Returns true if string has at least 1 character and all characters are alphabetic and false otherwise.
+checks whether the string consists of alphabetic characters only
+returns true if all characters in the string are alphabetic and there is at least one character, false otherwise.
+str = "this";  # No space & digit in this string
+print str.isalpha()
 
+str = "this is string example....wow!!!";
+print str.isalpha()
 
+isdigit():
+Returns true if string contains only digits and false otherwise.
+checks whether the string consists of digits only.
+method returns true if all characters in the string are digits and there is at least one character, false otherwise.
+
+str = "123456";  # Only digit in this string
+print str.isdigit()
+
+str = "this is string example....wow!!!";
+print str.isdigit()
+
+islower():
+Returns true if string has at least 1 cased character and all cased characters are in lowercase and false otherwise.
+eturns true if all cased characters in the string are lowercase and there is at least one cased character, false otherwise.
+
+str = "THIS is string example....wow!!!"; 
+print str.islower()
+
+str = "this is string example....wow!!!";
+print str.islower()
+
+isnumeric():
+Returns true if a unicode string contains only numeric characters and false otherwise.
+checks whether the string consists of only numeric characters. This method is present only on unicode objects.
+
+Note − To define a string as Unicode, one simply prefixes a 'u' to the opening quotation mark of the assignment. 
+str.isnumeric()
+This method returns true if all characters in the string are numeric, false otherwise.
+str = u"this2009";  
+print str.isnumeric()
+
+str = u"23443434";
+print str.isnumeric()
+
+isspace():
+method isspace() checks whether the string consists of whitespace.
 
 
 
