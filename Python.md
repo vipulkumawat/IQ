@@ -1028,6 +1028,132 @@ str = "this is string example....wow!!!"
 print str.translate(trantab)
 
 
+max(str):
+Returns the max alphabetical character from the string str.
+method max() returns the max alphabetical character from the string str.
+Parameters
+str − This is the string from which max alphabetical character needs to be returned.
+
+str = "this is really a string example....wow!!!";
+print "Max character: " + max(str)
+
+str = "this is a string example....wow!!!";
+print "Max character: " + max(str)
+
+
+min(str):
+Returns the min alphabetical character from the string str
+
+str = "this-is-real-string-example....wow!!!";
+print "Min character: " + min(str)
+
+str = "this-is-a-string-example....wow!!!";
+print "Min character: " + min(str)
+
+replace(old, new [, max]):
+Replaces all occurrences of old in string with new or at most max occurrences if max given.
+returns a copy of the string in which the occurrences of old have been replaced with new, optionally restricting the number of replacements to max.
+
+Parameters
+old − This is old substring to be replaced.
+new − This is new substring, which would replace old substring.
+max − If this optional argument max is given, only the first count occurrences are replaced
+
+Return Value
+This method returns a copy of the string with all occurrences of substring old replaced by new. If the optional argument max is given, only the first count occurrences are replaced.
+
+
+str = "this is string example....wow!!! this is really string";
+print str.replace("is", "was");
+print str.replace("is", "was", 3);
+
+
+rfind(str, beg=0,end=len(string)):
+Same as find(), but search backwards in string.
+rfind() returns the last index where the substring str is found, or -1 if no such index exists, optionally restricting the search to string[beg:end].
+obj.rfind(str, beg=0 end=len(string))
+Parameters
+str − This specifies the string to be searched.
+beg − This is the starting index, by default its 0.
+end − This is the ending index, by default its equal to the length of the string.
+
+str1 = "this is really a string example....wow!!!";
+str2 = "is";
+
+print str1.rfind(str2)
+print str1.rfind(str2, 0, 10)
+print str1.rfind(str2, 10, 0)
+
+print str1.find(str2)
+print str1.find(str2, 0, 10)
+print str1.find(str2, 10, 0)
+
+
+rindex( str, beg=0, end=len(string)):
+Same as index(), but search backwards in string.
+Python string method rindex() returns the last index where the substring str is found, or raises an exception if no such index exists, optionally restricting the search to string[beg:end].
+
+str.rindex(str, beg=0 end=len(string))
+Parameters
+str − This specifies the string to be searched.
+beg − This is the starting index, by default its 0
+len − This is ending index, by default its equal to the length of the string.
+
+Return Value
+This method returns last index if found otherwise raises an exception if str is not found.
+
+str1 = "this is string example....wow!!!";
+str2 = "is";
+
+print str1.rindex(str2)
+print str1.index(str2)
+
+
+rjust(width,[, fillchar]):
+Returns a space-padded string with the original string right-justified to a total of width columns.
+rjust() returns the string right justified in a string of length width. Padding is done using the specified fillchar (default is a space). The original string is returned if width is less than len(s).
+Parameters
+width − This is the string length in total after padding.
+fillchar − This is the filler character, default is a space.
+returns the string right justified in a string of length width. Padding is done using the specified fillchar (default is a space). The original string is returned if width is less than len(s).
+
+str = "this is string example....wow!!!";
+print str.rjust(50, '0')
+
+rstrip():
+Removes all trailing whitespace of string.
+
+rstrip() returns a copy of the string in which all chars have been stripped from the end of the string (default whitespace characters).
+str.rstrip([chars])
+Parameters
+chars − You can supply what chars have to be trimmed.
+
+Return Value
+This method returns a copy of the string in which all chars have been stripped from the end of the string (default whitespace characters).
+
+str = "     this is string example....wow!!!     ";
+print str.rstrip()
+str = "88888888this is string example....wow!!!8888888";
+print str.rstrip('8')
+
+split(str="", num=string.count(str)):
+Splits string according to delimiter str (space if not provided) and returns list of substrings; split into at most num substrings if given.
+method split() returns a list of all the words in the string, using str as the separator (splits on all whitespace if left unspecified), optionally limiting the number of splits to num.
+str.split(str="", num=string.count(str))
+Parameters:
+str − This is any delimeter, by default it is space.
+num − this is number of lines minus one
+
+Return Value
+This method returns a list of lines.
+
+str = "Line1-abcdef \nLine2-abc \nLine4-abcd";
+print str.split( )
+print str.split(' ', 1 )
+
+
+splitlines( num=string.count('\n')):
+
 
 
 
