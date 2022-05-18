@@ -502,4 +502,77 @@ Business Events − They basically capture data associated with key performance 
 Exception strategies − These message processors handle errors of any type that occur during message processing.
 
 
+
+Core Components & Configuration:
+most important abilities of Mule is that it can perform routing, transforming, and processing with the components, because of which the configuration file of Mule application that combines various elements is very large in size.
+
+Following are the types of configuration patterns provided by Mule −
+
+Simple service pattern
+Bridge
+Validator
+HTTP proxy
+WS proxy
+
+core components:
+Custom business Event: used for the collection of information about flows as well as message processors that handle the business transactions in Mule app. In other words, we can use Custom Business Event component to add the following in our working flow −
+Metadata
+Key performance Indicators (KPIs)
+How to add KPIs?
+Following are the steps to add KPIs in our flow in Mule app −
+
+Step 1 − Follow Mule Palette → Core → Components → Custom Business Event, to add Custom Business Event component to a working flow in your Mule app.
+
+Step 2 − Click on the component to open it.
+
+Step 3 − Now, we need to provide values for Display Name and Event Name.
+
+Step 4 − To capture information from the message payload, add KPIs as follows −
+
+Give a name (key) for the KPI (tracking: meta-data element) and a value. The name will be used in search interface of Runtime Manager.
+
+Give a value that may be any Mule expression.
+
+Following table consists of the list of KPIs with Name and Value −
+
+Name	Expression/Value
+Student RollNo	#[payload[‘RollNo’]]
+Student Name	#[payload[‘Name’]]
+
+
+Dynamic Evaluate:
+used for dynamically selecting a script in Mule app. We can also use hardcore script through the Transform Message Component but using Dynamic Evaluate component is a better way. This core component works as follows −
+
+Firstly, it evaluates an expression that should result in another script.
+Then it evaluates that script for the final result.
+In this way, it allows us to dynamically select the script rather than hardcoding it.
+
+
+Flow Reference:
+If you want to route the Mule event to another flow or sub-flow and back within the same Mule app, then flow reference component is the right option.
+
+Characteristics
+Following are the characteristics of this core component −
+
+This core component allows us to treat the whole referenced flow like a single component in the current flow.
+
+It breaks the Mule application into discrete and reusable units. For example, a flow is listing files on regular basis. It might reference another flow that processes the output of the list operation.
+
+In this way, rather than appending the whole processing steps, we can append Flow References that points to the processing flow. The screenshot below shows that the Flow Reference Core Component is pointing towards a sub-flow named ProcessFiles.
+
+Logger
+The core component called logger helps us to monitor and debug our Mule application by logging important information like error messages, status notifications, payloads, etc. In AnyPoint studio, they appear in the Console.
+
+Advantages
+Following are some advantages of Logger Component −
+
+We can add this core component anywhere in the working flow.
+We can configure it to log a string specified by us.
+We can configure it to the output of a DataWeave expression written by us.
+We can also configure it to any combination of strings and expressions.
+
+Parse Template:
+Transform Message:
+
+
 ```
