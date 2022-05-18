@@ -476,5 +476,30 @@ We can easily access information contained in attributes.
 
 
 Outbound:
+The outbound properties in Mule 3 must be explicitly specified by Mule connectors and transports in order to send additional data. But in Mule 4, each of those can be set separately, using a DataWeave expression for each one of them. It does not produce any side effect in the main flow.
+below DataWeave expression will perform a HTTP request and generates headers and query parameters without a need to set message properties. This is shown in the below code −
+
+<http:request path = "M_issue" config-ref="http" method = "GET">
+   <http:headers>#[{'path':'input/issues-list.json'}]</http:headers>
+   <http:query-params>#[{'provider':'memory-provider'}]</http:query-params>
+</http:request>
+
+
+Message Processor:
+Message Processor
+Once Mule receives a message from a message source, the work of message processor starts. The Mule uses one or more message processors to process the message through a flow. The main task of message processor is to transform, filter, enrich and process the message as it passes through the Mule flow.
+
+Categorization of Mule Processor
+Following are the categories of Mule Processor, based on functions −
+
+Connectors − These message processors send and receive data. They also plug data into external data sources via standard protocols or third-party APIs.\
+Components − These message processors are flexible in nature and perform business logic implemented in various languages like Java, JavaScript, Groovy, Python or Ruby.
+Filters − They filter the messages and allow only specific messages to continue to be processed in a flow, based on specific criteria.
+Routers − This message processor is used to control the flow of message to route, resequencing or split.
+Scopes − hey basically wrap snippets of code for the purpose of defining fine-grained behavior within a flow.
+Transformers − The role of transformers is to convert message payload type and data format to facilitate communication between systems.
+Business Events − They basically capture data associated with key performance indicators.
+Exception strategies − These message processors handle errors of any type that occur during message processing.
+
 
 ```
