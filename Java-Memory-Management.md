@@ -144,6 +144,40 @@ so that as the interface don't have write methods it cannot access write methods
 here one loop hole is reference can be type cased again to actual class object and can call write methods
 
 
+Garbage Collection:
+Stack is very efficient
+Java can  manage it very easily.
+It knows that when call is completed it can destroy the stack
+java creates objects on heap
+Strings are immutable
+VM will place string literals in SCP
+
+String one="hello";
+String two="hello";
+
+if(one == two){
+System.out.println("they are same objects");
+}else{
+System.out.println("they are different objects");
+}
+
+String three=new Integer(76).toString();
+String four="76";
+
+if(three == four){
+System.out.println("they are same objects");
+}else{
+System.out.println("they are same objects");
+}
+
+
+three=new Integer(76).toString().interim();
+if(three == four){
+System.out.println("they are same objects");
+}else{
+System.out.println("they are same objects");
+}
+
 
 
 
