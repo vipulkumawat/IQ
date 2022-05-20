@@ -181,7 +181,50 @@ System.out.println("they are same objects");
 
 
 
+intern method is used to place string object on SCP.
 
+Garbage eligibility:
+Java cleans objects automatically.
+objects that are not freed continue to consume memory. this is a memory leak
+Java avoids memory leaks by:
+Running on a VM.
+Adopts a Garbage Collection strategy
+Any object on the heap which cannot be reached through a reference from stack is eligible for garbage collection
+
+All unreachable/unreferenced objects are eligible for garbage collection
+objects that are reference to each other causing circular references but no reference on stack are also eligible for garbage collection
+
+garbage collection is automatic process
+
+finalize method is called by garbage collector.
+
+understanding what are soft leaks are:
+a third party library can somehow keep the objects live.
+
+maxheap property:
+-Xmx10m
+heap with 10MB
+we will get out of memory error
+GC overhead limit exceeded
+
+JvisualVM
+
+
+
+Generational GC:
+Mark and sweep
+GC will search for objects that need to be retained.
+it is two state process:
+1. marking: program execution is paused, this is called stop the world event. Marking cannot work properly if there are any thread still executing. so All the threads in the application are paused
+Then GC will check the every single live reference, it simply looks every variable on the stack and follows its reference
+the object that is found at the end of the reference is marked alive and it then follows any other references
+that object has.
+that objects that are not marked as alive are freedup.
+object that are marked are moved to a contigous block of memory. 
+this stop the heap from becoming fragmented.
+
+
+2. Sweeping
 
 
 
