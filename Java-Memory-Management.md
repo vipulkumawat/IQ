@@ -91,6 +91,15 @@ list(2)---> String("three")
 
 
 
+Passing variables by value:
+when a value is passed to a method a copy of the value is passed this is called pass by value
+
+passing by reference is not possible
+
+final keyword:
+it is similar to constant keyword used in other languages
+if we try to reassign we get compile time error
+
 
 
 
