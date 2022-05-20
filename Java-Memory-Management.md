@@ -101,6 +101,50 @@ it is similar to constant keyword used in other languages
 if we try to reassign we get compile time error
 
 
+Escaping References:
+Encapsulation binds data and methods of the class
+it provides tight control on modification from outside
+but in case of references when reference of an object is provided user can modified from outside of the class
+it is like making the state of the class as public
+causing the state being modified from outside
+references can only be escaped if there are methods which can return references of the object.
+
+public Map<String,Customer> getCustomers(){
+
+	return this.records;
+}
+
+to be replaced as
+
+public Map<String,Customer> getCustomers(){
+
+return new HashMap<String,Customer>(this.records);
+
+}
+
+public Iterator<Customer> iterator(){
+
+	return records.values().iterator();
+}
+
+
+Collections.unmodifyableMap
+Collections.unmodifyableList
+
+public Map<String,Customer> getCustomers(){
+
+return Collections.unmodifyableMap(this.records);
+
+}
+
+
+
+in case of normal objects we need to keep readonly methods in interface and use it as return type of the actual object
+so that as the interface don't have write methods it cannot access write methods of the objects
+here one loop hole is reference can be type cased again to actual class object and can call write methods
+
+
+
 
 
 
