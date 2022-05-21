@@ -281,6 +281,36 @@ It should be okay because java8 is not yet widely used on production servers as 
 
 
 Tuning the Virtual Machine:
+For tuning VM we need to provide command line arguments to the Java Runtime so that one or more non-default settings is applied to our application.
+-Xmx set the maximum heap size
+-Xms set the starting heap size
+default heap size is normally a quarter of your computer's total memory
+-Xmx512m  -Xms150m
+
+https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html
+https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html
+
+PermGen Size:
+for java7 and below only it is available
+-XX:MaxPermSize set the size of the permgen
+-XX:MaxPermSize=256M
+
+Garbage Collection and Gernaration sizes
+-verbose:gc print to console when a garbage collection takes place.
+
+by default young generation is set to be 1/3rd of total heap size.
+oracle recommends to size young generation in range of 1/2 to 1/4 of the overall heap size
+-Xmn to set the size of the young generation
+
+If application crashes with out of memory error then we need to do below:
+-XX:HeapDumpOnOutOfMemory to create a heap dump file.
+This automatically creates a heap dump file when you get an out of memory error.
+we can then load this file into Memory Analyzer which gives us a useful way to analyze what went wrong.
+
+
+Choosing a Garbage Collector:
+
+
 
 
 
