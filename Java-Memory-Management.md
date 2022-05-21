@@ -309,6 +309,48 @@ we can then load this file into Memory Analyzer which gives us a useful way to a
 
 
 Choosing a Garbage Collector:
+https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/collectors.html
+
+There are 3 types of collectors:
+Serial
+Parallel
+Mostly Concurrent
+
+-> Series: uses single thread to perform all garbage collection work.
+it is slower, it is ok with smaller application with small amount of data
+-XX:+UseSerialGC
+
+-> Parallel: will perform gc on the young generation and these are called  minor collections in parallel.
+That mean you'll have multiple threads running all performig the garbage collection process.
+so it will be useful when there are multiple processors on the computer
+This is useful with application of large data and also gives better performance than Serial collector.
+Parallel collector also known as Throughput collector
+-XX:+UseParallelGC
+
+Mostly concurrent:
+here applications are not paused while garbage collection process happens.
+it only pauses application during marking of objects but then resumes your application while the sweep phase take place.
+Here stop the world part of the garbage collection process is minimized
+There two types of collectors under this category:
+MarkSweep collector and the G1 Collector
+
+-XX:+UseConcMarkSweepGC
+-XX:+UseG1GC
+
+
+We can find which GC is being used by running java command:
+java -XX:+PrintCommandLineFlags
+
+
+Hunting for a Memory Leak:
+for load testing we need to use JMeter
+
+
+Fixing a memory leak:
+
+
+
+
 
 
 
