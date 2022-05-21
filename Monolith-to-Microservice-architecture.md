@@ -31,6 +31,48 @@ with microservices problems might get more complex, as now the network layer and
 we can develop different services in different programming languages and then integrate them.
 
 
+Splitting capabilities into services:
+Problems with Tight coupling and Anemic Services
+-> Too much abstraction leads to anemic services
+-> To avoid redundant code services need to call each other
+-> Dependencies back to the monolith
+-> Multiple services need to access the same data
+-> Central data access services which ties these services together even more
+-> shared code creates the same dependencies that were present on the monolith
+-> The controller has to know many REST endpoints to accomplish anything
+
+
+
+Solution: 
+create separate services for each capability
+Design and Migrate around capabilities
+
+Best practices:
+->Design your service around capabilities and not around single functions
+->Make it a mantra that each service should be developed and deployed individually
+->Make evolutionary, atomic iterations and use the proxy patterns to delegate functions to respective service calls
+
+
+Refactor or Rewrite?
+why Rewrite?
+Splitting up monoliths is about capabilities and not code
+Much of the code is specific to the monolith and won't be usable
+you miss the oppurtunity to improve code
+you miss the oppurtunity to use the right tool for the job
+it's rarely faster than starting from scratch
+exception: complex orthogonal calculations and logic
+
+
+selection criteria:
+Start with an orthogonal, edge service
+Small and not too business critical
+limited and simple functionality that can be developed fast
+
+Review the architecture
+
+Zero downtime migration
+
+
 
 
 
