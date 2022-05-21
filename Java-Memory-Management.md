@@ -227,6 +227,64 @@ this stop the heap from becoming fragmented.
 2. Sweeping
 
 
+In case of mark sweep collection, application is paused or frozen during Garbage collection time.
+this is not acceptable. to avoid this we have generational garbage collection.
+Most objects don't live for long
+If an object survives it is likely to live forever
+
+Stack
+Heap: young and old generation
+gc on young generation is faster. objects that survive for longer time are moved to older generation
+gc of young generation is called minor collection
+gc on older generation is called major collection
+
+for heap dump analysis:
+www.eclipse.org/mat
+Memory Analyzer(MAT)
+
+
+In java6 there are permgen
+permGen is never garbage collected.
+if permgen is full then application will crash.
+there are two types of objects that go into permgen:
+internalized strings: that is strings which are placed into a pool for reuse.
+and everytime we create a class the metadata for that class is placed into permGen.
+for each class that is present in application there is some information that is need to live in PermGen space.
+
+We might have seen sometimes PermGen Space out of memory.
+this error mean our application have too many classes or internalized strings.
+this is not due to memory leaks or faults in the code.
+The only thing you can to avoid PermGen error is to increase the sie of the PermGen within the heap
+Each time we deploy the application on the server eventhough though most of the classes have no change a new complete set of metadata for all the classes will be created in PermGen.
+all the previous deployment metadata of classes is still in the PermGen but will never be referred to.
+As there is no Garbage collection on PermGen it will never get cleared out.
+So as we do deployment multiple times on a same server PermGen will eventually run out of space.
+For this reason on the live server you might want to consider stopping and restarting tomcat or whatever your service application is each time you deploy a new version of the code to avoid permgen becoming full.
+This is how Heap worked in Java6 and earlier versions.
+Heap: young, old, PermGen
+
+From java7 internalised strings are no longer stored in PermGen.
+This mean sinternalized strings are in the old part of the heap and can therefore be garbage collected.
+if your application uses lot of strings then this won't be a contributing factor to PermGen crashes anymore.
+
+In Java8 they removed the PermGen altogether.
+instead they created something else called the MetaSpace.
+which is where the metadata field classes are placed.
+Metaspace is a separate area of memory and it's not part of the Heap.
+Instead it is allocated outside of the computer's native memory so the maximum available space for the Metaspace is the total system memory for your computer.
+we can also cap the max memory for the MetaSpace, if we don't do that then Virtual Machine will just grow the MetaSpace as it needs to.
+Useful feature of the MetaSpace is that when classes are no longer creatable, the metadata related to those classes is then removed.
+So if we are running tomcat under java8 then everytime we redeploy all the old class metadata in the metaspace will get removed and MetaSpace won't grow each time we redeploy.
+So at the time of recording we think that this will remove the old PermGen style Problems on the server.
+Although on the live server of Java8 we might want to keep an eye on how much memory your app is using over time.
+It should be okay because java8 is not yet widely used on production servers as there could be some unidentified issues.
+
+
+Tuning the Virtual Machine:
+
+
+
+
 
 ```
 
