@@ -1371,13 +1371,152 @@ L[1:]	['Spam', 'SPAM!']	Slicing fetches sections
 
 Built-in List Functions & Methods
 Python includes the following list functions −
+cmp(list1, list2):
+Compares elements of both lists.
+method cmp() compares elements of two lists
+
+Return Value
+If elements are of the same type, perform the compare and return the result. If elements are different types, check to see if they are numbers.
+
+If numbers, perform numeric coercion if necessary and compare.
+If either element is a number, then the other element is "larger" (numbers are "smallest").
+Otherwise, types are sorted alphabetically by name.
+If we reached the end of one of the lists, the longer list is "larger." If we exhaust both lists and share the same data, the result is a tie, meaning that 0 is returned.
 
 
+list1, list2 = [123, 'xyz'], [456, 'abc']
+print cmp(list1, list2)
+print cmp(list2, list1)
+list3 = list2 + [786];
+print cmp(list2, list3)
 
 
+len(list):
+Gives the total length of the list.
+returns the number of elements in the list.
+list1, list2 = [123, 'xyz', 'zara'], [456, 'abc']
+print "First list length : ", len(list1)
+print "Second list length : ", len(list2)
+
+max(list):
+Returns item from the list with max value.
+method max returns the elements from the list with maximum value.
+list1, list2 = [123, 'xyz', 'zara', 'abc'], [456, 700, 200]
+print "Max value element : ", max(list1)
+print "Max value element : ", max(list2)
 
 
+min(list):
+Returns item from the list with min value.
 
+returns the elements from the list with minimum value.
+list1, list2 = [123, 'xyz', 'zara', 'abc'], [456, 700, 200]
+print "min value element : ", min(list1)
+print "min value element : ", min(list2)
+
+
+list(seq):
+Converts a tuple into list.
+method list() takes sequence types and converts them to lists. This is used to convert a given tuple into list.
+
+Note − Tuple are very similar to lists with only difference that element values of a tuple can not be changed and tuple elements are put between parentheses instead of square bracket.
+
+aTuple = (123, 'xyz', 'zara', 'abc');
+aList = list(aTuple)
+print "List elements : ", aList
+
+
+list.append(obj):
+Appends object obj to list
+list method append() appends a passed obj into the existing list.
+
+This method does not return any value but updates existing list.
+
+aList = [123, 'xyz', 'zara', 'abc'];
+aList.append( 2009 );
+print "Updated List : ", aList
+
+
+list.count(obj):
+Returns count of how many times obj occurs in list
+method count() returns count of how many times obj occurs in list.
+ returns count of how many times obj occurs in list.
+
+aList = [123, 'xyz', 'zara', 'abc', 123];
+print "Count for 123 : ", aList.count(123)
+print "Count for zara : ", aList.count('zara')
+
+
+list.extend(seq):
+Appends the contents of seq to list
+method extend() appends the contents of seq to list.
+This method does not return any value but add the content to existing list.
+
+aList = [123, 'xyz', 'zara', 'abc', 123];
+bList = [2009, 'manni'];
+aList.extend(bList)
+print "Extended List : ", aList 
+
+list.index(obj):
+Returns the lowest index in list that obj appears
+This method returns index of the found object otherwise raise an exception indicating that value does not find.
+
+aList = [123, 'xyz', 'zara', 'abc'];
+print "Index for xyz : ", aList.index( 'xyz' ) 
+print "Index for zara : ", aList.index( 'zara' )
+
+
+list.insert(index, obj):
+Inserts object obj into list at offset index
+method insert() inserts object obj into list at offset index.
+
+This method does not return any value but it inserts the given element at the given index.
+
+aList = [123, 'xyz', 'zara', 'abc']
+aList.insert( 3, 2009)
+print "Final List : ", aList
+
+
+list.pop(obj=list[-1])
+Removes and returns last object or obj from list
+
+removes and returns last object or obj from the list.
+
+This method returns the removed object from the list.
+
+aList = [123, 'xyz', 'zara', 'abc'];
+print "A List : ", aList.pop()
+print "B List : ", aList.pop(2)
+
+list.remove(obj):
+Removes object obj from list
+method remove() searches for the given element in the list and removes the first matching element.
+does not return any value but removes the given object from the list.
+
+aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
+aList.remove('xyz');
+print "List : ", aList
+aList.remove('abc');
+print "List : ", aList
+
+
+list.reverse():
+Reverses objects of list in place
+method reverse() reverses objects of list in place.
+
+aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
+aList.reverse();
+print "List : ", aList
+
+list.sort([func]):
+Sorts objects of list, use compare func if given
+does not return any value but it changes from the original list.
+
+aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
+aList.sort();
+print "List : ", aList
+
+Tuples:
 
 
 
