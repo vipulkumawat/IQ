@@ -1153,6 +1153,229 @@ print str.split(' ', 1 )
 
 
 splitlines( num=string.count('\n')):
+Splits string at all (or num) NEWLINEs and returns a list of each line with NEWLINEs removed.
+method splitlines() returns a list with all the lines in string, optionally including the line breaks (if num is supplied and is true)
+Parameters
+Keepends − This is an optional parameter, if its value as true, line breaks need are also included in the output.
+str = "Line1-a b c d e f\nLine2- a b c\n\nLine4- a b c d";
+print str.splitlines( )
+print str.splitlines( 0 )
+print str.splitlines( 3 )
+print str.splitlines( 4 )
+print str.splitlines( 5 )
+
+
+
+str = "Line1-a b c d e f\nLine2- a b c\n\nLine4- a b c d";
+print str.splitlines(True)
+print str.splitlines( 0 )
+print str.splitlines( 3 )
+print str.splitlines( 4 )
+print str.splitlines( 5 )
+
+
+startswith(str, beg=0,end=len(string)):
+Determines if string or a substring of string (if starting index beg and ending index end are given) starts with substring str; returns true if so and false otherwise.
+method startswith() checks whether string starts with str, optionally restricting the matching with the given indices start and end.
+Parameters
+str − This is the string to be checked.
+
+beg − This is the optional parameter to set start index of the matching boundary.
+
+end − This is the optional parameter to end start index of the matching boundary.
+
+Return Value
+This method returns true if found matching string otherwise false.
+
+str = "this is string example....wow!!!";
+print str.startswith( 'this' )
+print str.startswith( 'is', 2, 4 )
+print str.startswith( 'this', 2, 4 )
+
+strip([chars]):
+Performs both lstrip() and rstrip() on string.
+method strip() returns a copy of the string in which all chars have been stripped from the beginning and the end of the string (default whitespace characters).
+
+Parameters
+chars − The characters to be removed from beginning or end of the string.
+
+
+Return Value
+This method returns a copy of the string in which all chars have been stripped from the beginning and the end of the string.
+
+str = "0000000this is string example....wow!!!0000000";
+print str.strip( '0' )
+
+
+swapcase():
+Inverts case for all letters in string.
+method swapcase() returns a copy of the string in which all the case-based characters have had their case swapped.
+str.swapcase();
+returns a copy of the string in which all the case-based characters have had their case swapped.
+
+str = "this is string example....wow!!!";
+print str.swapcase()
+
+str = "THIS IS STRING EXAMPLE....WOW!!!";
+print str.swapcase()
+
+title():
+Returns "titlecased" version of string, that is, all words begin with uppercase and the rest are lowercase.
+returns a copy of the string in which first characters of all the words are capitalized.
+
+str = "this is string example....wow!!!";
+print str.title()
+
+translate(table, deletechars=""):
+Translates string according to translation table str(256 chars), removing those in the del string.
+returns a copy of the string in which all characters have been translated using table (constructed with the maketrans() function in the string module), optionally deleting all characters found in the string deletechars.
+Parameters
+table − You can use the maketrans() helper function in the string module to create a translation table.
+
+deletechars − The list of characters to be removed from the source string.
+
+returns a translated copy of the string.
+
+from string import maketrans   # Required to call maketrans function.
+
+intab = "aeiou"
+outtab = "12345"
+trantab = maketrans(intab, outtab)
+
+str = "this is string example....wow!!!";
+print str.translate(trantab)
+
+
+
+from string import maketrans   # Required to call maketrans function.
+
+intab = "aeiou"
+outtab = "12345"
+trantab = maketrans(intab, outtab)
+
+str = "this is string example....wow!!!";
+print str.translate(trantab, 'xm')
+
+
+upper():
+Converts lowercase letters in string to uppercase.
+returns a copy of the string in which all case-based characters have been uppercased.
+
+str = "this is string example....wow!!!";
+print "str.capitalize() : ", str.upper()
+
+zfill (width):
+Returns original string leftpadded with zeros to a total of width characters; intended for numbers, zfill() retains any sign given (less one zero).
+
+ method zfill() pads string on the left with zeros to fill width.
+
+str.zfill(width)
+
+width − This is final width of the string. This is the width which we would get after filling zeros.
+
+str = "this is string example....wow!!!";
+print str.zfill(40)
+print str.zfill(50)
+
+isdecimal():
+Returns true if a unicode string contains only decimal characters and false otherwise.
+
+method isdecimal() checks whether the string consists of only decimal characters. This method are present only on unicode objects.
+
+Note − To define a string as Unicode, one simply prefixes a 'u' to the opening quotation mark of the assignment. 
+
+
+
+str = u"this2009";  
+print str.isdecimal();
+
+str = u"23443434";
+print str.isdecimal();
+
+
+
+
+Python - Lists:
+ basic data structure in Python is the sequence. Each element of a sequence is assigned a number - its position or index. The first index is zero, the second index is one, and so forth.
+
+Python has six built-in types of sequences, but the most common ones are lists and tuples, which we would see in this tutorial.
+
+There are certain things you can do with all sequence types. These operations include indexing, slicing, adding, multiplying, and checking for membership. In addition, Python has built-in functions for finding the length of a sequence and for finding its largest and smallest elements.
+
+
+
+
+list is a most versatile datatype available in Python which can be written as a list of comma-separated values (items) between square brackets. Important thing about a list is that items in a list need not be of the same type.
+
+Creating a list is as simple as putting different comma-separated values between square brackets. 
+
+list1 = ['physics', 'chemistry', 1997, 2000];
+list2 = [1, 2, 3, 4, 5 ];
+list3 = ["a", "b", "c", "d"]
+
+
+Similar to string indices, list indices start at 0, and lists can be sliced, concatenated and so on.
+
+
+Accessing Values in Lists
+To access values in lists, use the square brackets for slicing along with the index or indices to obtain value available at that index. 
+
+list1 = ['physics', 'chemistry', 1997, 2000];
+list2 = [1, 2, 3, 4, 5, 6, 7 ];
+print "list1[0]: ", list1[0]
+print "list2[1:5]: ", list2[1:5]
+
+
+
+Updating Lists
+You can update single or multiple elements of lists by giving the slice on the left-hand side of the assignment operator, and you can add to elements in a list with the append() method. 
+
+list = ['physics', 'chemistry', 1997, 2000];
+print "Value available at index 2 : "
+print list[2]
+list[2] = 2001;
+print "New value available at index 2 : "
+print list[2]
+
+
+Delete List Elements
+To remove a list element, you can use either the del statement if you know exactly which element(s) you are deleting or the remove() method if you do not know.
+
+
+list1 = ['physics', 'chemistry', 1997, 2000];
+print list1
+del list1[2];
+print "After deleting value at index 2 : "
+print list1
+
+
+Basic List Operations
+Lists respond to the + and * operators much like strings; they mean concatenation and repetition here too, except that the result is a new list, not a string.
+
+lists respond to all of the general sequence operations we used on strings in the prior chapter.
+
+len([1, 2, 3]): length
+[1, 2, 3] + [4, 5, 6]: concatination
+['Hi!'] * 4: repetition
+3 in [1, 2, 3]: membership
+for x in [1, 2, 3]: print x, : Iteration
+
+Indexing, Slicing, and Matrixes:
+ lists are sequences, indexing and slicing work the same way for lists as they do for strings
+
+L = ['spam', 'Spam', 'SPAM!']
+L[2]	SPAM!	Offsets start at zero
+L[-2]	Spam	Negative: count from the right
+L[1:]	['Spam', 'SPAM!']	Slicing fetches sections
+
+
+Built-in List Functions & Methods
+Python includes the following list functions −
+
+
+
+
+
 
 
 
