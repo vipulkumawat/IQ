@@ -1,5 +1,5 @@
 **Java11 Features:**
-
+```
 New Methods of String class
 String value="";
 value.isBlank();
@@ -66,4 +66,4 @@ return response.statusCode();
 Java flight recorder
 
 migrating-beyond-java-8
-
+```
