@@ -1938,6 +1938,281 @@ The time Module
 There is a popular time module available in Python which provides functions for working with times and for converting between representations.
 
 
+time.altzone:
+method altzone() is the attribute of the time module. This returns the offset of the local DST timezone, in seconds west of UTC, if one is defined. This is negative if the local DST timezone is east of UTC (as in Western Europe, including the UK). Only use this if daylight is nonzero
+returns the offset of the local DST timezone, in seconds west of UTC, if one is defined.
+import time
+
+print "time.altzone %d " % time.altzone
+
+time.asctime([tupletime]):
+Accepts a time-tuple and returns a readable 24-character string such as 'Tue Dec 11 18:07:14 2008'.
+import time
+
+t = time.localtime()
+print "time.asctime(t): %s " % time.asctime(t)
+
+time.clock( ):
+Returns the current CPU time as a floating-point number of seconds. To measure computational costs of different approaches, the value of time.clock is more useful than that of time.time().
+
+import time
+
+def procedure():
+   time.sleep(2.5)
+
+# measure process time
+t0 = time.clock()
+procedure()
+print time.clock(), "seconds process time"
+
+# measure wall time
+t0 = time.time()
+procedure()
+print time.time() - t0, "seconds wall time"
+
+time.ctime([secs]):
+Like asctime(localtime(secs)) and without arguments is like asctime( )
+converts a time expressed in seconds since the epoch to a string representing local time. If secs is not provided or None, the current time as returned by time() is used. This function is equivalent to asctime(localtime(secs)). Locale information is not used by ctime().
+
+import time
+
+print "time.ctime() : %s" % time.ctime()
+
+time.gmtime([secs]):
+Accepts an instant expressed in seconds since the epoch and returns a time-tuple t with the UTC time. 
+converts a time expressed in seconds since the epoch to a struct_time in UTC in which the dst flag is always zero. If secs is not provided or None, the current time as returned by time() is used.
+
+import time
+
+print "time.gmtime() : %s" % time.gmtime()
+
+time.localtime([secs]):
+Accepts an instant expressed in seconds since the epoch and returns a time-tuple t with the local time (t.tm_isdst is 0 or 1, depending on whether DST applies to instant secs by local rules).
+
+method localtime() is similar to gmtime() but it converts number of seconds to local time. If secs is not provided or None, the current time as returned by time() is used. The dst flag is set to 1 when DST applies to the given time.
+import time
+
+print "time.localtime() : %s" % time.localtime()
+
+time.mktime(tupletime):
+Accepts an instant expressed as a time-tuple in local time and returns a floating-point value with the instant expressed in seconds since the epoch.
+ method mktime() is the inverse function of localtime(). Its argument is the struct_time or full 9-tuple and it returns a floating point number, for compatibility with time().
+
+If the input value cannot be represented as a valid time, either OverflowError or ValueError will be raised.
+
+import time
+
+t = (2009, 2, 17, 17, 3, 38, 1, 48, 0)
+secs = time.mktime( t )
+print "time.mktime(t) : %f" %  secs
+print "asctime(localtime(secs)): %s" % time.asctime(time.localtime(secs))
+
+
+time.sleep(secs):
+Suspends the calling thread for secs seconds.
+method sleep() suspends execution for the given number of seconds. The argument may be a floating point number to indicate a more precise sleep time.
+
+The actual suspension time may be less than that requested because any caught signal will terminate the sleep() following execution of that signal's catching routine.
+
+import time
+
+print "Start : %s" % time.ctime()
+time.sleep( 5 )
+print "End : %s" % time.ctime()
+
+
+time.strftime(fmt[,tupletime]):
+Accepts an instant expressed as a time-tuple in local time and returns a string representing the instant as specified by string fmt
+converts a tuple or struct_time representing a time as returned by gmtime() or localtime() to a string as specified by the format argument.
+
+If t is not provided, the current time as returned by localtime() is used. format must be a string. An exception ValueError is raised if any field in t is outside of the allowed range.
+t − This is the time in number of seconds to be formatted.
+
+format − This is the directive which would be used to format given time. The following directives can be embedded in the format string −
+import time
+
+t = (2009, 2, 17, 17, 3, 38, 1, 48, 0)
+t = time.mktime(t)
+print time.strftime("%b %d %Y %H:%M:%S", time.gmtime(t))
+
+Directive
+%a - abbreviated weekday name
+
+%A - full weekday name
+
+%b - abbreviated month name
+
+%B - full month name
+
+%c - preferred date and time representation
+
+%C - century number (the year divided by 100, range 00 to 99)
+
+%d - day of the month (01 to 31)
+
+%D - same as %m/%d/%y
+
+%e - day of the month (1 to 31)
+
+%g - like %G, but without the century
+
+%G - 4-digit year corresponding to the ISO week number (see %V).
+
+%h - same as %b
+
+%H - hour, using a 24-hour clock (00 to 23)
+
+%I - hour, using a 12-hour clock (01 to 12)
+
+%j - day of the year (001 to 366)
+
+%m - month (01 to 12)
+
+%M - minute
+
+%n - newline character
+
+%p - either am or pm according to the given time value
+
+%r - time in a.m. and p.m. notation
+
+%R - time in 24 hour notation
+
+%S - second
+
+%t - tab character
+
+%T - current time, equal to %H:%M:%S
+
+%u - weekday as a number (1 to 7), Monday=1. Warning: In Sun Solaris Sunday=1
+
+%U - week number of the current year, starting with the first Sunday as the first day of the first week
+
+%V - The ISO 8601 week number of the current year (01 to 53), where week 1 is the first week that has at least 4 days in the current year, and with Monday as the first day of the week
+
+%W - week number of the current year, starting with the first Monday as the first day of the first week
+
+%w - day of the week as a decimal, Sunday=0
+
+%x - preferred date representation without the time
+
+%X - preferred time representation without the date
+
+%y - year without a century (range 00 to 99)
+
+%Y - year including the century
+
+%Z or %z - time zone or name or abbreviation
+
+%% - a literal % character
+
+time.strptime(str,fmt='%a %b %d %H:%M:%S %Y'):
+Parses str according to format string fmt and returns the instant in time-tuple format
+method strptime() parses a string representing a time according to a format. The return value is a struct_time as returned by gmtime() or localtime().
+
+The format parameter uses the same directives as those used by strftime(); it defaults to "%a %b %d %H:%M:%S %Y" which matches the formatting returned by ctime().
+
+If string cannot be parsed according to format, or if it has excess data after parsing, ValueError is raised.
+
+string − This is the time in string format which would be parsed based on the given format.
+
+format − This is the directive which would be used to parse the given string.
+import time
+
+struct_time = time.strptime("30 Nov 00", "%d %b %y")
+print "returned tuple: %s " % struct_time
+
+	time.time( ):
+Returns the current time instant, a floating-point number of seconds since the epoch.
+method time() returns the time as a floating point number expressed in seconds since the epoch, in UTC.
+
+Note − Even though the time is always returned as a floating point number, not all systems provide time with a better precision than 1 second. While this function normally returns non-decreasing values, it can return a lower value than a previous call if the system clock has been set back between the two calls.
+
+import time
+
+print "time.time(): %f " %  time.time()
+print time.localtime( time.time() )
+print time.asctime( time.localtime(time.time()) )
+
+time.tzset():
+Resets the time conversion rules used by the library routines. The environment variable TZ specifies how this is done.
+method tzset() resets the time conversion rules used by the library routines. The environment variable TZ specifies how this is done.
+import time
+import os
+
+os.environ['TZ'] = 'EST+05EDT,M4.1.0,M10.5.0'
+time.tzset()
+print time.strftime('%X %x %Z')
+
+os.environ['TZ'] = 'AEST-10AEDT-11,M10.5.0,M3.5.0'
+time.tzset()
+print time.strftime('%X %x %Z')
+
+The calendar Module:
+By default, calendar takes Monday as the first day of the week and Sunday as the last one. To change this, call calendar.setfirstweekday() function.
+
+Here is a list of functions available with the calendar module −
+calendar.calendar(year,w=2,l=1,c=6)
+
+Returns a multiline string with a calendar for year year formatted into three columns separated by c spaces. w is the width in characters of each date; each line has length 21*w+18+2*c. l is the number of lines for each week.
+
+calendar.firstweekday( )
+
+Returns the current setting for the weekday that starts each week. By default, when calendar is first imported, this is 0, meaning Monday.
+
+calendar.isleap(year)
+
+Returns True if year is a leap year; otherwise, False
+
+calendar.leapdays(y1,y2)
+
+Returns the total number of leap days in the years within range(y1,y2).
+
+calendar.month(year,month,w=2,l=1)
+
+Returns a multiline string with a calendar for month month of year year, one line per week plus two header lines. w is the width in characters of each date; each line has length 7*w+6. l is the number of lines for each week.
+
+calendar.monthcalendar(year,month)
+
+Returns a list of lists of ints. Each sublist denotes a week. Days outside month month of year year are set to 0; days within the month are set to their day-of-month, 1 and up.
+
+
+
+calendar.monthrange(year,month)
+
+Returns two integers. The first one is the code of the weekday for the first day of the month month in year year; the second one is the number of days in the month. Weekday codes are 0 (Monday) to 6 (Sunday); month numbers are 1 to 12.
+
+calendar.prcal(year,w=2,l=1,c=6)
+
+Like print calendar.calendar(year,w,l,c).
+
+
+calendar.prmonth(year,month,w=2,l=1)
+
+Like print calendar.month(year,month,w,l).
+
+calendar.setfirstweekday(weekday)
+
+Sets the first day of each week to weekday code weekday. Weekday codes are 0 (Monday) to 6 (Sunday)
+
+calendar.timegm(tupletime)
+
+The inverse of time.gmtime: accepts a time instant in time-tuple form and returns the same instant as a floating-point number of seconds since the epoch.
+
+calendar.weekday(year,month,day)
+
+Returns the weekday code for the given date. Weekday codes are 0 (Monday) to 6 (Sunday); month numbers are 1 (January) to 12 (December).
+
+Other Modules & Functions:
+The datetime Module
+The pytz Module
+The dateutil Module
+
+https://docs.python.org/3/library/datetime.html#module-datetime
+http://labix.org/python-dateutil
+
+Functions:
+
 
 
 
