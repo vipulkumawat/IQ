@@ -1580,6 +1580,198 @@ print tup;
 Note an exception raised, this is because after del tup tuple does not exist any more −
 
 
+Basic Tuples Operations:
+Tuples respond to the + and * operators much like strings; they mean concatenation and repetition here too, except that the result is a new tuple, not a string.
+
+In fact, tuples respond to all of the general sequence operations we used on strings 
+
+len((1,2,3))
+(1,2,3)+(4,5,6)
+('Hi!',)*4
+3 in (1,2,3)
+for x in(1,2,3): print x
+Indexing, Slicing, and Matrixes:
+Because tuples are sequences, indexing and slicing work the same way for tuples as they do for strings.
+L = ('spam', 'Spam', 'SPAM!')
+L[2]
+L[-2]
+L[1:]
+
+
+No Enclosing Delimiters
+Any set of multiple objects, comma-separated, written without identifying symbols, i.e., brackets for lists, parentheses for tuples, etc., default to tuples, as indicated in these short examples
+#!/usr/bin/python
+
+print 'abc', -4.24e93, 18+6.6j, 'xyz';
+x, y = 1, 2;
+print "Value of x , y : ", x,y;
+
+
+Built-in Tuple Functions:
+cmp(tuple1, tuple2)
+Compares elements of both tuples
+If elements are of the same type, perform the compare and return the result. If elements are different types, check to see if they are numbers.
+
+If numbers, perform numeric coercion if necessary and compare.
+
+If either element is a number, then the other element is "larger" (numbers are "smallest").
+
+Otherwise, types are sorted alphabetically by name.
+
+If we reached the end of one of the tuples, the longer tuple is "larger." If we exhaust both tuples and share the same data, the result is a tie, meaning that 0 is returned.
+
+tuple1, tuple2 = (123, 'xyz'), (456, 'abc')
+print cmp(tuple1, tuple2)
+print cmp(tuple2, tuple1)
+tuple3 = tuple2 + (786,);
+print cmp(tuple2, tuple3)
+
+
+len(tuple)
+Gives the total length of the tuple.
+tuple1, tuple2 = (123, 'xyz', 'zara'), (456, 'abc')
+print "First tuple length : ", len(tuple1)
+print "Second tuple length : ", len(tuple2)
+
+
+max(tuple)
+Returns item from the tuple with max value.
+tuple1, tuple2 = (123, 'xyz', 'zara', 'abc'), (456, 700, 200)
+print "Max value element : ", max(tuple1)
+print "Max value element : ", max(tuple2)
+
+
+min(tuple)
+Returns item from the tuple with min value.
+
+tuple1, tuple2 = (123, 'xyz', 'zara', 'abc'), (456, 700, 200)
+print "min value element : ", min(tuple1)
+print "min value element : ", min(tuple2)
+
+
+tuple(seq)
+Converts a list into tuple.
+
+aList = [123, 'xyz', 'zara', 'abc']
+aTuple = tuple(aList)
+print "Tuple elements : ", aTuple
+
+
+Dictionary:
+Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
+
+Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+print "dict['Name']: ", dict['Name']
+print "dict['Age']: ", dict['Age']
+
+If we attempt to access a data item with a key, which is not part of the dictionary, we get an error as follows −
+
+ Live Demo
+#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+print "dict['Alice']: ", dict['Alice']
+When the above code is executed, it produces the following result −
+
+dict['Alice']:
+Traceback (most recent call last):
+File "test.py", line 4, in <module>
+print "dict['Alice']: ", dict['Alice'];
+KeyError: 'Alice'
+
+
+Updating Dictionary
+You can update a dictionary by adding a new entry or a key-value pair, modifying an existing entry, or deleting an existing entry as shown below in the simple example −
+
+#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+dict['Age'] = 8; # update existing entry
+dict['School'] = "DPS School"; # Add new entry
+
+print "dict['Age']: ", dict['Age']
+print "dict['School']: ", dict['School']
+
+
+Delete Dictionary Elements
+You can either remove individual dictionary elements or clear the entire contents of a dictionary. You can also delete entire dictionary in a single operation.
+
+To explicitly remove an entire dictionary, just use the del statement. Following is a simple example −
+
+#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+del dict['Name']; # remove entry with key 'Name'
+dict.clear();     # remove all entries in dict
+del dict ;        # delete entire dictionary
+
+print "dict['Age']: ", dict['Age']
+print "dict['School']: ", dict['School']
+
+Note that an exception is raised because after del dict dictionary does not exist any more
+
+Properties of Dictionary Keys
+Dictionary values have no restrictions. They can be any arbitrary Python object, either standard objects or user-defined objects. However, same is not true for the keys.
+
+There are two important points to remember about dictionary keys −
+
+(a) More than one entry per key not allowed. Which means no duplicate key is allowed. When duplicate keys encountered during assignment, the last assignment wins. 
+
+dict = {'Name': 'Zara', 'Age': 7, 'Name': 'Manni'}
+print "dict['Name']: ", dict['Name']
+
+(b) Keys must be immutable. Which means you can use strings, numbers or tuples as dictionary keys but something like ['key'] is not allowed.
+
+dict = {['Name']: 'Zara', 'Age': 7}
+print "dict['Name']: ", dict['Name']
+When the above code is executed, it produces the following result −
+
+Traceback (most recent call last):
+File "test.py", line 3, in <module>
+dict = {['Name']: 'Zara', 'Age': 7};
+TypeError: unhashable type: 'list'
+
+Built-in Dictionary Functions & Methods:
+
+cmp(dict1, dict2)
+Compares elements of both dict
+method cmp() compares two dictionaries based on key and values.
+This method returns 0 if both dictionaries are equal, -1 if dict1 < dict2 and 1 if dict1 > dic2.
+
+
+dict1 = {'Name': 'Zara', 'Age': 7};
+dict2 = {'Name': 'Mahnaz', 'Age': 27};
+dict3 = {'Name': 'Abid', 'Age': 27};
+dict4 = {'Name': 'Zara', 'Age': 7};
+print "Return Value : %d" %  cmp (dict1, dict2)
+print "Return Value : %d" %  cmp (dict2, dict3)
+print "Return Value : %d" %  cmp (dict1, dict4)
+
+
+
+len(dict)
+Gives the total length of the dictionary. This would be equal to the number of items in the dictionary.
+dict = {'Name': 'Zara', 'Age': 7};
+print "Length : %d" % len (dict)
+
+str(dict)
+Produces a printable string representation of a dictionary
+dict = {'Name': 'Zara', 'Age': 7};
+print "Equivalent String : %s" % str (dict)
+
+type(variable)
+Returns the type of the passed variable. If passed variable is dictionary, then it would return a dictionary type.
+
+dict = {'Name': 'Zara', 'Age': 7};
+print "Variable Type : %s" %  type (dict)
+
+
+Python includes following dictionary methods −
+
+
+
 
 
 
