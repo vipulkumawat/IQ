@@ -1771,6 +1771,107 @@ print "Variable Type : %s" %  type (dict)
 Python includes following dictionary methods −
 
 
+dict.clear()
+Removes all elements of dictionary dict
+method clear() removes all items from the dictionary.
+
+dict = {'Name': 'Zara', 'Age': 7};
+print "Start Len : %d" %  len(dict)
+dict.clear()
+print "End Len : %d" %  len(dict)
+
+
+dict.copy()
+Returns a shallow copy of dictionary dict
+method copy() returns a shallow copy of the dictionary.
+
+dict1 = {'Name': 'Zara', 'Age': 7};
+dict2 = dict1.copy()
+print "New Dictionary : %s" %  str(dict2)
+
+
+dict.fromkeys()
+Create a new dictionary with keys from seq and values set to value.
+
+method fromkeys() creates a new dictionary with keys from seq and values set to value.
+
+seq = ('name', 'age', 'sex')
+dict = dict.fromkeys(seq)
+print "New Dictionary : %s" %  str(dict)
+
+dict = dict.fromkeys(seq, 10)
+print "New Dictionary : %s" %  str(dict)
+
+dict.get(key, default=None)
+For key key, returns value or default if key not in dictionary
+Python dictionary method get() returns a value for the given key. If key is not available then returns default value None.
+key − This is the Key to be searched in the dictionary.
+default − This is the Value to be returned in case key does not exist.
+
+This method return a value for the given key. If key is not available, then returns default value None.
+
+
+dict = {'Name': 'Zabra', 'Age': 7}
+print "Value : %s" %  dict.get('Age')
+print "Value : %s" %  dict.get('Education', "Never")
+
+dict.has_key(key)
+Returns true if key in dictionary dict, false otherwise
+returns true if a given key is available in the dictionary, otherwise it returns a false.
+
+dict = {'Name': 'Zara', 'Age': 7}
+print "Value : %s" %  dict.has_key('Age')
+print "Value : %s" %  dict.has_key('Sex')
+
+dict.items()
+Returns a list of dict's (key, value) tuple pairs
+ returns a list of tuple pairs
+dict = {'Name': 'Zara', 'Age': 7}
+print "Value : %s" %  dict.items()
+
+
+dict.keys()
+Returns list of dictionary dict's keys
+returns a list of all the available keys in the dictionary.
+dict = {'Name': 'Zara', 'Age': 7}
+print "Value : %s" %  dict.keys()
+
+
+dict.setdefault(key, default=None)
+Similar to get(), but will set dict[key]=default if key is not already in dict
+method setdefault() is similar to get(), but will set dict[key]=default if key is not already in dict.
+key − This is the key to be searched.
+default − This is the Value to be returned in case key is not found.
+
+dict = {'Name': 'Zara', 'Age': 7}
+print "Value : %s" %  dict.setdefault('Age', None)
+print "Value : %s" %  dict.setdefault('Sex', None)
+
+
+dict.update(dict2)
+Adds dictionary dict2's key-values pairs to dict
+method update() adds dictionary dict2's key-values pairs in to dict.
+
+dict = {'Name': 'Zara', 'Age': 7}
+dict2 = {'Sex': 'female' }
+
+dict.update(dict2)
+print "Value : %s" %  dict
+
+
+dict.values()
+Returns list of dictionary dict's values
+returns a list of all the values available in a given dictionary.
+
+dict = {'Name': 'Zara', 'Age': 7}
+print "Value : %s" %  dict.values()
+
+
+
+
+
+
+
 
 
 
