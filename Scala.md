@@ -23,4 +23,29 @@ Scala is compiled into Java Byte Code which is executed by the Java Virtual Mach
 The Scala compiler compiles your Scala code into Java Byte Code, which can then be executed by the 'scala' command. The 'scala' command is similar to the java command, in that it executes your compiled Scala code.
 
 Scala can Execute Java Code:
+Scala enables you to use all the classes of the Java SDK and also your own custom Java classes, or your favorite Java open source projects.
+
+Scala can do Concurrent & Synchronize processing:
+Scala allows you to express general programming patterns in an effective way. It reduces the number of lines and helps the programmer to code in a type-safe way. It allows you to write codes in an immutable manner, which makes it easy to apply concurrency and parallelism (Synchronize).
+
+
+Scala vs Java
+Scala has a set of features that completely differ from Java. Some of these are −
+
+All types are objects
+Type inference
+Nested Functions
+Functions are objects
+Domain specific language (DSL) support
+Traits
+Closures
+Concurrency support inspired by Erlang
+
+
+Scala Web Frameworks
+Scala is being used everywhere and importantly in enterprise web applications. You can check a few of the most popular Scala web frameworks −
+The Lift Framework
+The Play framework
+The Bowler framework
+
 ```
