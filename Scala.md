@@ -48,4 +48,27 @@ The Lift Framework
 The Play framework
 The Bowler framework
 
+
+Environment requirement:
+JDK1.8+
+set JAVA_HOME
+Add JAVA_HOME/bin to Path
+verify scala version: scala -version
+
+ the ';' line end character is optional in scala
+Object − Objects have states and behaviors. An object is an instance of a class. Example − A dog has states - color, name, breed as well as behaviors - wagging, barking, and eating.
+
+Class − A class can be defined as a template/blueprint that describes the behaviors/states that are related to the class.
+
+Methods − A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.
+
+Fields − Each object has its unique set of instance variables, which are called fields. An object's state is created by the values assigned to these fields.
+
+Closure − A closure is a function, whose return value depends on the value of one or more variables declared outside this function.
+
+Traits − A trait encapsulates method and field definitions, which can then be reused by mixing them into classes. Traits are used to define object types by specifying the signature of the supported methods.
+
+
+
+
 ```
