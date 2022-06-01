@@ -393,6 +393,7 @@ Local variables are variables declared inside a method. Local variables are only
 
 
 Classes & Objects:
+A class is a blueprint for objects. Once you define a class, you can create objects from the class blueprint with the keyword new. Through the object you can use all functionalities of the defined class.
 
 
 
