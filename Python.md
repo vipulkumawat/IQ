@@ -2898,9 +2898,80 @@ os.rmdir( "/tmp/test"  )
 There are three important sources, which provide a wide range of utility methods to handle and manipulate files & directories on Windows and Unix operating systems. They are as follows −
 
 File Object Methods: The file object provides functions to manipulate files.
+A file object is created using open function and here is a list of functions which can be called on this object −
+file.close()
+Close the file. A closed file cannot be read or written any more.
+
+file.flush()
+Flush the internal buffer, like stdio's fflush. This may be a no-op on some file-like objects.
+
+file.fileno()
+Returns the integer file descriptor that is used by the underlying implementation to request I/O operations from the operating system.
+
+file.isatty()
+Returns True if the file is connected to a tty(-like) device, else False.
+
+file.next()
+Returns the next line from the file each time it is being called.
+
+file.read([size])
+Reads at most size bytes from the file (less if the read hits EOF before obtaining size bytes).
+
+file.readline([size])
+Reads one entire line from the file. A trailing newline character is kept in the string.
+
+file.readlines([sizehint])
+Reads until EOF using readline() and return a list containing the lines. If the optional sizehint argument is present, instead of reading up to EOF, whole lines totalling approximately sizehint bytes (possibly after rounding up to an internal buffer size) are read.
+
+file.seek(offset[, whence])
+Sets the file's current position
+
+file.tell()
+Returns the file's current position
+
+file.truncate([size])
+Truncates the file's size. If the optional size argument is present, the file is truncated to (at most) that size.
+
+file.write(str)
+Writes a string to the file. There is no return value.
+
+file.writelines(sequence)
+Writes a sequence of strings to the file. The sequence can be any iterable object producing strings, typically a list of strings.
+
 
 OS Object Methods: This provides methods to process files as well as directories.
+https://www.tutorialspoint.com/python/os_file_methods.htm
 
+Python Standard Exceptions:
+Exception Base class for all exceptions
+StopIteration Raised when the next() method of an iterator does not point to any object.
+SystemExit Raised by the sys.exit() function.
+StandardError Base class for all built-in exceptions except StopIteration and SystemExit.
+ArithmeticError Base class for all errors that occur for numeric calculation.
+OverflowError Raised when a calculation exceeds maximum limit for a numeric type.
+FloatingPointError Raised when a floating point calculation fails.
+ZeroDivisionError Raised when division or modulo by zero takes place for all numeric types.
+AssertionError Raised in case of failure of the Assert statement.
+AttributeError Raised in case of failure of attribute reference or assignment.
+EOFError Raised when there is no input from either the raw_input() or input() function and the end of file is reached.
+ImportError Raised when an import statement fails.
+KeyboardInterrupt Raised when the user interrupts program execution, usually by pressing Ctrl+c.
+LookupError Base class for all lookup errors.
+IndexError Raised when an index is not found in a sequence.
+KeyError Raised when the specified key is not found in the dictionary.
+NameError Raised when an identifier is not found in the local or global namespace.
+UnboundLocalError Raised when trying to access a local variable in a function or method but no value has been assigned to it.
+EnvironmentError Base class for all exceptions that occur outside the Python environment.
+IOError Raised when an input/ output operation fails, such as the print statement or the open() function when trying to open a file that does not exist.
+OSError Raised for operating system-related errors.
+SyntaxError Raised when there is an error in Python syntax.
+IndentationError Raised when indentation is not specified properly.
+SystemError Raised when the interpreter finds an internal problem, but when this error is encountered the Python interpreter does not exit.
+SystemExit Raised when Python interpreter is quit by using the sys.exit() function. If not handled in the code, causes the interpreter to exit.
+TypeError Raised when an operation or function is attempted that is invalid for the specified data type.
+ValueError Raised when the built-in function for a data type has the valid type of arguments, but the arguments have invalid values specified.
+RuntimeError Raised when a generated error does not fall into any category.
+NotImplementedError Raised when an abstract method that needs to be implemented in an inherited class is not actually implemented.
 
 ```
 
