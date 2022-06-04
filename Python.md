@@ -2943,6 +2943,11 @@ OS Object Methods: This provides methods to process files as well as directories
 https://www.tutorialspoint.com/python/os_file_methods.htm
 
 Python Standard Exceptions:
+Exceptions Handling:
+two very important features to handle any unexpected error in your Python programs and to add debugging capabilities in them −
+
+Exception Handling −
+list standard Exceptions available in Python: 
 Exception Base class for all exceptions
 StopIteration Raised when the next() method of an iterator does not point to any object.
 SystemExit Raised by the sys.exit() function.
@@ -2972,6 +2977,10 @@ TypeError Raised when an operation or function is attempted that is invalid for 
 ValueError Raised when the built-in function for a data type has the valid type of arguments, but the arguments have invalid values specified.
 RuntimeError Raised when a generated error does not fall into any category.
 NotImplementedError Raised when an abstract method that needs to be implemented in an inherited class is not actually implemented.
+
+
+Assertions −
+
 
 ```
 
