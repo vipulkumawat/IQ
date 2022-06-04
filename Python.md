@@ -3007,7 +3007,92 @@ print int(KelvinToFahrenheit(505.78))
 print KelvinToFahrenheit(-5)
 
 
-List of Standard Exceptions −
+An assertion is a sanity-check that you can turn on or turn off when you are done with your testing of the program.
+
+The easiest way to think of an assertion is to liken it to a raise-if statement (or to be more accurate, a raise-if-not statement). An expression is tested, and if the result comes up false, an exception is raised.
+
+Programmers often place assertions at the start of a function to check for valid input, and after a function call to check for valid output.
+
+The assert Statement
+When it encounters an assert statement, Python evaluates the accompanying expression, which is hopefully true. If the expression is false, Python raises an AssertionError exception.
+
+
+assert Expression[, Arguments]
+
+when a Python script encounters a situation that it cannot cope with, it raises an exception. An exception is a Python object that represents an error.
+
+When a Python script raises an exception, it must either handle the exception immediately otherwise it terminates and quits.
+
+
+Handling an exception
+If you have some suspicious code that may raise an exception, you can defend your program by placing the suspicious code in a try: block. After the try: block, include an except: statement, followed by a block of code which handles the problem as elegantly as possible.
+
+
+ try....except...else blocks
+
+A single try statement can have multiple except statements. This is useful when the try block contains statements that may throw different types of exceptions.
+
+You can also provide a generic except clause, which handles any exception.
+
+After the except clause(s), you can include an else-clause. The code in the else-block executes if the code in the try: block does not raise an exception.
+
+The else-block is a good place for code that does not need the try: block's protection.
+
+
+try:
+   fh = open("testfile", "w")
+   fh.write("This is my test file for exception handling!!")
+except IOError:
+   print "Error: can\'t find file or read data"
+else:
+   print "Written content in the file successfully"
+   fh.close()
+
+
+The except Clause with No Exceptions
+You can also use the except statement with no exceptions defined as follows −
+
+try:
+You do your operations here;
+......................
+except:
+If there is any exception, then execute this block.
+......................
+else:
+If there is no exception then execute this block.
+This kind of a try-except statement catches all the exceptions that occur. Using this kind of try-except statement is not considered a good programming practice though, because it catches all exceptions but does not make the programmer identify the root cause of the problem that may occur.
+
+
+The except Clause with Multiple Exceptions
+You can also use the same except statement to handle multiple exceptions as follows −
+
+try:
+   You do your operations here;
+   ......................
+except(Exception1[, Exception2[,...ExceptionN]]]):
+   If there is any exception from the given exception list, 
+   then execute this block.
+   ......................
+else:
+   If there is no exception then execute this block. 
+
+
+The try-finally Clause
+You can use a finally: block along with a try: block. The finally block is a place to put any code that must execute, whether the try-block raised an exception or not. The syntax of the try-finally statement is this −
+
+try:
+   You do your operations here;
+   ......................
+   Due to any exception, this may be skipped.
+finally:
+   This would always be executed.
+   ......................
+
+
+**You cannot use else clause as well along with a finally clause.**
+
+
+
 
 
 
