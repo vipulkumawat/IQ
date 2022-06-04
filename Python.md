@@ -3093,10 +3093,94 @@ finally:
 
 
 
+try:
+   fh = open("testfile", "w")
+   try:
+      fh.write("This is my test file for exception handling!!")
+   finally:
+      print "Going to close the file"
+      fh.close()
+except IOError:
+   print "Error: can\'t find file or read data"
+
+
+When an exception is thrown in the try block, the execution immediately passes to the finally block. After all the statements in the finally block are executed, the exception is raised again and is handled in the except statements if present in the next higher layer of the try-except statement.
+
+Argument of an Exception
+An exception can have an argument, which is a value that gives additional information about the problem. The contents of the argument vary by exception. You capture an exception's argument by supplying a variable in the except clause as follows −
+
+try:
+   You do your operations here;
+   ......................
+except ExceptionType, Argument:
+   You can print value of Argument here...
+
+
+
+If you write the code to handle a single exception, you can have a variable follow the name of the exception in the except statement. If you are trapping multiple exceptions, you can have a variable follow the tuple of the exception.
+
+This variable receives the value of the exception mostly containing the cause of the exception. The variable can receive a single value or multiple values in the form of a tuple. This tuple usually contains the error string, the error number, and an error location.
+
+def temp_convert(var):
+   try:
+      return int(var)
+   except ValueError, Argument:
+      print "The argument does not contain numbers\n", Argument
+
+# Call above function here.
+temp_convert("xyz");
+
+Raising an Exceptions
+You can raise exceptions in several ways by using the raise statement. The general syntax for the raise statement is as follows.
+
+Syntax
+raise [Exception [, args [, traceback]]]
+Here, Exception is the type of exception (for example, NameError) and argument is a value for the exception argument. The argument is optional; if not supplied, the exception argument is None.
+
+The final argument, traceback, is also optional (and rarely used in practice), and if present, is the traceback object used for the exception.
+
+Example
+An exception can be a string, a class or an object. Most of the exceptions that the Python core raises are classes, with an argument that is an instance of the class. Defining new exceptions is quite easy and can be done as follows −
+
+def functionName( level ):
+   if level < 1:
+      raise "Invalid level!", level
+
+Note: In order to catch an exception, an "except" clause must refer to the same exception thrown either class object or simple string. For example, to capture above exception, we must write the except clause as follows −
+
+try:
+   Business Logic here...
+except "Invalid level!":
+   Exception handling here...
+else:
+   Rest of the code here...
+User-Defined Exceptions
+Python also allows you to create your own exceptions by deriving classes from the standard built-in exceptions.
+
+Here is an example related to RuntimeError. Here, a class is created that is subclassed from RuntimeError. This is useful when you need to display more specific information when an exception is caught.
+
+In the try block, the user-defined exception is raised and caught in the except block. The variable e is used to create an instance of the class Networkerror.
+
+class Networkerror(RuntimeError):
+   def __init__(self, arg):
+      self.args = arg
+So once you defined above class, you can raise the exception as follows −
+
+try:
+   raise Networkerror("Bad hostname")
+except Networkerror,e:
+   print e.args
+
+
 
 
 
 ```
 
+**Object Oriented:**
+```
+Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy. 
 
+Overview of OOP Terminology:
+```
 
