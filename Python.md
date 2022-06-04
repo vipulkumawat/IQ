@@ -3253,7 +3253,6 @@ emp2.displayEmployee()
 print "Total Employee %d" % Employee.empCount
 Now, putting all the concepts together −
 
-[ Live Demo](http://tpcg.io/hbnZb4)
 #!/usr/bin/python
 
 class Employee:
@@ -3303,5 +3302,13 @@ __doc__ − Class documentation string or none, if undefined.
 __name__ − Class name.
 __module__ − Module name in which the class is defined. This attribute is "__main__" in interactive mode.
 __bases__ − A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
+
+
+Destroying Objects (Garbage Collection)
+Python deletes unneeded objects (built-in types or class instances) automatically to free the memory space. The process by which Python periodically reclaims blocks of memory that no longer are in use is termed Garbage Collection.
+
+Python's garbage collector runs during program execution and is triggered when an object's reference count reaches zero. An object's reference count changes as the number of aliases that point to it changes.
+
+An object's reference count increases when it is assigned a new name or placed in a container (list, tuple, or dictionary). The object's reference count decreases when it's deleted with del, its reference is reassigned, or its reference goes out of scope. When an object's reference count reaches zero, Python collects it automatically.
 
 
