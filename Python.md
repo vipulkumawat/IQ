@@ -3182,7 +3182,6 @@ except Networkerror,e:
 Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy. 
 
 Overview of OOP Terminology:
-```
 
 Class − A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
 
@@ -3312,3 +3311,81 @@ Python's garbage collector runs during program execution and is triggered when a
 An object's reference count increases when it is assigned a new name or placed in a container (list, tuple, or dictionary). The object's reference count decreases when it's deleted with del, its reference is reassigned, or its reference goes out of scope. When an object's reference count reaches zero, Python collects it automatically.
 
 
+Note − Ideally, you should define your classes in separate file, then you should import them in your main program file using import statement.
+
+Class Inheritance
+Instead of starting from scratch, you can create a class by deriving it from a preexisting class by listing the parent class in parentheses after the new class name.
+
+The child class inherits the attributes of its parent class, and you can use those attributes as if they were defined in the child class. A child class can also override data members and methods from the parent.
+
+Syntax
+Derived classes are declared much like their parent class; however, a list of base classes to inherit from is given after the class name −
+
+class SubClassName (ParentClass1[, ParentClass2, ...]):
+   'Optional class documentation string'
+   class_suite
+Example
+
+#!/usr/bin/python
+
+class Parent:        # define parent class
+   parentAttr = 100
+   def __init__(self):
+      print "Calling parent constructor"
+
+   def parentMethod(self):
+      print 'Calling parent method'
+
+   def setAttr(self, attr):
+      Parent.parentAttr = attr
+
+   def getAttr(self):
+      print "Parent attribute :", Parent.parentAttr
+
+class Child(Parent): # define child class
+   def __init__(self):
+      print "Calling child constructor"
+
+   def childMethod(self):
+      print 'Calling child method'
+
+c = Child()          # instance of child
+c.childMethod()      # child calls its method
+c.parentMethod()     # calls parent's method
+c.setAttr(200)       # again call parent's method
+c.getAttr()          # again call parent's method
+
+
+You normally will not notice when the garbage collector destroys an orphaned instance and reclaims its space. But a class can implement the special method __del__(), called a destructor, that is invoked when the instance is about to be destroyed. This method might be used to clean up any non memory resources used by an instance.
+
+Example
+This __del__() destructor prints the class name of an instance that is about to be destroyed −
+
+
+#!/usr/bin/python
+
+class Point:
+   def __init__( self, x=0, y=0):
+      self.x = x
+      self.y = y
+   def __del__(self):
+      class_name = self.__class__.__name__
+      print class_name, "destroyed"
+
+pt1 = Point()
+pt2 = pt1
+pt3 = pt1
+print id(pt1), id(pt2), id(pt3) # prints the ids of the obejcts
+del pt1
+del pt2
+del pt3
+
+
+
+Note − Ideally, you should define your classes in separate file, then you should import them in your main program file using import statement.
+
+
+
+
+Class Inheritance:
+```
