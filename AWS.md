@@ -149,6 +149,66 @@ Config
 ...
 
 
+MediaServices:
+Elastic Transcoder
+Kinesis Video Streams
+Media Convert
+Media Live
+Media Package
+Media Stoore
+Media Tailor
+
+
+
+Machine Learning:
+...
+
+Analytics:
+Kinesis
+...
+
+
+Security, Identity and Compliance:
+IAM
+Cognito
+Secrets Manager
+GuardDuty
+Inspector
+...
+AWS Organizations
+Cloud HSM
+Directory Service
+WAF and Shield
+...
+
+
+AWS costmanagement:
+AWS Cost explorer
+AWS Budgets
+
+
+Mobile Services:
+Mobile Hub
+AWS AppSync
+Device Farm
+
+
+
+Application Integration:
+Step Functions
+Amazon MQ
+Simple Notification Service
+Simple Queue Service
+SWF
+
+
+Customer Engaugement:
+Amazon Connect
+Pinpoint
+Simple Email Service
+
+
+
 
 
 ```
