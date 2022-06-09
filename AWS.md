@@ -64,6 +64,12 @@ SaaS - Software as a Service:
 -someone else develps the software
 -You use it from the cloud
 
-
+AWS Platform:
+built on top of compute capability
+storage
+objects
+block based storage
+virtual  private cloud
+AWS identity and access management(security)
 
 ```
