@@ -255,6 +255,42 @@ Scenario is one of the core Gherkin structures. Every scenario starts with the k
 
 Scenario − Verify Help Functionality.
 
+Given user navigates to Facebook.
+
+When the user clicks on Help, then the Help page opens.
+
+Consider a case, where we need to execute a test scenario more than once. Suppose, we need to make sure that the login functionality is working for all types of subscription holders. That requires execution of login functionality scenario multiple times. Copy paste the same steps in order to just re-execute the code, does not seem to be a smart idea. For this, Gherkin provides one more structure, which is scenario outline.
+
+Scenario outline is similar to scenario structure; the only difference is the provision of multiple inputs. As you can see in the following example, the test case remains the same and non-repeatable. At the bottom we have provided multiple input values for the variables “Username” and “Password”. While running the actual test, Cucumber will replace the variable with input values provided and it will execute the test. Once pass-1 has been executed, the test will rerun for second iteration with another input value. Such variable or placeholders can be represented with ”<>” while mentioning with gherkin statements.
+
+
+Scenario Outline − Login functionality for a social networking site. The given user navigates to Facebook.
+
+When the user logs in using the Username as "<username>" and the Password as "<password>", then login should be successful.
+
+| username | password |
+| user1 | password1 |
+| user2 | password2 |
+There are a few tips and tricks to smartly define the Cucumber scenarios.
+
+Each step should be clearly defined, so that it does not create any confusion for the reader.
+
+Do not repeat the test scenario, if needed use scenario outline to implement repetition.
+
+Develop a test step in a way that, it can be used within multiple scenarios and scenario outlines.
+
+As far as possible, keep each step completely independent. For example: “Given the user is logged in”. This can be divided into two steps
+
+Given the user enters the user name.
+Clicks on login.
+
+
+
+```
+
+**Annotations**
+
+```
 
 
 ```
