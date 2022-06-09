@@ -71,5 +71,84 @@ objects
 block based storage
 virtual  private cloud
 AWS identity and access management(security)
+database as a service
+Amazon VPC
+
+
+
+compute:
+EC2
+lightsail
+ECS
+EKS
+Lambda
+Batch
+Elastic Beanstalk
+
+
+
+with EC2 we need to manually setting up the instance and what kind of proocessor or in memory do you want to use, what OS you need to run and so forth
+
+with Beanstalk we can ask I need a platform to run the application, and beanstalk takes care of what databases that app need, what instances needed, anything that application needed to run application
+
+
+
+Storage:
+S3
+EFS
+Glacier
+Storage Gateway
+
+
+S3 is object based, put things into buckets storage service
+
+EFS: we need to see how it works in connection with EC2 instance.
+
+Glacier: we keep the things that might not needed so often. It is used for archival purposes. we keep things that are not needed for us very often. it is least expensive storage we have in AWS. these files need not require superfast bandwidth.
+
+storage gateway: to access storage that is in the cloud locally or locally that is in the cloud seamlessly, 
+
+
+Databases:
+RDS
+Dynamodb
+Elastic Cache
+Neptune
+Amazon Redshift
+
+
+Migration:
+AWS migration Hub
+Application Discovery Service
+Data Basee migration service
+Server Migration Service
+Snowball
+
+
+snowball: when bunch of data to keep it in aws quickly we use this service.
+it can be TBs of data also
+
+
+
+Network and Content delivery
+VPC
+CloudFront
+Route 53
+API Gateway
+Direct Connect
+
+
+
+
+Management tools:
+Cloud watch
+AWS Autoscaling
+Cloud formation
+Cloud Trail
+Config
+...
+
+
+
 
 ```
