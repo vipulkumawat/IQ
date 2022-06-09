@@ -207,6 +207,11 @@ Amazon Connect
 Pinpoint
 Simple Email Service
 
+Security Services include identity and Access management(IAM) and AWS organizations
+Cost management services help you track the costs of your AWS solutions
+The new IoT services will likely get an exam of their own in the future
+
+
 
 
 
