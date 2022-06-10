@@ -246,7 +246,13 @@ An AWS region is a physical location or boundary containing AWS data centers
 An AWS AvailabilityZone(AZ) is one or more data centers with redundant power and networking
 Multiple AZs are within Regions
 
+```
 
+**aws-essential-training-for-architects**
 
 
 ```
+
+
+
+``
