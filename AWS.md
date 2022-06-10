@@ -211,6 +211,14 @@ Security Services include identity and Access management(IAM) and AWS organizati
 Cost management services help you track the costs of your AWS solutions
 The new IoT services will likely get an exam of their own in the future
 
+Security is a shared responsibility
+Customer Responsibility: Customer data, Client side data encryption and Data integrity Operation
+
+AWS Responsibility:
+Platform and Application management
+Operating System and Network Configuration
+AWS Foundation Services(Compute, Storage, Database, Network)
+AWS Global Infrastructure (Region, Availability Zone, Edge Locations)
 
 
 
