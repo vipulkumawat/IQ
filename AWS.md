@@ -220,6 +220,22 @@ Operating System and Network Configuration
 AWS Foundation Services(Compute, Storage, Database, Network)
 AWS Global Infrastructure (Region, Availability Zone, Edge Locations)
 
+The AWS Customer is responsible for the security of their data and client side operations
+AWS is responsible for the security of the services they offer
+While AWS is responsible for the security of the cloud, you are responsible for the security in the cloud
+
+Region: physical location or boundary with AWS data centers in that location.
+
+
+Availability zone: it is 1-6 data centers, there is redudant power and networking across different data centers, 
+so that if one data center fails the other data center continue in operation hence its available
+Multiple availability zones are within a region
+
+Regions(Availability Zones( datacenters))
+This is the hierarchy of how AWS is deployed worldwide
+
+aws.amazon.com/about-aws/global-infrastructure
+
 
 
 
