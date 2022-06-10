@@ -236,6 +236,15 @@ This is the hierarchy of how AWS is deployed worldwide
 
 aws.amazon.com/about-aws/global-infrastructure
 
+Edge Area(Edge Location): are servers located near customers
+
+Edge areas are used by cloud front, so when we want to cache web pages close the users, we can pick an edge area that you can use
+and get it as close to those users as possible
+
+
+An AWS region is a physical location or boundary containing AWS data centers
+An AWS AvailabilityZone(AZ) is one or more data centers with redundant power and networking
+Multiple AZs are within Regions
 
 
 
