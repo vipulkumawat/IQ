@@ -4500,7 +4500,79 @@ print "Exiting Main Thread"
 Multithreaded Priority Queue:
 
 
+The Queue module allows you to create a new queue object that can hold a specific number of items. There are following methods to control the Queue −
+get() − The get() removes and returns an item from the queue.
+put() − The put adds item to a queue.
+qsize() − The qsize() returns the number of items that are currently in the queue.
+empty() − The empty( ) returns True if queue is empty; otherwise, False.
+full() − the full() returns True if queue is full; otherwise, False.
 
+
+
+import queue as Queue
+import threading
+import time
+
+exitFlag=0
+
+
+class MyThread (threading.Thread):
+	def __init__(self,threadId,name,q):
+		threading.Thread.__init__(self)
+		self.threadId=threadId
+		self.name=name
+		self.q=q
+
+	def run(self):
+		print("Starting ",self.name)
+		process_data(self.name,self.q)
+		print("Exiting ", self.name)
+
+
+def process_data(threadName,q):
+	while not exitFlag:
+		queueLock.acquire()
+		if not workQueue.empty():
+			data = q.get()
+			queueLock.release()
+			print("{0} processing {1}".format(threadName,data))
+		else:
+			queueLock.release()
+		time.sleep(1)
+
+threadList = ["Thread-1","Thread-2","Thread-3"]
+nameList=["One","Two","Three","Four","Five"]
+queueLock = threading.Lock()
+workQueue=Queue.Queue(10)
+threads = []
+threadId =1
+
+#Create new Threads
+
+for tName in threadList:
+	thread = MyThread(threadId,tName, workQueue)
+	thread.start()
+	threads.append(thread)
+	threadId+=1
+
+#Fill the queue
+queueLock.acquire()
+for word in nameList:
+	workQueue.put(word)
+queueLock.release()
+
+#wait for queue to empty
+while not workQueue.empty():
+	pass
+
+#Notify theads it's time to exit
+exitFlag=1
+
+#Wait for all thread to complete
+for t in threads:
+	t.join()
+
+print("Exiting Main Thread")
 
 
 
