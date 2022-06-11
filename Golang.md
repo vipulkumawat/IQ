@@ -21,4 +21,27 @@ Support for pointer arithmetic
 Support for assertions
 Support for generic programming
 ```
+
+```
+Strong and statically typed
+strong typing means type of a variable cannot change over time.
+statically typed means all of those variables have to be defined at compile time.
+
+key features:
+simplicity to learn
+fast compile times
+garbage collected language means you don't have to manage memory, go runtime is going to manage that for you.why? garbage collected language does have challengees when dealing with certain usecases. ex: realtime trading systems for stock market systems have a very hard time when you're dealing with garbage collection.
+Built-in concurrency: have concurrency primitives built right into the language. instead of having a library that we're going to have to import, inorder to work with concurrency, we are going to do concurrent development right there in the base language.
+compile to standalone library: compiles down to a standalone library which means when you compile your go application, everything is going to be bundled into the single binary that's related to the go application.
+version management at runtime becomes trivial as you simply have one binary, you deploy that binary, you run it and all of its dependencies are there.
+
+
+golang.org
+golang.org/doc/effective_go.html
+
+https://www.youtube.com/watch?v=YS4e4q9oBaU
+17:00	
+
+
+```
 https://www.tutorialspoint.com/go/go_environment.htm
