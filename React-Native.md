@@ -197,7 +197,7 @@ technically No, there is no css with React Native.
 html and css are for the web.
 react native instead uses native mobile tools.
 so the css that we use in react native is built through javascript. it is based on CSS syntax but little different.
-
+https://reactnative.dev/docs/getting-started
 
 
 section3:
