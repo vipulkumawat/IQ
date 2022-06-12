@@ -125,6 +125,14 @@ metaverse is not a single platform or not owned by single company.
 Augmented reality(AR): overlays the physical world with digital visual, auditory and other sensory information.
 
 
+Connecting directly with customers
+Expanding remote work capabilities
+Accepting crypto currency payments
+
+
+Beauty spear by P&G
+https://beautysphere.com/
+
 
 
 
