@@ -252,6 +252,74 @@ Multiple AZs are within Regions
 
 
 ```
+Cloud concpets:
+The term cloud generally refers to anything involving hosted services over the internet.
+These hosted services are categorized as one of 
+IaaS
+PaaS
+SaaS
+
+c#3
+Application Data
+Database Data
+
+C#2
+Runtime
+OS
+
+C#1
+Servers
+Load balancers
+File Storage
+Networking
+
+IaaS: C#1
+PaaS: C#1+ C#2
+SaaS: C#1+C#2+C#3
+
+
+Cloud services provide flexibility for controlling costs than traditional on-premise hosting environments.
+Cloud allows for minimum upfront investment in the infrastructure needed to launch an application.
+Companies don't need to manage server, power supplies, routers and cables, all the parts and connections between them
+that are needed to host the technology product.
+
+Cloud offers Just-in-time infrastructure.
+this allows to allocate exactly what is needed and only when it is needed.
+
+No need to guess the capacity of resources to provision when launching new application.
+
+No need to incurr the cost when getting it wrong.
+
+Autoscaling is key beneift of cloud.
+Resources can be scaled out by adding more resources, scaled in by removing resources.
+scaled up by making resources bigger
+scaled down by making resources smaller
+to match demand without any human intervention
+
+Cloud allows applications to react to changing load and demand in an automated fashion
+we can also do proactive scaling in anticipation of an expected event
+
+On-Demand scaling
+
+High Availability and Disaster Recovery Benefits helps against local and regional area outages.
+and hosts data in closest proximity to the users of your application
+This helps in increasing speed and performance
+
+
+Cloud elasticity:
+refers to its ability to expand or contact.
+
+Cloud provides scalable infrastructure means ability to expand and contract inorder to handle a growing or diminishing workload.
+This is called scaling and this is why the term elastic is used to describe cloud services.
+
+
+
+
+
+
+
+
+
 
 
 
