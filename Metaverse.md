@@ -134,7 +134,16 @@ Beauty spear by P&G
 https://beautysphere.com/
 
 
+Lean what your customers want by letting them actively participate in the world building of your company in the metaverse
 
+Physical limits donot exist in the metaverse
+Be receptive to strategies and products you may have never considered
+
+Give your team spaec to try new things and take risks as you  make your makr in metaverse
+
+Reach any customer with internet access
+Build brand loyalty
+Inspire digital and real-world purchases
 
 
 
