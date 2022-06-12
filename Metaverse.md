@@ -60,4 +60,78 @@ that are used to record transactions.
 All these technologies and many more enable the convergence of our physical and digital worlds which brings us closer to metaverse, this greater vision of being built today and in future.
 
 
+virtual sneakers or miniatures of fashion designer Karl Lagerfeld
+Map of metaverse looks more like a web rather than a grid
+Digital goods company RTFKT
+they have sold non physical items for thousands of dollars
+their first NFT, the cyber sneaker was inspired by the Tesla Cyber truck
+When  RTFKT circulated a doctored image of Elon Musk wearing the sneakers, it actually went viral and many people actually thought the sneakers existed in physical form.
+The company is able to make buzz of the products which are in virtual form made them attractive to Nike, who acquired them for an undisclosed amount.
+
+In metaverse there are currencies, creators and Collectors.
+it is a place of exchange where value is transfered from one person to another.
+
+Popular Marketplaces include
+Nifty Gateway
+Open Sea
+KnownOrigin
+ARIExchange
+Rarible and SuperRare
+
+
+Currencies in metaverse are:
+Cryptcurrencies
+and most often represted in coins , 
+Just as stock market fluctuates in value depending on economy so do the value of coins change
+
+According to currency.com 4 biggest metaverse cryptocurrencies are currently:
+Mana, AXIS, SAN and Gala
+
+Krista Kim
+FEWOCIOUS or Victor Langlois
+
+
+
+NFT: Non fundable Tokens
+
+
+Web3:
+Built on block chain technology
+Emphasizes decentralization and individual ownership
+Different visions for the future
+
+
+A block chain is a shared database that links data in blocks that cannot be edited. This creates an irreversible timeline of data, allowing you to see when and where any piece of data was created or stored.
+
+It is a distributed leadger. meaning same information is stored in multiple places within a network.
+
+wheever information is entered on the blockchain it is recorded across the entire network
+
+By nature block chain is decentralized, there is no central server company that controls and owns the data
+
+In Web3 world, you would have more control and ownership over your data because you would have direct access to the block chain it was stored on.
+
+instead of companies collect and monitize your data, you can monitize yourself.
+
+
+what is metaverse?
+it involves the internet breaking free from rectangles on our hands and our desks.
+
+it is convergence of physical and digital lives.
+
+metaverse is not a single platform or not owned by single company.
+
+
+Augmented reality(AR): overlays the physical world with digital visual, auditory and other sensory information.
+
+
+
+
+
+
+
+
+
+
+
 ```
