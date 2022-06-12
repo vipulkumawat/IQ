@@ -318,7 +318,84 @@ what resources are needed while designing application for cloud?
 
 
 
+Failure Now ---> Failproof Later
 
+Thinking about failure at the beginning of a project causes recovery strategies to be part of the design process,
+which will then lend itself to a better, more stable end product.
+Single point of Failure is Bad
+One major rule of thum to consider when designing for failure is to strive to avoid single points of failure.
+
+Elasticity refers to the ability of the cloud to scale resources to match the demand of your applications.
+
+There are few methods typically to achieve this scaling.
+-> scale components on a regular, fixed basis.
+ex: hourly, daily or weekly
+This might work if an application has highly predictable traffic patterns.
+if traffic increases during business hours and slows down at night, this allows scaling of resources at specific time intervals to accomodate this pattern.
+
+scale the components in anticipation of an expected event.
+involves scaling out or up due to some known marketing campaign or event where sharp increase in demand are expected.
+
+setup monitoring of certain metrics and scale in reaction to metrics raising above or falling below certain thresholds
+ex: spikes in CPU utilization or network I/O
+If these metrics breach certain thresholds, components can scale automatically and immediately either in or out.
+
+This way system is coninuously matching supply with demand.
+
+Regardless of method, in order to take full advantage of scaling:
+ application deployment process need to be automated.
+System configuration adjustment and application design  must also be adjusted to accommodate scaling.
+AWS has deployment services
+One of the keys to automating application processes is a concept referred to as bootstrapping.
+
+Bootstrapping is a selfsustaining start-up process that can run on its own.
+in AWS, its a process needed to get applications up and running on an EC2 instance
+Cloud is called Elastic due to its ability to expand and contract resources to match the demand of the applications you build on the cloud.
+
+you must design your applications in such a manner so that they are able to take advantage of this elastic nature of the cloud.
+Decoupling or loose coupling refers to a design principle concerned with minimizing dependencies between components in order to improve scalability of applications.
+
+
+
+Communication between webserver & Application servers:
+with load balancer or Message Queue
+
+
+Few AWS services to decouple application components:
+Elasitc Load balancer
+Simple Message Queue
+Simple Notification Service
+Simple workflow engine
+
+
+Cloud Best practices: Optimize for performance
+For performance optimization you are likely to be about decreasing latency and increasing throughput of the systems.
+making systems go faster and do more.
+
+Optimizing any system in this manner is important to the success of the application.
+optimizing performance as it pertains to be ability to use cloud computing resources efficiently.
+good to know all available services and how they might best fit into a system's architecture.
+
+Cloud watch is used to monitor application metrics and send notification alarms when thersholds are breached.
+
+These alarms trigger automated actions by integrating with other services, such as Amazon Simple Queue Service, Amazon Simple Notification Service, and AWS Lambda just to remember a few.
+
+
+Keep thigs secure:
+
+Cloud provider(AWS provider):
+Physical security
+Infrastructure
+Equipment
+Seperation from other customer
+
+
+
+
+
+
+
+ 
 
 
 
