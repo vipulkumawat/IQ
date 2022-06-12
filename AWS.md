@@ -313,6 +313,7 @@ Cloud provides scalable infrastructure means ability to expand and contract inor
 This is called scaling and this is why the term elastic is used to describe cloud services.
 
 
+what resources are needed while designing application for cloud?
 
 
 
