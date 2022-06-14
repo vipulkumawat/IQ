@@ -496,7 +496,47 @@ VPN only subnet
 Setup custom VPCs to better protect AWS resources and fully control the security and topology of your network
 
 
+If a subnet doesn't have a route to the Internet gateway, the subnet is known as a _____ subnet.
+private
 
+A security group is a set of rules created to distribute traffic to multiple resources.
+False
+
+When creating a key pair, the automatically downloaded .PEM file represents the _____ key.
+Private
+
+
+IAM is used to create which of the following?
+groups
+
+
+You associate IAM permissions with which other IAM entity type?
+roles
+groups
+users
+All of these answers
+Correct
+
+A valid credit card is required to set up a new AWS account.
+True
+
+
+Multifactor authentication is not allowed on the master account.
+False
+
+Which of the following is the customer always responsible for in the shared security model?
+account and user management security
+Correct
+
+Depending on the service being used and the level of abstraction being provided, Amazon may take on security responsibility for network, software, data, database OS, and runtime environment, but Amazon is never responsible for IAM account and user management security.
+
+
+
+
+
+
+
+Designing For Failure:
 
 
 
