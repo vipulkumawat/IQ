@@ -448,6 +448,68 @@ use security groups to control the inbound and outbound traffic to AWS resources
 
  
 
+VPC: Amazon Virtual Private Cloud
+enables AWS resources to be launched into a virtual network defined by customer
+
+
+EC2 classic:
+Runs in a single flat network
+Network shared with other AWS customers
+Automatically be associated with a public and private IP
+Everything internet addressable
+After December 4th,2013- no longer available
+
+
+VPC:
+Logically isolated to ony one AWS account
+Not automatically addressable via the public internet
+Private and public interface control
+Both inbound and outbound traffic can be controlled
+Multiple IP addresses can be assigned
+Elastic interface networks can be assigned
+VPN Connection
+More flexibility is provided than EC2 classic
+
+Default VPC:
+No configuration
+Read to use
+
+
+VPC setup:
+choose which region
+Specify range of IP addresses for the entire VPC network
+CIDR notation
+Ensure range allows for growth
+Create Subnets
+Subset IP range of entire VPC network
+Defined within Availability Zones and don't span between them
+
+Gateway interfaces are attached
+
+private Subnet
+public Subnet has internet routed gateway
+VPN only subnet
+
+
+
+
+Setup custom VPCs to better protect AWS resources and fully control the security and topology of your network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
