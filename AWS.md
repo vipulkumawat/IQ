@@ -393,6 +393,57 @@ Seperation from other customer
 
 
 
+Amazon EC2 uses public key cryptography to encrypt and decrypt log information.
+public key cryptography uses public key to encrypt a piece of data such as password and receipient uses private key to decrypt the data
+public and private key together knows as key pair
+key pair should be used to manage EC2 instances
+you use public key for launching instance but uses private key for logging into the instance
+
+linux based instances doesn't have passwords but this key-pair is used to log in using SSH.
+
+for windows instances we use RDP for login and keypair is used to obtain administrative password
+
+console can be used to create a new key pair.
+
+Rotate the keys so often as it is a good security practice
+
+pem file is the private key of the public-private key pair that we discussed
+
+we use ssh to login to instance we need to have proper permissions on pem file.
+
+AWS security groups are the virtual firewalls in the cloud that allow the control of inbound and outbound traffic on certain resources.
+security groups determine who can communicate with the resources that below to that group.
+
+Traffice rules can be setup once and can be applied to multiple resources
+
+resources can be assigned to multiple security groups allows the flexibility to mix and match security groups with resources to accommodate differing security management needs.
+
+if no security group is assigned default security group will be assigned by aws with defaulting to no access to the resource
+security group controls inbound and outbound traffic to a resource.
+
+These security rules composed of traffic type, an underlying protocol, a port or a port range, and a source
+
+traffic type:
+ssh
+rdp
+http
+
+actually underlying protocol is fixed by the type choosen
+ex: 
+Http--underlying is->TCP,
+ UDP, 
+
+port range
+source can be specified by IpAddress or security group
+
+
+
+
+CIDR notation: Class less internet domain routing
+
+
+Cloud Application Architecuture Security Tip:
+use security groups to control the inbound and outbound traffic to AWS resources and follow the principle of least privilege when defining your rules
 
 
  
