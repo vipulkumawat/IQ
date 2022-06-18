@@ -4577,3 +4577,96 @@ print("Exiting Main Thread")
 
 
 ```
+
+**Network Programming:**
+
+
+```
+
+
+
+Python provides two levels of access to network services. At a low level, you can access the basic socket support in the underlying operating system, which allows you to implement clients and servers for both connection-oriented and connectionless protocols.
+
+Python also has libraries that provide higher-level access to specific application-level network protocols, such as FTP, HTTP, and so on.
+
+What is Sockets?
+Sockets are the endpoints of a bidirectional communications channel. Sockets may communicate within a process, between processes on the same machine, or between processes on different continents.
+
+Sockets may be implemented over a number of different channel types: Unix domain sockets, TCP, UDP, and so on. The socket library provides specific classes for handling the common transports as well as a generic interface for handling the rest.
+
+
+Domain
+
+The family of protocols that is used as the transport mechanism. These values are constants such as AF_INET, PF_INET, PF_UNIX, PF_X25, and so on.
+
+2	
+type
+
+The type of communications between the two endpoints, typically SOCK_STREAM for connection-oriented protocols and SOCK_DGRAM for connectionless protocols.
+
+3	
+protocol
+
+Typically zero, this may be used to identify a variant of a protocol within a domain and type.
+
+4	
+hostname
+
+The identifier of a network interface −
+
+A string, which can be a host name, a dotted-quad address, or an IPV6 address in colon (and possibly dot) notation
+
+A string "<broadcast>", which specifies an INADDR_BROADCAST address.
+
+A zero-length string, which specifies INADDR_ANY, or
+
+An Integer, interpreted as a binary address in host byte order.
+
+5	
+port
+
+Each server listens for clients calling on one or more ports. A port may be a Fixnum port number, a string containing a port number, or the name of a service.
+
+The socket Module
+To create a socket, you must use the socket.socket() function available in socket module, which has the general syntax −
+
+s = socket.socket (socket_family, socket_type, protocol=0)
+Here is the description of the parameters −
+
+socket_family − This is either AF_UNIX or AF_INET, as explained earlier.
+
+socket_type − This is either SOCK_STREAM or SOCK_DGRAM.
+
+protocol − This is usually left out, defaulting to 0.
+
+Once you have socket object, then you can use required functions to create your client or server program. Following is the list of functions required −
+
+Server Socket Methods
+s.bind()
+
+This method binds address (hostname, port number pair) to socket.
+
+2	
+s.listen()
+
+This method sets up and start TCP listener.
+
+3	
+s.accept()
+
+This passively accept TCP client connection, waiting until connection arrives (blocking).
+
+Client Socket Methods
+
+
+s.connect()
+
+This method actively initiates TCP server connection.
+
+
+General Socket Methods:
+
+
+
+
+```
