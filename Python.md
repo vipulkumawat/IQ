@@ -4665,6 +4665,138 @@ This method actively initiates TCP server connection.
 
 
 General Socket Methods:
+To create a socket, you must use the socket.socket() function available in socket module, which has the general syntax −
+
+s = socket.socket (socket_family, socket_type, protocol=0)
+Here is the description of the parameters −
+
+socket_family − This is either AF_UNIX or AF_INET, as explained earlier.
+
+socket_type − This is either SOCK_STREAM or SOCK_DGRAM.
+
+protocol − This is usually left out, defaulting to 0.
+
+Once you have socket object, then you can use required functions to create your client or server program. Following is the list of functions required −
+
+
+Server Socket Methods:
+s.bind()
+
+This method binds address (hostname, port number pair) to socket.
+
+s.listen()
+
+This method sets up and start TCP listener.
+
+s.accept()
+
+This passively accept TCP client connection, waiting until connection arrives (blocking)
+
+
+Client Socket Methods
+s.connect()
+
+This method actively initiates TCP server connection.
+
+General Socket Methods
+s.recv()
+
+This method receives TCP message
+
+s.send()
+
+This method transmits TCP message
+
+	
+s.recvfrom()
+
+This method receives UDP message
+
+s.sendto()
+
+This method transmits UDP message
+
+s.close()
+
+This method closes socket
+
+socket.gethostname()
+
+Returns the hostname.
+
+
+A Simple Server
+To write Internet servers, we use the socket function available in socket module to create a socket object. A socket object is then used to call other functions to setup a socket server.
+
+Now call bind(hostname, port) function to specify a port for your service on the given host.
+
+Next, call the accept method of the returned object. This method waits until a client connects to the port you specified, and then returns a connection object that represents the connection to that client.
+
+#!/usr/bin/python           # This is server.py file
+
+import socket               # Import socket module
+
+s = socket.socket()         # Create a socket object
+host = socket.gethostname() # Get local machine name
+port = 12345                # Reserve a port for your service.
+s.bind((host, port))        # Bind to the port
+
+s.listen(5)                 # Now wait for client connection.
+while True:
+   c, addr = s.accept()     # Establish connection with client.
+   print 'Got connection from', addr
+   c.send('Thank you for connecting')
+   c.close()                # Close the connection
+A Simple Client
+Let us write a very simple client program which opens a connection to a given port 12345 and given host. This is very simple to create a socket client using Python's socket module function.
+
+The socket.connect(hosname, port ) opens a TCP connection to hostname on the port. Once you have a socket open, you can read from it like any IO object. When done, remember to close it, as you would close a file.
+
+The following code is a very simple client that connects to a given host and port, reads any available data from the socket, and then exits −
+
+#!/usr/bin/python           # This is client.py file
+
+import socket               # Import socket module
+
+s = socket.socket()         # Create a socket object
+host = socket.gethostname() # Get local machine name
+port = 12345                # Reserve a port for your service.
+
+s.connect((host, port))
+print s.recv(1024)
+s.close()                     # Close the socket when done
+Now run this server.py in background and then run above client.py to see the result.
+
+# Following would start a server in background.
+$ python server.py & 
+
+# Once server is started run client as follows:
+$ python client.py
+
+
+Python Internet modules
+A list of some important modules in Python Network/Internet programming.
+
+Protocol	Common function	Port No	Python module
+HTTP	Web pages	80	httplib, urllib, xmlrpclib
+NNTP	Usenet news	119	nntplib
+FTP	File transfers	20	ftplib, urllib
+SMTP	Sending email	25	smtplib
+POP3	Fetching email	110	poplib
+IMAP4	Fetching email	143	imaplib
+Telnet	Command lines	23	telnetlib
+Gopher	Document transfers	70	gopherlib, urllib
+Please check all the libraries mentioned above to work with FTP, SMTP, POP, and IMAP protocols.
+
+
+
+
+It is recommended to go through the following link to find more detail −
+https://www.tutorialspoint.com/unix_sockets/index.htm
+
+https://docs.python.org/3.0/library/socket.html
+
+
 
 
 
