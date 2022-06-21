@@ -204,6 +204,7 @@ if __name__ == '__main__':
 Both the rules appear similar but in the second rule, trailing slash (/) is used. As a result, it becomes a canonical URL. Hence, using /python or /python/ returns the same output. However, in case of the first rule, /flask/ URL results in 404 Not Found page.
 
 
+URL Building:
 
 
 ```
