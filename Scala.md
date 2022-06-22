@@ -396,5 +396,186 @@ Classes & Objects:
 A class is a blueprint for objects. Once you define a class, you can create objects from the class blueprint with the keyword new. Through the object you can use all functionalities of the defined class.
 
 
+ Class is a blue print and objects are real here. 
+Basic Class:
+Following is a simple syntax to define a basic class in Scala. This class defines two variables x and y and a method: move, which does not return a value. Class variables are called, fields of the class and methods are called class methods.
+
+The class name works as a class constructor which can take a number of parameters. The above code defines two constructor arguments, xc and yc; they are both visible in the whole body of the class.
+
+class Point(xc: Int, yc: Int) {
+var x: Int = xc
+var y: Int = yc
+
+def move(dx: Int, dy: Int) {
+x = x + dx
+y = y + dy
+println ("Point x location : " + x);
+println ("Point y location : " + y);
+}
+}
+
+
+As mentioned earlier in this chapter, you can create objects using a keyword new and then you can access class fields and methods as shown below in the example −
+
+object Demo{
+  def main(args:Array[String]): Unit ={
+    val pt=new Point(10,20)
+    pt.move(20,10);
+    
+  }
+}
+
+
+Extending a Class
+You can extend a base Scala class and you can design an inherited class in the same way you do it in Java (use extends key word), but there are two restrictions: method overriding requires the override keyword, and only the primary constructor can pass parameters to the base constructor. Let us extend our above class and add one more class method.
+
+
+Example
+Let us take an example of two classes Point class (as same example as above) and Location class is inherited class using extends keyword. Such an ‘extends’ clause has two effects: it makes Location class inherit all non-private members from Point class, and it makes the type Location a subtype of the type Point class. So here the Point class is called superclass and the class Location is called subclass. Extending a class and inheriting all the features of a parent class is called inheritance but Scala allows the inheritance from just one class only.
+
+Note − Methods move() method in Point class and move() method in Location class do not override the corresponding definitions of move since they are different definitions (for example, the former take two arguments while the latter take three arguments).
+
+
+class Location(override val xc: Int, override val yc: Int,
+   val zc :Int) extends Point(xc, yc){
+   var z: Int = zc
+
+   def move(dx: Int, dy: Int, dz: Int) {
+      x = x + dx
+      y = y + dy
+      z = z + dz
+      println ("Point x location : " + x);
+      println ("Point y location : " + y);
+      println ("Point z location : " + z);
+   }
+}
+
+
+Implicit Classes
+Implicit classes allow implicit conversations with class’s primary constructor when the class is in scope. Implicit class is a class marked with ‘implicit’ keyword. This feature is introduced in Scala 2.10.
+
+Syntax − The following is the syntax for implicit classes. Here implicit class is always in the object scope where all method definitions are allowed because implicit class cannot be a top level class.
+
+Syntax
+object <object name> {
+   implicit class <class name>(<Variable>: Data type) {
+      def <method>(): Unit =
+   }
+}
+
+
+Let us take an example of an implicit class named IntTimes with the method times(). It means the times () contain a loop transaction that will execute the given statement in number of times that we give. Let us assume the given statement is “4 times println (“Hello”)” means the println (“”Hello”) statement will execute 4 times.
+
+The following is the program for the given example. In this example two object classes are used (Run and Demo) so that we have to save those two classes in different files with their respective names as follows.
+
+
+
+object Run {
+   implicit class IntTimes(x: Int) {
+      def times [A](f: =>A): Unit = {
+         def loop(current: Int): Unit =
+         
+         if(current > 0){
+            f
+            loop(current - 1)
+         }
+         loop(x)
+      }
+   }
+}
+
+import Run._
+
+object Demo {
+   def main(args: Array[String]) {
+      4 times println("hello")
+   }
+}
+
+
+Note −
+
+Implicit classes must be defined inside another class/object/trait (not in top level).
+
+Implicit classes may only take one non –implicit argument in their constructor.
+
+Implicit classes may not be any method, member or object in scope with the same name as the implicit class.
+
+
+
+Singleton Objects
+Scala is more object-oriented than Java because in Scala, we cannot have static members. Instead, Scala has singleton objects. A singleton is a class that can have only one instance, i.e., Object. You create singleton using the keyword object instead of class keyword. Since you can't instantiate a singleton object, you can't pass parameters to the primary constructor. You already have seen all the examples using singleton objects where you called Scala's main method.
+
+
+object SingletonDemo{
+  def main(args:Array[String]): Unit ={
+    val point=new Point(10,20)
+    printPoint
+
+    def printPoint: Unit ={
+      println(point.x)
+      println(point.y)
+    }
+  }
+}
+
+
+Access Modifiers:
+ Members of packages, classes or objects can be labeled with the access modifiers private and protected, and if we are not using either of these two keywords, then access will be assumed as public. These modifiers restrict accesses to the members to certain regions of code. To use an access modifier, you include its keyword in the definition of members of package, class or object as we will see in the following section.
+
+Private Members
+
+A private member is visible only inside the class or object that contains the member definition.
+
+
+class Outer{
+  class Inner{
+    private def f(): Unit ={
+      println("f")
+    }
+
+    class InnerMost{
+      f()//OK
+    }
+  }
+
+//  (new Inner).f()
+  // Error: f is not accessible
+}
+
+
+
+In Scala, the access (new Inner). f() is illegal because f is declared private in Inner and the access is not from within class Inner. By contrast, the first access to f in class Innermost is OK, because that access is contained in the body of class Inner. Java would permit both accesses because it lets an outer class access private members of its inner classes.
+
+
+Protected Members
+A protected member is only accessible from subclasses of the class in which the member is defined.
+
+
+package p{
+
+  class Super{
+    protected  def f():Unit={
+      println("F")}
+
+  }
+
+  class Sub extends Super{
+    f()
+  }
+
+  class Other{
+//    (new Super).f() 
+    //// Error: f is not accessible
+  }
+}
+
+The access to f in class Sub is OK because f is declared protected in ‘Super’ class and ‘Sub’ class is a subclass of Super. By contrast the access to f in ‘Other’ class is not permitted, because class ‘Other’ does not inherit from class ‘Super’. In Java, the latter access would be still permitted because ‘Other’ class is in the same package as ‘Sub’ class.
+
+Public Members
+
+
+
+
 
 ```
