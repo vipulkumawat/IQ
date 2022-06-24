@@ -280,6 +280,125 @@ Here, args is dictionary object containing a list of pairs of form parameter and
 It is possible to return the output of a function bound to a certain URL in the form of HTML. For instance, in the following script, hello() function will render ‘Hello World’ with <h1> tag attached to it.
 
 
+However, generating HTML content from Python code is cumbersome, especially when variable data and Python language elements like conditionals or loops need to be put. This would require frequent escaping from HTML.
+
+This is where one can take advantage of Jinja2 template engine, on which Flask is based. Instead of returning hardcode HTML from the function, a HTML file can be rendered by the render_template() function.
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template(‘hello.html’)
+
+
+
+Flask will try to find the HTML file in the templates folder, in the same folder in which this script is present.
+
+The term ‘web templating system’ refers to designing an HTML script in which the variable data can be inserted dynamically. A web template system comprises of a template engine, some kind of data source and a template processor.
+
+Flask uses jinja2 template engine. A web template contains HTML syntax interspersed placeholders for variables and expressions (in these case Python expressions) which are replaced values when the template is rendered.
+
+
+<!doctype html>
+<html>
+   <body>
+   
+      <h1>Hello {{ name }}!</h1>
+      
+   </body>
+</html>
+
+
+from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route('/hello/<user>')
+def hello_name(user):
+   return render_template('hello.html', name = user)
+
+
+The jinja2 template engine uses the following delimiters for escaping from HTML.
+
+{% ... %} for Statements
+{{ ... }} for Expressions to print to the template output
+{# ... #} for Comments not included in the template output
+# ... ## for Line Statements
+
+
+Static Files:
+A web application often requires a static file such as a javascript file or a CSS file supporting the display of a web page. Usually, the web server is configured to serve them for you, but during the development, these files are served from static folder in your package or next to your module and it will be available at /static on the application.
+
+
+A special endpoint ‘static’ is used to generate URL for static files.
+
+
+Request Object:
+The data from a client’s web page is sent to the server as a global request object. In order to process the request data, it should be imported from the Flask module.
+
+Important attributes of request object are listed below −
+
+Form − It is a dictionary object containing key and value pairs of form parameters and their values.
+
+args − parsed contents of query string which is part of URL after question mark (?).
+
+Cookies − dictionary object holding Cookie names and values.
+
+files − data pertaining to uploaded file.
+
+method − current request method.
+
+
+
+Sending Form Data to Template:
+We have already seen that the http method can be specified in URL rule. The Form data received by the triggered function can collect it in the form of a dictionary object and forward it to a template to render it on a corresponding web page.
+from flask import Flask, render_template, request
+app = Flask(__name__)
+
+@app.route('/')
+def student():
+   return render_template('student.html')
+
+@app.route('/result',methods = ['POST', 'GET'])
+def result():
+   if request.method == 'POST':
+      result = request.form
+      return render_template("result.html",result = result)
+
+
+Cookies:
+A cookie is stored on a client’s computer in the form of a text file. Its purpose is to remember and track data pertaining to a client’s usage for better visitor experience and site statistics.
+
+A Request object contains a cookie’s attribute. It is a dictionary object of all the cookie variables and their corresponding values, a client has transmitted. In addition to it, a cookie also stores its expiry time, path and domain name of the site.
+
+In Flask, cookies are set on response object. Use make_response() function to get response object from return value of a view function. After that, use the set_cookie() function of response object to store a cookie.
+
+Reading back a cookie is easy. The get() method of request.cookies attribute is used to read a cookie.
+
+
+
+@app.route('/setcookie', methods = ['POST', 'GET'])
+def setcookie():
+   if request.method == 'POST':
+   user = request.form['nm']
+   
+   resp = make_response(render_template('readcookie.html'))
+   resp.set_cookie('userID', user)
+   
+   return resp
+‘readcookie.html’ contains a hyperlink to another view function getcookie(), which reads back and displays the cookie value in browser.
+
+@app.route('/getcookie')
+def getcookie():
+   name = request.cookies.get('userID')
+   return '<h1>welcome '+name+'</h1>'
+
+
+
+Sessions:
+
+
+
 
 
 
