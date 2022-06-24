@@ -207,4 +207,80 @@ Both the rules appear similar but in the second rule, trailing slash (/) is used
 URL Building:
 
 
+The url_for() function is very useful for dynamically building a URL for a specific function. The function accepts the name of a function as first argument, and one or more keyword arguments, each corresponding to the variable part of URL.
+
+The following script demonstrates use of url_for() function.
+
+from flask import Flask, redirect, url_for
+app= Flask(__name__)
+
+
+@app.route('/admin')
+def hello_admin():
+	return 'Hello Admin'
+
+@app.route('/guest/<guest>')
+def hello_guest(guest):
+	return 'Hello %s as Guest' %guest
+
+@app.route('/user/<name>')
+def hello_user(name):
+	if name == 'admin':
+		return redirect(url_for('hello_admin'))
+	else:
+		return redirect(url_for('hello_guest',guest=name))
+
+
+
+
+
+The above script has a function user(name) which accepts a value to its argument from the URL.
+
+The User() function checks if an argument received matches ‘admin’ or not. If it matches, the application is redirected to the hello_admin() function using url_for(), otherwise to the hello_guest() function passing the received argument as guest parameter to it.
+
+
+
+HTTP methods:
+Http protocol is the foundation of data communication in world wide web. Different methods of data retrieval from specified URL are defined in this protocol.
+
+GET Sends data in unencrypted form to the server. Most common method.
+
+HEAD Same as GET, but without response body
+
+POST Used to send HTML form data to server. Data received by POST method is not cached by server.
+
+PUT Replaces all current representations of the target resource with the uploaded content.
+DELETE Removes all current representations of the target resource given by a URL
+
+
+By default, the Flask route responds to the GET requests. However, this preference can be altered by providing methods argument to route() decorator.
+
+In order to demonstrate the use of POST method in URL routing, first let us create an HTML form and use the POST method to send form data to a URL.
+
+from flask import Flask, redirect, url_for, request
+
+
+@app.route('/success/<name>')
+def success(name):
+	return 'welcome %s' % name
+
+@app.route('/login',methods=['POST','GET'])
+def login():
+	if request.method == 'POST':
+		user = request.form['nm']
+		return redirect(url_for('success',name=user))
+	else:
+		user = request.args.get('nm')
+		return redirect(url_for('success',name=user))
+
+
+Here, args is dictionary object containing a list of pairs of form parameter and its corresponding value.
+
+ Templates:
+It is possible to return the output of a function bound to a certain URL in the form of HTML. For instance, in the following script, hello() function will render ‘Hello World’ with <h1> tag attached to it.
+
+
+
+
+
 ```
