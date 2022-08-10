@@ -48,5 +48,32 @@ Javascript for custom chat features
 
 message broker is heart of the chat app
 
+A websocket server needs a message broker to manage message destinations(queues) and relay data between clients and other application code(ex controller)
+
+websocket protocol is bidirectional which means the client can subscribe to a topic and a service can publish topic updates to a client.
+
+once a connection is established both client and server can exchange the information endlessly until conneection is closed by any of the parties.
+for this reason a websocket typically preferred over A2DP when the client and server need to exchange information at high frequency
+and with low latency because A2DP connections are closed once a request is served by the server
+and there is time constraint to open a A2DP connection again
+
+MessageBroker:
+Implemented registerStompEndpoint()
+Configured destination prefix("/topic")
+Configured app URI("/app")
+
+Integration Test Scope
+Client(emulated)
+connect()
+subscribe("/topic/guestchats")
+send("my message")
+
+MessageBroker(handleSend("my message"))
+Controller
+
+An Integration test allows us to get instant feedback on the configuration and implemenatation of major server
+
+
+
 
 ```
