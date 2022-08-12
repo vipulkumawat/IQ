@@ -44,5 +44,23 @@ https://www.youtube.com/watch?v=YS4e4q9oBaU
 
 The source code written in source file is the human readable source for your program. It needs to be compiled and turned into machine language so that your CPU can actually execute the program as per the instructions given. The Go programming language compiler compiles the source code into its final executable program.
 
+go1.4.windows-amd64.msi
+ set the c:\Go\bin directory in Window's PATH environment variable. Restart any open command prompts for the change to take effect.
+
+test.go:
+package main
+import "fmt"
+
+func main(){
+   fmt.Println("Hello World")
+}
+
+execution: go run test.go
+
+error when I run with .txt file:
+no required module provides package test.txt: go.mod file not found in current directory or any parent directory; see 'go help modules
+
+
+
 ```
 https://www.tutorialspoint.com/go/go_environment.htm
