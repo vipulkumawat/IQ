@@ -42,6 +42,7 @@ golang.org/doc/effective_go.html
 https://www.youtube.com/watch?v=YS4e4q9oBaU
 17:00	
 
+The source code written in source file is the human readable source for your program. It needs to be compiled and turned into machine language so that your CPU can actually execute the program as per the instructions given. The Go programming language compiler compiles the source code into its final executable program.
 
 ```
 https://www.tutorialspoint.com/go/go_environment.htm
