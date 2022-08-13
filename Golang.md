@@ -136,4 +136,179 @@ const | fallthrough | if | range | Type
 continue | for | import | return | Var
 
 
+Go - Data Types:
+data types refer to an extensive system used for declaring variables or functions of different types. The type of a variable determines how much space it occupies in storage and how the bit pattern stored is interpreted.
+
+Boolean types: true or false
+Numeric types: integer and floating point
+String types: represents the set of string values. Its value is a sequence of bytes. 
+Strings are immutable types that is once created, it is not possible to change the contents of a string.
+ The predeclared string type is string.
+
+Derived types
+They include 
+(a) Pointer types, 
+(b) Array types, 
+(c) Structure types, 
+(d) Union types and 
+(e) Function types 
+f) Slice types
+ g) Interface types
+ h) Map types
+ i) Channel Types
+
+
+
+Array types and structure types are collectively referred to as aggregate types. 
+The type of a function specifies the set of all functions with the same parameter and result types.
+
+Integer types:
+uint8: (0 to 255)
+uint16: (0 to 65535)
+uint32:  (0 to 4294967295)
+uint64: (0 to 18446744073709551615)
+int8: (-128 to 127)
+int16:  (-32768 to 32767)
+int32:  (-2147483648 to 2147483647)
+int64: (-9223372036854775808 to 9223372036854775807)
+
+Floating types:
+float32: IEEE-754 32-bit floating-point numbers
+float64: IEEE-754 64-bit floating-point numbers
+complex64: Complex numbers with float32 real and imaginary parts
+complex128: Complex numbers with float64 real and imaginary parts
+
+
+The value of an n-bit integer is n bits and is represented using two's complement arithmetic operations.
+
+
+other numeric types:
+byte: same as uint8
+rune: same as int32
+uint: 32 or 64 bits
+int: same size as uint
+uintptr: an unsigned integer to store the uninterpreted bits of a pointer value
+
+
+Go - Variables
+
+A variable is nothing but a name given to a storage area that the programs can manipulate. Each variable in Go has a specific type, which determines the size and layout of the variable's memory, the range of values that can be stored within that memory, and the set of operations that can be applied to the variable.
+
+The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because Go is case-sensitive. Based on the basic types explained in the previous chapter, there will be the following basic variable types −
+
+
+byte: Typically a single octet(one byte). This is an byte type.
+int: The most natural size of integer for the machine.
+float32: A single-precision floating point value
+
+
+Go programming language also allows to define various other types of variables such as 
+Enumeration, Pointer, Array, Structure, and Union, which we will discuss in subsequent chapters. 
+
+Variable Definition in Go
+A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows −
+
+var variable_list optional_data_type;
+Here, optional_data_type is a valid Go data type including byte, int, float32, complex64, boolean or any user-defined object, etc., and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here −
+
+var i, j, k int;
+var c, ch byte;
+var f, salary float32;
+d = 42;
+
+
+
+The statement “var i, j, k;” declares and defines the variables i, j and k; which instructs the compiler to create variables named i, j, and k of type int.
+
+Variables can be initialized (assigned an initial value) in their declaration. The type of variable is automatically judged by the compiler based on the value passed to it. The initializer consists of an equal sign followed by a constant expression as follows −
+
+variable_name = value;
+For example,
+
+d = 3, f = 5;
+
+
+For definition without an initializer: variables with static storage duration are implicitly initialized with nil (all bytes have the value 0); the initial value of all other variables is zero value of their data type.
+
+Static Type Declaration in Go
+A static type variable declaration provides assurance to the compiler that there is one variable available with the given type and name so that the compiler can proceed for further compilation without requiring the complete detail of the variable. A variable declaration has its meaning at the time of compilation only, the compiler needs the actual variable declaration at the time of linking of the program.
+#program test1.go
+
+
+
+
+Dynamic Type Declaration / Type Inference in Go
+A dynamic type variable declaration requires the compiler to interpret the type of the variable based on the value passed to it. The compiler does not require a variable to have type statically as a necessary requirement.
+
+for dynamic type inference use := operator
+
+#test2.go
+
+
+Mixed Variable Declaration in Go
+Variables of different types can be declared in one go using type inference.
+
+#test3.go
+
+The lvalues and the rvalues in Go
+There are two kinds of expressions in Go −
+
+lvalue − Expressions that refer to a memory location is called "lvalue" expression. An lvalue may appear as either the left-hand or right-hand side of an assignment.
+
+rvalue − The term rvalue refers to a data value that is stored at some address in memory. An rvalue is an expression that cannot have a value assigned to it which means an rvalue may appear on the right- but not left-hand side of an assignment.
+
+Variables are lvalues and so may appear on the left-hand side of an assignment. Numeric literals are rvalues and so may not be assigned and can not appear on the left-hand side.
+
+The following statement is valid −
+x = 20.0
+The following statement is not valid. It would generate compile-time error −
+10 = 20
+
+
+Go - Constants:
+Constants refer to fixed values that the program may not alter during its execution. These fixed values are also called literals.
+
+Constants can be of any of the basic data types like an integer constant, a floating constant, a character constant, or a string literal. There are also enumeration constants as well.
+
+Constants are treated just like regular variables except that their values cannot be modified after their definition.
+
+Integer Literals
+An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the base or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.
+
+An integer literal can also have a suffix that is a combination of U and L, for unsigned and long, respectively. The suffix can be uppercase or lowercase and can be in any order.
+
+Here are some examples of integer literals −
+
+212 /* Legal */
+215u /* Legal */
+0xFeeL /* Legal */
+078 /* Illegal: 8 is not an octal digit */
+032UU /* Illegal: cannot repeat a suffix */
+
+
+Following are other examples of various type of Integer literals −
+
+85 /* decimal */
+0213 /* octal */
+0x4b /* hexadecimal */
+30 /* int */
+30u /* unsigned int */
+30l /* long */
+30ul /* unsigned long */
+
+
+Floating-point Literals:
+https://www.tutorialspoint.com/go/go_constants.htm
+
+
+
+
+
+
+
+
+
+
+
+
 ```
