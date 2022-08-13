@@ -298,17 +298,51 @@ Following are other examples of various type of Integer literals −
 
 
 Floating-point Literals:
-https://www.tutorialspoint.com/go/go_constants.htm
+
+
+A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent part. You can represent floating point literals either in decimal form or exponential form.
+
+While representing using decimal form, you must include the decimal point, the exponent, or both and 
+while representing using exponential form, you must include the integer part, the fractional part, or both. 
+The signed exponent is introduced by e or E.
+
+Escape Sequence
+When certain characters are preceded by a backslash, they will have a special meaning in Go. 
+These are known as Escape Sequence codes which are used to represent newline (\n), tab (\t), backspace, etc.
 
 
 
+\\, \', \", \?, \a, \b, \f, \n, \r, \t, \v, \ooo, \xhh
+#test4.go
+
+String Literals in Go
+String literals or constants are enclosed in double quotes "". A string contains characters that are similar to character literals: plain characters, escape sequences, and universal characters.
+
+You can break a long line into multiple lines using string literals and separating them using whitespaces.
+
+Here are some examples of string literals. All the three forms are identical strings.
+
+"hello, dear"
+
+"hello, \
+
+dear"
+
+"hello, " "d" "ear"
 
 
+The const Keyword
+You can use const prefix to declare constants with a specific type as follows −
+
+const variable type = value;
+
+#test5.go
+
+Note that it is a good programming practice to define constants in CAPITALS.
 
 
+Go - Operators:
 
 
-
-
-
+https://www.tutorialspoint.com/go/go_operators.htm
 ```
