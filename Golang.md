@@ -62,5 +62,78 @@ no required module provides package test.txt: go.mod file not found in current d
 
 
 
+
+let us first discuss the bare minimum structure of Go programs so that we can take it as a reference in subsequent chapters.
+
+Hello World Example
+A Go program basically consists of the following parts −
+
+Package Declaration
+Import Packages
+Functions
+Variables
+Statements and Expressions
+Comments
+
+
+The first line of the program package main defines the package name in which this program should lie. It is a mandatory statement, as Go programs run in packages. The main package is the starting point to run the program. Each package has a path and name associated with it.
+
+The next line import "fmt" is a preprocessor command which tells the Go compiler to include the files lying in the package fmt.
+
+The next line func main() is the main function where the program execution begins.
+
+The next line /*...*/ is ignored by the compiler and it is there to add comments in the program. Comments are also represented using // similar to Java or C++ comments.
+
+The next line fmt.Println(...) is another function available in Go which causes the message "Hello, World!" to be displayed on the screen. Here fmt package has exported Println method which is used to display the message on the screen.
+
+Notice the capital P of Println method. In Go language, a name is exported if it starts with capital letter. Exported means the function or variable/constant is accessible to the importer of the respective package.
+
+
+Executing a Go Program:
+go run hello.go
+
+Tokens in Go
+A Go program consists of various tokens. A token is either a keyword, an identifier, a constant, a string literal, or a symbol. For example, the following Go statement consists of six tokens −
+
+fmt.Println("Hello, World!")
+The individual tokens are −
+
+fmt
+.
+Println
+(
+   "Hello, World!"
+)
+
+In a Go program, the line separator key is a statement terminator. 
+That is, individual statements don't need a special separator like “;” in C. 
+The Go compiler internally places “;” as the statement terminator to indicate the end of one logical entity.
+
+ex usage:
+fmt.Println("Hello, World!")
+fmt.Println("I am in Go Programming World!")
+
+
+
+Comments
+Comments are like helping texts in your Go program and they are ignored by the compiler. They start with /* and terminates with the characters */ as shown below −
+
+/* my first program in Go */
+You cannot have comments within comments and they do not occur within a string or character literals.
+
+Identifiers:
+ An identifier starts with a letter A to Z or a to z or an underscore _ followed by zero or more letters, underscores, and digits (0 to 9).
+identifier = letter { letter | unicode_digit }.
+
+Go does not allow punctuation characters such as @, $, and % within identifiers. Go is a case-sensitive programming language. Thus, Manpower and manpower are two different identifiers in Go.
+
+Keywords:
+
+break | default | func | interface | select
+case | defer | Go | map | Struct
+chan | else | Goto | package | Switch
+const | fallthrough | if | range | Type
+continue | for | import | return | Var
+
+
 ```
-https://www.tutorialspoint.com/go/go_environment.htm
