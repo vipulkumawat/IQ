@@ -419,8 +419,99 @@ When the variable being switched on is equal to a case, the statements following
 
 A switch statement can have an optional default case, which must appear at the end of the switch. The default case can be used for performing a task when none of the cases is true. No break is needed in the default case.
 
+#test6.go
 
-https://www.tutorialspoint.com/go/go_switch_statement.htm
+Type Switch
+The syntax for a type switch statement in Go programming is
+switch x.(type){
+
+case type:
+statement(s);
+case type:
+statement(s);
+/* you can have any number of case statements */
+default: /* Optional */
+statement(s);
+
+}
+
+
+The following rules apply to a switch statement −
+
+The expression used in a switch statement must have an variable of interface{} type.
+
+You can have any number of case statements within a switch. Each case is followed by the value to be compared to and a colon.
+
+The type for a case must be the same data type as the variable in the switch, and it must be a valid data type.
+
+When the variable being switched on is equal to a case, the statements following that case will execute. No break is needed in the case statement.
+
+A switch statement can have an optional default case, which must appear at the end of the switch. The default case can be used for performing a task when none of the cases is true. No break is needed in the default case.
+
+#test7.go
+
+select statement:
+A select statement is similar to switch statement with difference that case statements refers to channel communications.
+
+syntax for a select statement:
+select {
+case communication clause :
+statement(s);
+case communication clause :
+statement(s);
+/* you can have any number of case statements */
+default : /* Optional */
+statement(s);
+}
+
+
+The following rules apply to a select statement −
+You can have any number of case statements within a select. Each case is followed by the value to be compared to and a colon.
+The type for a case must be the a communication channel operation.
+When the channel operation occurred the statements following that case will execute. No break is needed in the case statement.
+A select statement can have an optional default case, which must appear at the end of the select. The default case can be used for performing a task when none of the cases is true. No break is needed in the default case.
+
+#test8.go
+
+Go - Loops:
+for loop-
+for [condition | ( init; condition; increment ) | Range] {
+statement(s);
+}
+
+The flow of control in a for loop is a follows −
+If a condition is available, then for loop executes as long as condition is true.
+If a for clause that is ( init; condition; increment ) is present then −
+The init step is executed first, and only once. This step allows you to declare and initialize any loop control variables. You are not required to put a statement here, as long as a semicolon appears.
+Next, the condition is evaluated. If it is true, the body of the loop is executed. If it is false, the body of the loop does not execute and the flow of control jumps to the next statement just after the for loop.
+After the body of the for loop executes, the flow of control jumps back up to the increment statement. This statement allows you to update any loop control variables. This statement can be left blank, as long as a semicolon appears after the condition.
+The condition is now evaluated again. If it is true, the loop executes and the process repeats itself (body of loop, then increment step, and then again the condition). After the condition becomes false, the for loop terminates.
+
+
+If range is available, then the for loop executes for each item in the range.
+
+#test9.go
+
+nested loops:
+These are one or multiple loops inside any for loop.
+
+ syntax for a nested for loop :
+
+for [condition | ( init; condition; increment ) | Range] {
+for [condition | ( init; condition; increment ) | Range] {
+statement(s);
+}
+statement(s);
+}
+
+
+#test10.go
+
+Loop Control Statements:
+https://www.tutorialspoint.com/go/go_loops.htm
+
+
+
 
 
 
