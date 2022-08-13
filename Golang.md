@@ -344,5 +344,84 @@ Note that it is a good programming practice to define constants in CAPITALS.
 Go - Operators:
 
 
-https://www.tutorialspoint.com/go/go_operators.htm
+Arithmetic Operators:+, -, *, /, %, ++, --
+Relational Operators: ==, !=, >, <, >=, <=
+Logical Operators: &&, ||, !
+Bitwise Operators: &, |, ^, >>, <<
+Assignment Operators: =, +=, -=, *=, /=, %=, <<=, >>=, &=, ^=, |=
+Miscellaneous Operators: sizeof, ?:, &	Returns the address of a variable., *	Pointer to a variable.
+
+
+Operators Precedence in Go:
+operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom
+
+Postfix	() [] -> . ++ - -	Left to right
+Unary	+ - ! ~ ++ - - (type)* & sizeof	Right to left
+Multiplicative	* / %	Left to right
+Additive	+ -	Left to right
+Shift	<< >>	Left to right
+Relational	< <= > >=	Left to right
+Equality	== !=	Left to right
+Bitwise AND	&	Left to right
+Bitwise XOR	^	Left to right
+Bitwise OR	|	Left to right
+Logical AND	&&	Left to right
+Logical OR	||	Left to right
+Assignment	= += -= *= /= %=>>= <<= &= ^= |=	Right to left
+Comma	,	Left to right
+
+Go - Decision Making
+	if statement
+if(boolean_expression) {
+/* statement(s) will execute if the boolean expression is true */
+}
+
+if...else statement:
+if(boolean_expression) {
+/* statement(s) will execute if the boolean expression is true */
+} else {
+/* statement(s) will execute if the boolean expression is false */
+}
+
+nested if statements
+
+switch statement:
+switch(boolean-expression or integral type){
+case boolean-expression or integral type :
+statement(s);
+case boolean-expression or integral type :
+statement(s);
+
+/* you can have any number of case statements */
+default : /* Optional */
+statement(s);
+}
+
+
+A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.
+
+In Go programming, switch statements are of two types −
+
+Expression Switch − In expression switch, a case contains expressions, which is compared against the value of the switch expression.
+
+Type Switch − In type switch, a case contain type which is compared against the type of a specially annotated switch expression.
+
+
+The following rules apply to a switch statement −
+
+The expression used in a switch statement must have an integral or boolean expression, or be of a class type in which the class has a single conversion function to an integral or boolean value. If the expression is not passed then the default value is true.
+
+You can have any number of case statements within a switch. Each case is followed by the value to be compared to and a colon.
+
+The constant-expression for a case must be the same data type as the variable in the switch, and it must be a constant or a literal.
+
+When the variable being switched on is equal to a case, the statements following that case will execute. No break is needed in the case statement.
+
+A switch statement can have an optional default case, which must appear at the end of the switch. The default case can be used for performing a task when none of the cases is true. No break is needed in the default case.
+
+
+https://www.tutorialspoint.com/go/go_switch_statement.htm
+
+
+
 ```
